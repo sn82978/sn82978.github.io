@@ -26,6 +26,14 @@ function Footer() {
     )
 }
 
+function MainContent() {
+    return (
+        <div>
+            <h1>Personal</h1>
+        </div>
+    )
+}
+
 function Page() {
     return (
         <div>
