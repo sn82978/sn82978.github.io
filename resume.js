@@ -162,6 +162,7 @@ function Experience() {
 function Publications() {
     return (
         <div>
+            <h1>Publications</h1>
             <h2>Constraining Cosmic-ray Transport with Observations of the Circumgalactic Medium</h2>
             <p>
             Butsky, I., Nakum, S., Ponnada, S., Hummels, C., Ji, S., & Hopkins, P., 2022, Constraining Cosmic-ray Transport with Observations of the Circumgalactic Medium, <a href="https://arxiv.org/abs/2210.14232">arxiv:2210.14232</a>, (submitted to MNRAS)
