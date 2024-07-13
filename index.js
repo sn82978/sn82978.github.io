@@ -6,8 +6,8 @@ function Header() {
                 <ul className="nav-items">
                     <li><a href = "/">home</a></li>
                     <li><a href = "resume.html">resume</a></li>
-                    <li>projects</li>
-                    <li>personal</li>
+                    <li><a href = "projects.html">projects</a></li>
+                    <li><a href = "personal.html">personal</a></li>
                 </ul>
             </nav>
         </header>
