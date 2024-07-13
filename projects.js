@@ -51,6 +51,23 @@ function MainContent() {
   );
 }
 
+function MainContent_Two() {
+    return (
+      <div className="projects-container">
+        <div className="projects-text">
+          <h2>VenusHacks 2024: ZotBright</h2>
+          <p>From having to navigate campus in the dark, returning from 8:00 PM computer science classes, campus can seem scary. These struggles of having to find restrooms on campus with period products, traversing campus safely at night, and even finding inclusive spaces are experiences our team has been through on multiple occasions.</p>
+          <p>With ZotBright, we wanted to solve these issues with a multi-faceted website that allows you to open a map of our campus and see which restrooms have period products and which pathways are best lit/are dark. With features such as the sunset time, as well, users can plan their routes accordingly and stay safe. In the case that of immediate danger, we provided an SOS page where users can immediately call the UCI Police for help, alongside other health/safety resource numbers. With our period products feature, users can update whether or not restrooms they visit are stocked, using the Updates page.</p>
+          <p>Check out our devpost <a href="https://devpost.com/software/zotbright?ref_content=user-portfolio&ref_feature=in_progress">here</a></p>
+        </div>
+        <div className="projects-text">
+          <h2>AI Projects 1: Coming Soon!</h2>
+          <p> </p>
+        </div>
+      </div>
+    );
+  }
+
 
 function Page() {
     return (
@@ -58,6 +75,7 @@ function Page() {
             <Header />
             <Title />
             <MainContent />
+            <MainContent_Two />
             <Footer />
         </div>
     )
