@@ -52,3 +52,23 @@
     font-size: 1.2em;
     word-spacing: 0.1em; 
 }
+
+/* styles.css */
+
+.projects-container {
+    display: flex;
+    justify-content: center; 
+    gap: 100px; 
+    background-color: white;
+    padding: 40px; 
+  }
+  
+  .projects-text {
+    flex: 1;
+    text-align: center; 
+    padding: 20px; 
+    background-color: lightblue; 
+    border: 2px solid #ccc; 
+  }
+  
+  
