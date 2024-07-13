@@ -36,19 +36,19 @@
 
 .intro-wrapper {
     display: flex;
-    align-items: center; /* Align items vertically centered */
-    gap: 20px; /* Add space between the image and the text */
+    align-items: center; 
+    gap: 20px; 
 }
 
 .footer {
     display: flex;
-    justify-content: flex-end; /* Align items to the right */
-    align-items: center; /* Center items vertically */
-    padding: 10px 20px; /* Add some padding */
-    background-color: #ffffff; /* Optional: add a background color */
+    justify-content: flex-end;
+    align-items: center; 
+    padding: 10px 20px; 
+    background-color: #ffffff; 
 }
 
 .about-section {
-    font-size: 1.2em; /* Increase the font size */
-    word-spacing: 0.1em; /* Increase the spacing between words */
+    font-size: 1.2em;
+    word-spacing: 0.1em; 
 }
