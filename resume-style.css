@@ -1,0 +1,107 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff; 
+}
+
+.logo-items {
+    list-style: none;
+    display: flex;
+    gap: 30px; 
+    margin: 0;
+    padding: 0;
+}
+
+.nav-items a {
+    text-decoration: none; 
+    color: lightgrey; 
+    padding: 10px;
+    transition: color 0.3s ease; 
+}
+
+.nav-items a:hover {
+    color: black;
+}
+
+.nav-items a.active {
+    color: black; 
+}
+
+.nav {
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+.nav-items {
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+}
+
+.nav-items li {
+    display: inline;
+}
+
+
+.nav-logo {
+    height: 30px; 
+}
+
+.shreya-pic {
+    width: 30%; 
+}
+
+.intro-wrapper {
+    display: flex;
+    align-items: center; 
+    gap: 20px; 
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; 
+    padding: 10px 20px; 
+    background-color: #ffffff; 
+}
+
+.about-section {
+    font-size: 1.2em;
+    word-spacing: 0.1em; 
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center; 
+    gap: 100px; 
+    background-color: white;
+    padding: 40px; 
+  }
+  
+  .projects-text {
+    flex: 1;
+    text-align: center; 
+    padding: 20px; 
+    background-color: rgb(240, 190, 198); 
+    border: 2px solid #ccc; 
+  }
+
+  p {
+    color: rgb(95, 95, 95);
+}
+
+body {
+    font-family: "Lato", sans-serif;
+}
+h1 {
+    color: rgb(1,66,53);
+}
+h2 {
+    color: rgb(53,104,94);
+}
+
+h3 {
+    color:rgb(74,145,131);
+}
