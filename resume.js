@@ -1,13 +1,15 @@
 function Header() {
+    const currentPage = window.location.pathname;
+
     return (
         <header className="header">
             <h1>Shreya Nakum</h1>
             <nav className="nav"> 
                 <ul className="nav-items">
-                    <li><a href = "/">home</a></li>
-                    <li><a href = "resume.html">resume</a></li>
-                    <li><a href = "projects.html">projects</a></li>
-                    <li><a href = "personal.html">personal</a></li>
+                    <li><a href="/" className={currentPage === '/' ? 'active' : ''}>home</a></li>
+                    <li><a href="resume.html" className={currentPage === '/resume.html' ? 'active' : ''}>resume</a></li>
+                    <li><a href="projects.html" className={currentPage === '/projects.html' ? 'active' : ''}>projects</a></li>
+                    <li><a href="personal.html" className={currentPage === '/personal.html' ? 'active' : ''}>personal</a></li>
                 </ul>
             </nav>
         </header>
@@ -29,9 +31,9 @@ function Footer() {
 function Contact() {
     return (
         <div>
-            <h1>
+            <h2>
                 Contact
-                </h1>
+                </h2>
                 <p>
                     Email: shreyanakum2@gmail.com
                 </p>
@@ -42,12 +44,12 @@ function Contact() {
 function Education() {
     return (
         <div>
-            <h1>
-                Education
-            </h1>
             <h2>
-                University of California Irvine, Honors - Computer Science
+                Education
             </h2>
+            <h3>
+                University of California Irvine, Honors - Computer Science
+            </h3>
             <p>
                 September 2023 - June 2026
                 <ul>
@@ -57,9 +59,9 @@ function Education() {
                     <li>Relevant Coursework: Boolean Algebra, Python Programming, Discrete Math, Programming in C/C++</li>
                 </ul>
             </p>
-            <h2>
+            <h3>
                 Milpitas High School - High School Diploma
-            </h2>
+            </h3>
             <p>
                 August 2019 - June 2023
                 <ul>
@@ -76,7 +78,7 @@ function Education() {
 function Skills() {
     return (
         <div>
-            <h1>Skills</h1>
+            <h2>Skills</h2>
             <p>
                 <ul>
                     <li>Java</li>
@@ -100,8 +102,8 @@ function Skills() {
 function Experience() {
     return (
         <div>
-            <h1>Experience</h1>
-            <h2>Utiltyx, Milpitas, California - <i>Machine Learning Intern</i></h2>
+            <h2>Experience</h2>
+            <h3>Utiltyx, Milpitas, California - <i>Machine Learning Intern</i></h3>
             <p>
                 July 2024 - present
                 <ul>
@@ -109,7 +111,7 @@ function Experience() {
                 </ul>
             </p>
 
-            <h2>dabbl, Los Gatos, California - <i>Software Engineering Intern</i></h2>
+            <h3>dabbl, Los Gatos, California - <i>Software Engineering Intern</i></h3>
             <p>
                 June 2024 - present
                 <ul>
@@ -118,7 +120,7 @@ function Experience() {
                 </ul>
             </p>
 
-            <h2>Atoma Media, Irvine, California - <i>Large Language Model Specilist</i></h2>
+            <h3>Atoma Media, Irvine, California - <i>Large Language Model Specilist</i></h3>
             <p>
                 November 2023 - present
                 <ul>
@@ -128,7 +130,7 @@ function Experience() {
                 </ul>
             </p>
 
-            <h2>Cosmic-Ray Research, Pasadena, California - <i>Researcher/Second Author of Paper</i></h2>
+            <h3>Cosmic-Ray Research, Pasadena, California - <i>Researcher/Second Author of Paper</i></h3>
             <p>
                 November 2020 - March 2023
                 <ul>
@@ -139,7 +141,7 @@ function Experience() {
                 </ul>
             </p>
 
-            <h2>Rapt.ai, Santa Clara, California - <i>Machine Learning Intern</i></h2>
+            <h3>Rapt.ai, Santa Clara, California - <i>Machine Learning Intern</i></h3>
             <p>
                 May 2022 - September 2023
                 <ul>
@@ -148,7 +150,7 @@ function Experience() {
                 </ul>
             </p>
 
-            <h2>Sugar Mama Desserts, Milpitas, California - <i>Cashier/Closer</i></h2>
+            <h3>Sugar Mama Desserts, Milpitas, California - <i>Cashier/Closer</i></h3>
             <p>
                 June 2022 - June 2023
                 <ul>
@@ -162,8 +164,8 @@ function Experience() {
 function Publications() {
     return (
         <div>
-            <h1>Publications</h1>
-            <h2>Constraining Cosmic-ray Transport with Observations of the Circumgalactic Medium</h2>
+            <h2>Publications</h2>
+            <h3>Constraining Cosmic-ray Transport with Observations of the Circumgalactic Medium</h3>
             <p>
             Butsky, I., Nakum, S., Ponnada, S., Hummels, C., Ji, S., & Hopkins, P., 2022, Constraining Cosmic-ray Transport with Observations of the Circumgalactic Medium, <a href="https://arxiv.org/abs/2210.14232">arxiv:2210.14232</a>, (submitted to MNRAS)
             </p>
