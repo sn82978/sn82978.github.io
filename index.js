@@ -25,7 +25,8 @@ function MainContent() {
                 <div className="about-section">
                         <h2>ABOUT</h2>
                         <p>
-                            Hello! I am a Computer Science major with a minor in Math specializing in Artificial Intelligence and Machine Learning at UC Irvine. [Add research interests]
+                            Hello! I am a Computer Science major with a minor in Math specializing in Artificial Intelligence and Machine Learning at UC Irvine.
+                            My research interests include galaxy evolution, planetary physics, and machine learning applications. 
                         </p>
                         <p>
                             Throughout my academic journey, I have gained research experience and worked on various projects through internships and jobs that have honed my skills and deepened my understanding of ML algorithms and their applications. I am proficient in multiple programming languages, as well! From collaborating on research initiatives to developing applications, I am always excited to use my knowledge and skills to contribute to the tech world :)
