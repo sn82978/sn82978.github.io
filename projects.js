@@ -64,7 +64,7 @@ function MainContent_Two() {
           <p>Check out our devpost <a href="https://devpost.com/software/zotbright?ref_content=user-portfolio&ref_feature=in_progress">here</a></p>
         </div>
         <div className="projects-text">
-          <h3>AI Projects 1: Coming Soon!</h3>
+          <h3>AI Project 1: Coming Soon!</h3>
           <p> </p>
         </div>
       </div>
