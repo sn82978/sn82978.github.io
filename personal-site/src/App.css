@@ -1,77 +1,146 @@
-#root {
-  max-width: 1280px;
+/* App.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  width: 760px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  background-color: #1a1a1a;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #666;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  height: 40px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-nav {
+.header-actions {
   display: flex;
-  justify-content: flex-end; /* Aligns items to the right */
-  position: absolute; /* Positions the nav in relation to its nearest positioned ancestor */
-  top: 1rem; /* Adjusts the vertical position */
-  right: 1rem; /* Adjusts the horizontal position */
-  margin-bottom: 2rem;
+  gap: 10px;
 }
 
-nav ul {
+.navigation {
+  background-color: #000000;
+}
+
+.navigation ul {
+  display: flex;
   list-style-type: none;
   padding: 0;
-  display: flex;
-  gap: 1rem;
+  margin: 0;
 }
 
-nav li {
-  background-color: #f0f0f0;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+.navigation li {
+  padding: 5px 10px;
+  position: relative;
 }
 
-nav a {
-  display: block;
-  padding: 0.5rem 1rem;
+.navigation li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60%;
+  width: 1px;
+  background-color: #fff; /* Line color */
+}
+
+.navigation a {
+  color: #ffffff; /* Text color */
   text-decoration: none;
-  color: #333;
-  transition: background-color 0.3s ease;
+  font-size: 12px;
+  display: block; /* Make the link fill the li */
+  transition: background-color 0.3s ease; /* Smooth transition */
 }
 
-nav a:hover {
-  background-color: #e0e0e0;
+.navigation a:hover {
+  background: linear-gradient(to right, #7cfc00, #32cd32); /* Gradient background */
+  color: #000; /* Keep text color black on hover */
 }
 
+.main-content {
+  display: flex;
+  padding: 10px;
+}
+
+.left-column {
+  flex: 2;
+  margin-right: 10px;
+}
+
+.right-column {
+  flex: 1;
+}
+
+.featured-content img {
+  width: 100%;
+  height: auto;
+}
+
+.news, .quick-links {
+  background-color: #333;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+h2, h3 {
+  color: #7cfc00;
+  font-size: 14px;
+  margin-top: 0;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+}
+
+.shreya-image {
+  width: 350px;
+  height: auto; /* Maintains aspect ratio */
+}
+
+.logo {
+  width: 50px; /* Adjust the size as needed */
+  height: 50px;
+  margin-right: 1rem;
+}
+
+h1 {
+  margin: 0;
+  color: #7cfc00
+}
+
+.news ul, .quick-links ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.news li, .quick-links li {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.quick-links a {
+  color: #7cfc00;
+  text-decoration: none;
+}
+
+.footer {
+  background-color: #000;
+  color: #666;
+  text-align: center;
+  padding: 5px;
+  font-size: 10px;
+}
