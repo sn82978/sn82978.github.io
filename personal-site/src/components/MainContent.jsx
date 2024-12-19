@@ -1,18 +1,36 @@
-// components/MainContent.js
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 function MainContent() {
+  const [text, setText] = useState('');
+  const fullText = 'about me';
+
+  useEffect(() => {
+    let index = 0;
+    const timer = setInterval(() => {
+      if (index < fullText.length) {
+        setText(fullText.slice(0, index + 1));
+        index++;
+      } else {
+        clearInterval(timer);
+      }
+    }, 100); // Adjust typing speed here
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <main className="main-content">
       <div className="left-column">
         <section className="news">
-          <img src="src/assets/IMG_0075.JPG" class="shreya-image"></img>
+          <img src="src/assets/IMG_0075.JPG" className="shreya-image" alt="Shreya" />
         </section>
       </div>
       <div className="right-column">
         <section className="quick-links">
-          <h3>about me</h3>
-          <p>just a chill guy</p>
+          <h1 className="typewriter">{text}</h1>
+          <p>Hi! I'm Shreya, a computer science major specializing in Intelligent Systems and Systems & Software at UC Irvine with a minor in Mathematics.</p>
+          <p>I am passionate about multidisciplinary research, especially how AI tools can be used in fields such as biology or physics.</p>
+          <p>I also love 80's rock music, so let me know if you want music recommendations!</p>
         </section>
       </div>
     </main>
