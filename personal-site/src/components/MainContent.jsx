@@ -26,7 +26,7 @@ function MainContent() {
    <main className="main-content">
      <div className="left-column">
        <section className="news">
-         <img src="personal-site/src/assets/IMG_0075.JPG" className="shreya-image" alt="Shreya" />
+         <img src="src/assets/IMG_0075.JPG" className="shreya-image" alt="Shreya" />
        </section>
      </div>
      <div className="right-column">
