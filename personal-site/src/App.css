@@ -2,12 +2,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Lato:wght@400;700&display=swap');
 
 
-body {
+/* body {
  background-color: #000000;
  color: #fff;
  margin: 0;
  padding: 0;
-}
+} */
+
+.matrix-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+  }
+  
+  #root {
+    position: relative;
+    z-index: 1;
+  }
 
 
 h1, h2, h3, h4, h5, h6 {
@@ -22,7 +42,7 @@ h4 {
 
 
 .app {
- width: 60%;
+ width: 90%;
  height: 60%;
  margin: 1;
  background-color: #1a1a1a;
@@ -246,3 +266,4 @@ h1 {
     color: #666;
     text-decoration: none;
 }
+  

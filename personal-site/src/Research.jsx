@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import MatrixBackground from './components/MatrixBackground';
 
 
 function ResearchContent() {
@@ -56,7 +57,7 @@ function ResearchContent() {
          learn to use technical vocabulary in my explanations. That June, I presented at the American Astronomical Society Conference (AAS).
          After the presentation, I began to work on the research paper. I helped write the methods section of the paper, describing the
          plot that displays the final transport rate values for each galaxy in the dataset.</p>
-         <img src="src/assets/mnras-plot.png" alt="Shreya"  width="503.4" height="405" />
+         <img src="src/assets/mnras-plot.png" alt="cosmic rays plot"  width="503.4" height="405" />
          <p><i>Figure 2</i></p>
          <div className="project-links-container">
            <a href="https://github.com/sn82978/Cosmic-Ray-Transport-Plots" className="project-link">Github</a>
@@ -70,14 +71,17 @@ function ResearchContent() {
 }
 // 1678 by 1350
 function Research() {
- return (
-   <div className="app">
-     <Header />
-     <Navigation />
-     <ResearchContent />
-     <Footer />
-   </div>
- );
+  return (
+    <>
+      <MatrixBackground /> {/* Add the MatrixBackground component here */}
+      <div className="app">
+        <Header />
+        <Navigation />
+        <ResearchContent />
+        <Footer />
+      </div>
+    </>
+  );
 }
 
 
