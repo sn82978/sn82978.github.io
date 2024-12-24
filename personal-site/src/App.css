@@ -241,3 +241,8 @@ h1 {
  background-color: #7cfc00;
  color: black;
 }
+
+.custom-link {
+    color: #666;
+    text-decoration: none;
+}
