@@ -4,6 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Research from './Research'
+import Projects from './Projects'
 
 
 createRoot(document.getElementById('root')).render(
@@ -12,6 +13,7 @@ createRoot(document.getElementById('root')).render(
      <Routes>
        <Route path="/" element={<App />} />
        <Route path="/research" element={<Research />} />
+       <Route path="/projects" element={<Projects />} />
      </Routes>
    </Router>
  </StrictMode>

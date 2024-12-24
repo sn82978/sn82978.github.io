@@ -96,22 +96,22 @@ h4 {
  transform: translateY(-50%);
  height: 60%;
  width: 1px;
- background-color: #fff; /* Line color */
+ background-color: #fff;
 }
 
 
 .navigation a {
- color: #ffffff; /* Text color */
+ color: #ffffff;
  text-decoration: none;
  font-size: 14px;
- display: block; /* Make the link fill the li */
- transition: background-color 0.3s ease; /* Smooth transition */
+ display: block; 
+ transition: background-color 0.3s ease;
 }
 
 
 .navigation a:hover {
- background: linear-gradient(to right, #7cfc00, #32cd32); /* Gradient background */
- color: #000; /* Keep text color black on hover */
+ background: linear-gradient(to right, #7cfc00, #32cd32);
+ color: #000;
 }
 
 
@@ -147,12 +147,12 @@ h2, h3 {
 
 .shreya-image {
  width: 350px;
- height: auto; /* Maintains aspect ratio */
+ height: auto;
 }
 
 
 .logo {
- width: 30px; /* Adjust the size as needed */
+ width: 30px;
  height: 30px;
  margin-right: 1rem;
 }
@@ -172,7 +172,6 @@ h1 {
  font-size: 10px;
 }
 
-
 .typewriter {
  display: inline-block;
  overflow: hidden;
@@ -183,18 +182,15 @@ h1 {
  animation: blink-caret .75s step-end infinite;
 }
 
-
 @keyframes blink-caret {
  from, to { border-color: transparent }
  50% { border-color: #7cfc00; }
 }
 
-
 .research-content {
  padding: 20px;
  background-color: #000000;
 }
-
 
 .research-title {
  color: #7cfc00;
@@ -203,15 +199,11 @@ h1 {
  text-transform: uppercase;
 }
 
-
 .project-links-container {
  display: flex;
  justify-content: center;
  width: 100%;
 }
-
-
-
 
 .project {
  width: 100%;
@@ -224,11 +216,6 @@ h1 {
  flex-direction: column;
  align-items: center;
 }
-
-
-
-
-
 
 .project-title {
  color: #7cfc00;
