@@ -1,0 +1,243 @@
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Lato:wght@400;700&display=swap');
+
+
+body {
+ background-color: #000000;
+ color: #fff;
+ margin: 0;
+ padding: 0;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+ font-family: 'Orbitron', sans-serif;
+}
+
+
+h4 {
+ color: #7cfc00;
+ font-size: 22px;
+}
+
+
+.app {
+ width: 60%;
+ height: 60%;
+ margin: 1;
+ background-color: #1a1a1a;
+}
+
+
+.header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 10px;
+ height: 15px;
+ background-color: #666;
+}
+
+
+.logo {
+ height: 10px;
+}
+
+
+.header-actions {
+ display: flex;
+ gap: 0px;
+}
+
+
+.navigation {
+ background-color: #000000;
+}
+
+
+.navigation ul {
+ display: flex;
+ list-style-type: none;
+ padding: 0;
+ margin: 0;
+}
+
+
+.navigation li {
+ padding: 5px 10px;
+ position: relative;
+}
+
+
+.navigation li:not(:last-child)::after {
+ content: '';
+ position: absolute;
+ right: 0;
+ top: 50%;
+ transform: translateY(-50%);
+ height: 60%;
+ width: 1px;
+ background-color: #fff; /* Line color */
+}
+
+
+.navigation a {
+ color: #ffffff; /* Text color */
+ text-decoration: none;
+ font-size: 14px;
+ display: block; /* Make the link fill the li */
+ transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+
+.navigation a:hover {
+ background: linear-gradient(to right, #7cfc00, #32cd32); /* Gradient background */
+ color: #000; /* Keep text color black on hover */
+}
+
+
+.main-content {
+ display: flex;
+ padding: 10px;
+}
+
+
+.left-column {
+ flex: 1;
+ margin-right: 10px;
+}
+
+
+.right-column {
+ flex: 2;
+}
+
+
+h2, h3 {
+ color: #7cfc00;
+ font-size: 14px;
+ margin-top: 0;
+}
+
+
+.header-content {
+ display: flex;
+ align-items: center;
+}
+
+
+.shreya-image {
+ width: 350px;
+ height: auto; /* Maintains aspect ratio */
+}
+
+
+.logo {
+ width: 30px; /* Adjust the size as needed */
+ height: 30px;
+ margin-right: 1rem;
+}
+
+
+h1 {
+ margin: 0;
+ color: #7cfc00
+}
+
+
+.footer {
+ background-color: #000;
+ color: #666;
+ text-align: center;
+ padding: 5px;
+ font-size: 10px;
+}
+
+
+.typewriter {
+ display: inline-block;
+ overflow: hidden;
+ border-right: .15em solid #7cfc00;
+ white-space: nowrap;
+ margin: 0;
+ letter-spacing: .15em;
+ animation: blink-caret .75s step-end infinite;
+}
+
+
+@keyframes blink-caret {
+ from, to { border-color: transparent }
+ 50% { border-color: #7cfc00; }
+}
+
+
+.research-content {
+ padding: 20px;
+ background-color: #000000;
+}
+
+
+.research-title {
+ color: #7cfc00;
+ font-size: 36px;
+ margin-bottom: 20px;
+ text-transform: uppercase;
+}
+
+
+.project-links-container {
+ display: flex;
+ justify-content: center;
+ width: 100%;
+}
+
+
+
+
+.project {
+ width: 100%;
+ margin-bottom: 20px;
+ background-color: #1a1a1a;
+ padding: 20px;
+ border: 1px solid #7cfc00;
+ box-sizing: border-box;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+
+
+
+
+
+.project-title {
+ color: #7cfc00;
+ font-size: 24px;
+ margin-bottom: 10px;
+}
+
+
+.project-description {
+ color: #ffffff;
+ font-size: 16px;
+ margin-bottom: 15px;
+}
+
+
+.project-link {
+ display: inline-block;
+ background-color: black;
+ color: white;
+ padding: 8px 15px;
+ text-decoration: none;
+ font-weight: bold;
+ align-items: center;
+ margin-right: 10px;
+}
+
+
+.project-link:hover {
+ background-color: #7cfc00;
+ color: black;
+}
