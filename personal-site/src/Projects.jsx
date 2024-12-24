@@ -52,8 +52,8 @@ function ProjectsContent() {
            therapist-matching algorithm, ensuring a secure, scalable, and functional system.
          </p>
          <div className="project-links-container">
-           <a href="https://github.com/PatelPurav05/ActsAI" className="project-link">Github</a>
-           <a href="https://ballot.hackmit.org/project/cbspo-ztize-qaxbl-xmhub" className="project-link">DevPost</a>
+           <a href="https://github.com/PatelPurav05/ActsAI" className="project-link">GitHub</a>
+           <a href="https://ballot.hackmit.org/project/cbspo-ztize-qaxbl-xmhub" className="project-link">Devpost</a>
          </div>
        </div>
        <div className="project">
@@ -65,7 +65,7 @@ function ProjectsContent() {
            Through this, I created the model's training/testing/validation set. I finetuned the BERT model and then proceeded to test it, coming up with an
            accuracy of 80%. The model has around 6k downloads.
          </p>
-         <a href="https://huggingface.co/snoneeightfive/final-luna-sentiment-analysis" className="project-link">HuggingFace</a>
+         <a href="https://huggingface.co/snoneeightfive/final-luna-sentiment-analysis" className="project-link">Hugging Face</a>
        </div>
      </div>
    </div>

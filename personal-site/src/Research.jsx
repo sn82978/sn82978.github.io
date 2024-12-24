@@ -40,7 +40,7 @@ function ResearchContent() {
            we made use of out 26 GB of image data by splitting it into smaller 75x75 tiles. I have created a UI that then makes annotation
            easier, by providing a series of options asking the number of eggs in the smaller tile. This way, drawing bounding boxes is eliminated.
          </p>
-         <img src="classifier-site-sample.png" alt="Classifier Site Sample" width="596.4" height="301.2" />
+         <img src="classifier-site-sample.png" alt="Classifier Site Sample" className="project-image"  />
          <p><i>Sample of the UI</i></p>
          <a href="https://github.com/rose-mueller-labs/Classifier-Site" className="project-link">Github</a>
        </div>
@@ -57,7 +57,7 @@ function ResearchContent() {
          learn to use technical vocabulary in my explanations. That June, I presented at the American Astronomical Society Conference (AAS).
          After the presentation, I began to work on the research paper. I helped write the methods section of the paper, describing the
          plot that displays the final transport rate values for each galaxy in the dataset.</p>
-         <img src="mnras-plot.png" alt="cosmic rays plot"  width="503.4" height="405" />
+         <img src="mnras-plot.png" alt="cosmic rays plot" className="project-image" />
          <p><i>Figure 2</i></p>
          <div className="project-links-container">
            <a href="https://github.com/sn82978/Cosmic-Ray-Transport-Plots" className="project-link">Github</a>
