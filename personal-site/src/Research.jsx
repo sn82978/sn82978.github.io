@@ -35,14 +35,22 @@ function ResearchContent() {
        <div className="project">
          <h3 className="project-title">Computer Vision to Count <i>Drosophila Melanogaster</i> Eggs</h3>
          <p className="project-description">
-           With a multidisciplinary approach, we use computer vision to detect drosophila melanogaster (fruit fly) eggs to automate egg-counting.
-           At the moment, my team and I are working on the creating a fully annotated dataset for the model. In this stage, to make annotating faster,
-           we made use of out 26 GB of image data by splitting it into smaller 75x75 tiles. I have created a UI that then makes annotation
-           easier, by providing a series of options asking the number of eggs in the smaller tile. This way, drawing bounding boxes is eliminated.
+           With a multidisciplinary approach, I use computer vision to detect drosophila melanogaster (fruit fly) eggs to automate egg-counting.
+           The images of fly eggs contain varied overlaid eggs, causing current computer vision models and methods to develop them have difficulty
+           differentiating between one egg and two overlaid eggs. In an attempt to address, I propose a novel approach to increase accuracy
+           of CV models to detect small objects when images are of lower quality. Rather than aritificially augmenting the quality using models such as CARN-M,
+           I proposed splitting the images into smaller 75x75 tiles. These tiles encapsulated 0-10 eggs. Each one of these counts represents a class that a smaller
+           image could be classified into. In training the model on these smaller 75x75 tiles matching up to 0 to 10 egg classes, the model showed considerable improved.
+           Additionally, rather than manually annotating, creating a portal to help quickly annotate these by have automatically created "bounding boxes," 
+           egg counting time was decreased by 10x. The resulting model with only one set of annotated images has an accuracy of 88%. Below is a sample of the classifier site
+           used to annotate/classify the tiles to egg count classes.
          </p>
          <img src="classifier-site-sample.png" alt="Classifier Site Sample" className="project-image"  />
          <p><i>Sample of the UI</i></p>
-         <a href="https://github.com/rose-mueller-labs/Classifier-Site" className="project-link">Github</a>
+         <div className="project-links-container">
+          <a href="https://github.com/sn82978/Classifier-Site" className="project-link">Classifier Site Github</a>
+          <a href="https://github.com/sn82978/CNN-Classifier" className="project-link">CNN Github</a>
+         </div>
        </div>
        <div className="project">
          <h3 className="project-title">Constraining Cosmic-Ray Transport with Observational Data</h3>
