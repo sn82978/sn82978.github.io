@@ -32,13 +32,23 @@ function ProjectsContent() {
      <h1 className="typewriter">{text}</h1>
      <p></p>
      <div className="project-container">
-        {/* <div className="project">
-         <h3 className="project-title">Aristocrat Model</h3>
+        <div className="project">
+         <h3 className="project-title">Boiling Bad (Vlog Site)</h3>
          <p className="project-description">
-           [description incoming]
+         BOILING BAD is a web application that allows users to view recipes and vlogs made by
+         my roommate and I, built using Vite+React+Typescript. The site is designed with a 
+         user-friendly interface, making it easy to 
+         navigate and find the information you're looking for. The project was made to share
+         the funny vlogs my roommate and I make with the world. 
+         This project demonstrates skills 
+         in web development, API integration, and data presentation.
          </p>
-         <a href="https://github.com/sn82978/Aristocrat-Model" className="project-link">GitHub</a>
-       </div> */}
+         <img src="Screenshot 2025-03-23 at 10.15.24 PM.png" className="project-image"></img>
+         <div className="project-links-container">
+          <a href="https://github.com/sn82978/BOILING-BAD" className="project-link">GitHub</a>
+          <a href="https://sn82978.github.io/BOILING-BAD/" className="project-link">Deployed Site</a>
+          </div>
+       </div>
         <div className="project">
          <h3 className="project-title">HackMIT: ActsAI</h3>
          <p className="project-description">
@@ -65,6 +75,7 @@ function ProjectsContent() {
            Through this, I created the model's training/testing/validation set. I finetuned the BERT model and then proceeded to test it, coming up with an
            accuracy of 80%. The model has around 6k downloads.
          </p>
+         <img src="Screenshot 2025-03-23 at 10.49.53 PM.png" className="project-image"></img>
          <a href="https://huggingface.co/snoneeightfive/final-luna-sentiment-analysis" className="project-link">Hugging Face</a>
        </div>
      </div>
