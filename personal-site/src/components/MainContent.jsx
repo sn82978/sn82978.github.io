@@ -26,7 +26,7 @@ function MainContent() {
    <main className="main-content">
      <div className="left-column">
        <section className="news">
-         <img src="IMG_7762 2.jpeg" className="shreya-image" alt="Shreya" />
+         <img src="IMG_3918.jpg" className="shreya-image" alt="Shreya" />
        </section>
      </div>
      <div className="right-column">
@@ -37,10 +37,15 @@ function MainContent() {
            My research interests consist of computational astrophysics, computational biology, compilers, and machine learning. 
          </p>
          <p>I have a lot of experience with machine learning and creating models. In the past, I have pruned datasets and finetuned existing models to
-          create custom models for whatever issue I'm facing. At the moment, I am creating a Computer Vision model from scratch using the Haar-Cascade algorithm
-          to detect very small <i>drosophila melanogaster</i> eggs, expediating the current manual process of egg-counting in research labs. 
+          create custom models for whatever issue I'm facing. At the moment, I am creating a Computer Vision CNN model
+          to detect very small <i>drosophila melanogaster</i> eggs, expediating the current manual process of egg-counting in research labs. I also developed
+          an interface to have producing bounding-boxed training data for computer vision models (pretraining or from scratch) faster by 10x, rivaling current practices such as using Roboflow.
          </p>
-         <p>I also love 80's rock and cryptography, so let me know if you want music recommendations encoded as Aristocratic ciphers!</p>
+         <p>In systems, I am interested in distributed systems research, specifically in concurrency and parallelism and distributed AI. I am currently looking to join research projects
+          in this field, please reach out to me if you are looking for undergraduates passionate in the topic to join
+          your project!
+         </p>
+         <p>I also love 80's rock, <i>The Matrix</i> (only the first one), and ciphers! Let me know if you have song recommendations</p>
        </section>
      </div>
    </main>
