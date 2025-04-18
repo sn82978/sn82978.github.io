@@ -44,12 +44,44 @@ function ResearchContent() {
            Additionally, rather than manually annotating, creating a portal to help quickly annotate these by have automatically created "bounding boxes," 
            egg counting time was decreased by 10x. The resulting model with only one set of annotated images has an accuracy of 88%. Below is a sample of the classifier site
            used to annotate/classify the tiles to egg count classes.
+
+           In this project, my team and I won the Chancellor's Award of Execellent Research, making us a finalist in the Oral Presentation competition
+           as UCI's UROP Symposium.
          </p>
          <img src="classifier-site-sample.png" alt="Classifier Site Sample" className="project-image"  />
          <p><i>Sample of the UI</i></p>
          <div className="project-links-container">
           <a href="https://github.com/sn82978/Classifier-Site" className="project-link">Classifier Site Github</a>
           <a href="https://github.com/sn82978/CNN-Classifier" className="project-link">CNN Github</a>
+         </div>
+       </div>
+       <div className="project">
+         <h3 className="project-title">Statistical Analaysis and Machine Learning to Detect Drift v. Anti-Drift</h3>
+         <p className="project-description">
+           What is the strength of genetic drift versus the strength of balancing selection on a 
+           population that has undergone an evolution stasis for hundreds of generations? Genetic 
+           drift is the stochastic process of allele frequency change in the absence of selective 
+           pressures. However, a population might never truly be entirely under the force of 
+           genetic drift as a constant environment is still itself an environment continuously 
+           applying the same selection across time. To address this, we analyzed genomic data 
+           sequenced from twenty Drosophila populations from two different selection-regimes at 
+           four timepoints across thirteen years and hundreds of Drosophila generations. From 
+           this evolutionary trajectory data, we combined both traditional analytical techniques 
+           such as linear models, with modern machine learning approaches to answer the big 
+           question. We find evidence for both multitudes of regions under genetic drift as well 
+           as regions under some kind of balancing selection. Additionally, we also find that the 
+           regions under balancing selection are the same regions under selection from previous 
+           trajectory experiments. Broadly speaking, this research might help us better understand 
+           how a population changes in the absence of any novel selective pressures.
+
+           In this project, my team and I were accepted to present our poster at both the UROP 
+           Symposium and the Calit2 Symposium
+         </p>
+         <img src="Figure_1.png" alt="The first linear regression graph" className="project-image"  />
+         <p><i>The first linear regression I did on our data</i></p>
+         <div className="project-links-container">
+          <a href="https://github.com/rose-mueller-labs/snp-data" className="project-link">Data Analysis Github</a>
+          <a href="https://www.youtube.com/watch?v=Phwr1gukG9E" className="project-link">UROP Presentation Audition</a>
          </div>
        </div>
        <div className="project">
