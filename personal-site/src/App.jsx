@@ -8,7 +8,6 @@ import Projects from "./Projects";
 import Research from "./Research";
 
 
-// Dummy data
 const artist = {
   tracks: [
     {
@@ -62,7 +61,7 @@ const artistPick = {
   postedByAvatar: "headshot.jpg",
   title: "ML to Detect Fruit Fly Eggs",
   type: "Research",
-  githubUrl: "https://github.com/sn82978/CNN-Classifier" // <-- Add your unique link here
+  githubUrl: "https://github.com/sn82978/CNN-Classifier"
 };
 
 
@@ -154,7 +153,7 @@ function Sidebar({ playlists }) {
                   }}
                 >
                   <a
-                    href="https://drive.google.com/file/d/12f1we87TBJ78daKGBmC6RHoP3fVy-gO6/view?usp=sharing" // <-- Replace with your actual resume URL
+                    href="https://drive.google.com/file/d/12f1we87TBJ78daKGBmC6RHoP3fVy-gO6/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{ color: "#b3b3b3", textDecoration: "none" }}
@@ -185,65 +184,6 @@ function Sidebar({ playlists }) {
     </aside>
   );
 }
-
-
-// function Sidebar({ playlists }) {
-//   const location = useLocation();
-//   return (
-//     <aside style={{
-//       width: 260,
-//       background: "#000",
-//       color: "#b3b3b3",
-//       height: "100vh",
-//       padding: "24px 0",
-//       display: "flex",
-//       flexDirection: "column",
-//       borderRight: "1px solid #222",
-//     }}>
-//       <div style={{ padding: "0 24px", marginBottom: 24 }}>
-//         <button style={{
-//           background: "#fff",
-//           color: "#000",
-//           border: "none",
-//           borderRadius: 999,
-//           fontWeight: "bold",
-//           padding: "8px 24px",
-//           marginBottom: 16,
-//           cursor: "pointer"
-//         }}>Create</button>
-//       </div>
-//       <div style={{ padding: "0 24px" }}>
-//         <div style={{ fontWeight: "bold", color: "#fff", marginBottom: 16 }}>Pages</div>
-//         <div style={{ fontSize: 14, marginBottom: 8 }}>Explore</div>
-//         <ul style={{ listStyle: "none", padding: 0 }}>
-//           <li
-//             style={{
-//               padding: "8px 0",
-//               background: location.pathname === "/" ? "#282828" : "transparent",
-//               color: location.pathname === "/" ? "#fff" : "#b3b3b3",
-//               borderRadius: 4,
-//               cursor: "pointer"
-//             }}>
-//             <Link to="/" style={{ color: "inherit", textDecoration: "none" }}>home</Link>
-//           </li>
-//           {playlists.map((pl) => (
-//             <li
-//               key={pl}
-//               style={{
-//                 padding: "8px 0",
-//                 background: location.pathname === `/${pl}` ? "#282828" : "transparent",
-//                 color: location.pathname === `/${pl}` ? "#fff" : "#b3b3b3",
-//                 borderRadius: 4,
-//                 cursor: "pointer"
-//               }}>
-//               <Link to={`/${pl}`} style={{ color: "inherit", textDecoration: "none" }}>{pl}</Link>
-//             </li>
-//           ))}
-//         </ul>
-//       </div>
-//     </aside>
-//   );
-// }
 
 function PopularTracks({ tracks }) {
   const handleTrackClick = (url) => {

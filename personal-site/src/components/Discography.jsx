@@ -3,8 +3,7 @@ import React, { useState } from "react";
 const FILTERS = ["Popular releases"]; 
 // , "Albums", "Singles and EPs"
 
-// Replace this with your actual resume URL
-const RESUME_URL = "https://yourdomain.com/your-resume.pdf";
+const RESUME_URL = "https://drive.google.com/file/d/12f1we87TBJ78daKGBmC6RHoP3fVy-gO6/view?usp=sharing";
 
 function Discography({ albums }) {
   const [filter, setFilter] = useState(FILTERS[0]);

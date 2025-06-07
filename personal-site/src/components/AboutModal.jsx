@@ -1,6 +1,5 @@
 import React from "react";
 
-// Replace with your own image import or URL
 const aboutImage = "headshot.jpg";
 
 export default function AboutModal({ open, onClose, aboutText }) {
