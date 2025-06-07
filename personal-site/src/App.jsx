@@ -257,7 +257,7 @@ function PlaylistPage({ name }) {
 function HomePage() {
   return (
     <>
-       <div style={{ padding: "2px 32px" }}>
+       <div style={{ padding: "24px 32px" }}>
       <ArtistHeader artist={artist} />
       <h2 style={{ color: "#fff", fontSize: 28, marginBottom: 16 }}>About</h2>
       <p>Hi! I'm Shreya, a computer science major specializing in Intelligent Systems and 
@@ -283,6 +283,7 @@ function HomePage() {
       </div>
       <PopularTracks tracks={artist.tracks} />
       <div style={{ padding: "24px 32px" }}>
+      <h2 style={{ color: "#fff", fontSize: 28, marginBottom: 16 }}>Artist's Pick</h2>
         <ArtistPick pick={artistPick} />
       </div>
       <div style={{ padding: "24px 32px" }}>
