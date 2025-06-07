@@ -1,10 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './App.css';
-import Header from './components/Header';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import MatrixBackground from './components/MatrixBackground';
-
+import "./App.css"
 
 function ResearchContent() {
  const [text, setText] = useState('');
@@ -113,12 +108,8 @@ function ResearchContent() {
 function Research() {
   return (
     <>
-      <MatrixBackground />
       <div className="app">
-        <Header />
-        <Navigation />
         <ResearchContent />
-        <Footer />
       </div>
     </>
   );

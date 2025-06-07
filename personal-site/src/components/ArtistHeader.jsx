@@ -2,12 +2,12 @@ import React, { useState } from "react";
 
 const artist = {
   name: "Shreya Nakum",
-  image: "IMG_6628_Medium.jpeg",
+  image: "IMG_2562.jpeg",
   verified: true,
 };
 
 export default function ArtistHeader() {
-  const [followers, setFollowers] = useState(488);
+  const [followers, setFollowers] = useState(605);
 
   const [isFollowing, setIsFollowing] = useState(false);
 
@@ -66,7 +66,7 @@ export default function ArtistHeader() {
                 <circle cx="8" cy="8" r="8" fill="#1db954" />
                 <path d="M12 5.5l-4.2 4.2L6 8.9" stroke="#fff" strokeWidth="1.5" fill="none" />
               </svg>
-              Verified Artist
+              Verified Programmer
             </span>
           </div>
         )}
@@ -84,7 +84,7 @@ export default function ArtistHeader() {
           {artist.name}
         </h1>
         <div style={{ color: "#fff", fontSize: 18, marginTop: 20, fontWeight: 500 }}>
-          {followers.toLocaleString()} listeners
+          {followers.toLocaleString()} contributions
         </div>
         {/* Action Buttons */}
         <div style={{ display: "flex", alignItems: "center", marginTop: 32, gap: 16 }}>
@@ -121,7 +121,7 @@ export default function ArtistHeader() {
               transition: "background 0.2s",
             }}
           >
-            {isFollowing ? "Following" : "Follow"}
+            {isFollowing ? "Pushed!" : "Push to main"}
           </button>
           <button
             style={{

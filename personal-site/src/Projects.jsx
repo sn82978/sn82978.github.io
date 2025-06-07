@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './App.css';
-import Header from './components/Header';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import MatrixBackground from './components/MatrixBackground';
+import "./App.css"
 
 
 function ProjectsContent() {
@@ -86,12 +82,8 @@ function ProjectsContent() {
 function Projects() {
   return (
     <>
-      <MatrixBackground />
       <div className="app">
-        <Header />
-        <Navigation />
         <ProjectsContent />
-        <Footer />
       </div>
     </>
   );
