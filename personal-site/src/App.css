@@ -226,48 +226,13 @@ h1 {
     text-decoration: none;
 }
 
-.footer {
-  display: flex;
-  justify-content: space-around;
-  padding: 20px;
-  background-color: black;
+.popular-track-row {
+  transition: background 0.2s;
+  border-radius: 12px;
 }
 
-.footer-section {
-  text-align: center;
-}
-
-.footer-heading {
-  color: white;
-  margin-bottom: 10px;
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-}
-
-.footer-icon {
-  width: 30px;
-  height: 30px;
-  margin: 0 10px;
-  transition: opacity 0.3s ease;
-}
-
-.footer-icon:hover {
-  opacity: 0.7;
-}
-
-.footer-text {
-  color: #808080; /* This sets the text color to gray */
-  margin: 5px 0;
-}
-
-.footer-text a {
-  color: gray;
-  text-decoration: underline;
-}
-
-.footer-text a:hover {
-  text-decoration: underline;
+.popular-track-row:hover, .popular-track-row:focus {
+  background: rgba(220, 220, 220, 0.25); /* light gray, semi-opaque */
+  border-radius: 12px;
+  outline: none;
 }

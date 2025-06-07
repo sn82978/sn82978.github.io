@@ -204,18 +204,19 @@ function PopularTracks({ tracks }) {
         </thead>
         <tbody>
           {tracks.map((track, i) => (
-            <tr
-              key={track.title}
-              style={{
-                borderTop: "1px solid #282828",
-                fontSize: 18,
-                cursor: "pointer"
-              }}
-              onClick={() => handleTrackClick(track.githubUrl)}
-              tabIndex={0}
-              onKeyPress={e => { if (e.key === "Enter" || e.key === " ") handleTrackClick(track.githubUrl); }}
-              title="View on GitHub"
-            >
+           <tr
+           key={track.title}
+           className="popular-track-row"
+           style={{
+             borderTop: "1px solid #282828",
+             fontSize: 18,
+             cursor: "pointer"
+           }}
+           onClick={() => handleTrackClick(track.githubUrl)}
+           tabIndex={0}
+           onKeyPress={e => { if (e.key === "Enter" || e.key === " ") handleTrackClick(track.githubUrl); }}
+           title="View on GitHub"
+         >
               <td style={{ padding: "8px 0" }}>{i + 1}</td>
               <td>
                 <span style={{ marginRight: 8 }}>{track.title}</span>
