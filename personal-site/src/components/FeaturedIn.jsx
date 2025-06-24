@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 
-const FILTERS = ['Albums (Click "Show All" for Details!")']; 
+const FILTERS = ['']; 
 // , "Albums", "Singles and EPs"
 
 const RESUME_URL = "https://drive.google.com/file/d/12f1we87TBJ78daKGBmC6RHoP3fVy-gO6/view?usp=sharing";
 
 import { useNavigate } from "react-router-dom";
 
-function Discography({ albums }) {
+function FtIn({ albums }) {
   const navigate = useNavigate();
 
   const handleShowAll = () => {
@@ -21,7 +21,7 @@ function Discography({ albums }) {
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 16 }}>
         {/* <h2 style={{ color: "#fff", fontSize: 24, fontWeight: 700 }}>Discography</h2> */}
         {/* <h1>Discography</h1> */}
-        <h2 style={{ color: "#fff", fontSize: 28, marginBottom: 16 }}>Discography</h2>
+        <h2 style={{ color: "#fff", fontSize: 28, marginBottom: 16 }}>Featuring Shreya Nakum</h2>
         <button
           onClick={handleShowAll}
           style={{
@@ -35,26 +35,6 @@ function Discography({ albums }) {
         >
           Show all
         </button>
-      </div>
-      <div style={{ display: "flex", gap: 12, marginBottom: 24 }}>
-        {FILTERS.map(f => (
-          <button
-            key={f}
-            onClick={() => setFilter(f)}
-            style={{
-              padding: "8px 20px",
-              borderRadius: 999,
-              border: "none",
-              background: filter === f ? "#fff" : "#222",
-              color: filter === f ? "#000" : "#fff",
-              fontWeight: 600,
-              fontSize: 15,
-              cursor: "pointer"
-            }}
-          >
-            {f}
-          </button>
-        ))}
       </div>
       <div style={{ display: "flex", gap: 32 }}>
         {albums.map(album => (
@@ -90,7 +70,7 @@ function Discography({ albums }) {
                 color: "#b3b3b3",
                 fontSize: 13,
                 marginTop: 2
-              }}>Latest Release &middot; Album</div>
+              }}>Latest Release &middot; Single</div>
             )}
           </div>
         ))}
@@ -99,4 +79,4 @@ function Discography({ albums }) {
   );
 }
 
-export default Discography;
+export default FtIn;
