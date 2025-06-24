@@ -65,15 +65,15 @@ const artistPick = {
 
 const albums = [
   {
-    title: "Constraining Cosmic-Ray Transport with Observational Data",
-    cover: "mnras-plot.png",
-    year: "2023",
-    type: "California Institute of Technology",
-    latest: false,
-    githubUrl: "https://github.com/sn82978/Cosmic-Ray-Transport-Plots",
-    category: "Research", // or "Projects",
-    paper: "https://academic.oup.com/mnras/article/521/2/2477/7070735?login=false", // add for each entry
-    poster: "https://aas240-aas.ipostersessions.com/Default.aspx?s=39-11-68-61-92-B5-5B-4D-65-27-D7-9C-C2-2B-9E-B1#stay"
+    title: "Tiling: Computer Vision to Detect Fruit Fly Eggs",
+    cover: "MLFFPic.png",
+    year: "2025",
+    type: "Rose & Mueller Labs",
+    latest: true,
+    githubUrl: "https://github.com/sn82978/CNN-Classifier",
+    category: "Research",
+    paper: "https://docs.google.com/document/d/1g8U7XFLoaX3DetpHfGf9URt-OD2jN2BHP9Nv4N5sYyY/edit?usp=sharing",
+    poster: "https://drive.google.com/file/d/12x2XuuYTxEq3A-VKrbrTqwNeN5h-iyRa/view"
   },
   {
     title: "Statistical Analaysis and Machine Learning to Detect Drift v. Anti-Drift",
@@ -87,17 +87,6 @@ const albums = [
     poster: "https://drive.google.com/file/d/1jpDVq2Ie3iVeWhEsMzWQTm08o821e0iy/view?usp=sharing"
   },
   {
-    title: "Tiling: Computer Vision to Detect Fruit Fly Eggs",
-    cover: "MLFFPic.png",
-    year: "2025",
-    type: "Rose & Mueller Labs",
-    latest: true,
-    githubUrl: "https://github.com/sn82978/CNN-Classifier",
-    category: "Research",
-    paper: "https://docs.google.com/document/d/1g8U7XFLoaX3DetpHfGf9URt-OD2jN2BHP9Nv4N5sYyY/edit?usp=sharing",
-    poster: "https://drive.google.com/file/d/12x2XuuYTxEq3A-VKrbrTqwNeN5h-iyRa/view"
-  },
-  {
     title: "UI for Tiling",
     cover: "classifier-site-sample.png",
     year: "2025",
@@ -107,6 +96,17 @@ const albums = [
     category: "Research",
     paper: "https://github.com/sn82978/Classifier-Site/blob/main/README.md",
     poster: "https://drive.google.com/file/d/12x2XuuYTxEq3A-VKrbrTqwNeN5h-iyRa/view",
+  },
+  {
+    title: "Constraining Cosmic-Ray Transport with Observational Data",
+    cover: "mnras-plot.png",
+    year: "2023",
+    type: "California Institute of Technology",
+    latest: false,
+    githubUrl: "https://github.com/sn82978/Cosmic-Ray-Transport-Plots",
+    category: "Research", // or "Projects",
+    paper: "https://academic.oup.com/mnras/article/521/2/2477/7070735?login=false", // add for each entry
+    poster: "https://aas240-aas.ipostersessions.com/Default.aspx?s=39-11-68-61-92-B5-5B-4D-65-27-D7-9C-C2-2B-9E-B1#stay"
   },
   {
     title: "Sentiment Analysis for Financial News",

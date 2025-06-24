@@ -1,14 +1,17 @@
 # Welcome to my Personal Site!
 
 ## Introduction
-I started making this site to explore web development. The site started off with pure HTML and some CSS, but I later began developing it over the summer with React. 
+I started making this site to explore web development. The site started off with pure HTML and some CSS, but I later began developing it over the summer with React, exploring different types of components.
 
 ## What's it made of?
-I made this site using React+Vite, JavaScript XML, and CSS. If you look through it, the primary components at play here are the site's background based on the first Matrix movie (see the source code in ```MatrixBackground.jsx```), the footer and header (```Footer.jsx``` and ```Header.jsx```), and the Nav bar (```Navigation.jsx```). The Matrix background took the most time for me since I had to figure out how to align the numbers correctly and later decided I wanted to make the falling characters variable. 
+I made this site using React+Vite, JavaScript XML, and CSS. The site is modeled on Spotify's UI. Why? I am a huge music nerd, and I adore Spotify's UI. Moreover, I thought it would be fun to use the Spotify Artist's page to showcase my work since--if you think about it--computer programmers are arists in their own way :)
+
+### Navigation
+"Resume," "Projects," "CV," BORING! What about Discography? Your work throughout your career is your discography! Your projects are albums are your silly off-hand programs are singles! This thought made me decide to reformat my navbar to reflect playlists on Spotify, the way that they showcase arists' work. Also, having weird names in the navbar makes you want to explore more, too :)
 
 ## Additions
-This website is far from done, some things I want to implement in the future are:
-- Better organization, right now all my pages are in src and not all the files in the components directory are components. Additionally, I have one massive CSS file that holds all the styling for all the pages on the site, I want to make my CSS file modular similar to what I did in my latest site [Boiling Bad](https://sn82978.github.io/BOILING-BAD/).
-- Make a Personal page, something to showcase my personality and interests further than my homepage's blurb.
-- Add more silly features, such as a red pill-blue pill easter egg to make the site more interesting.
-- Integrate a CV into my website rather than just the clickable resume in the navigation bar.
+My friends know that I always start making changes to this site when it's finals and changes I make are always related to the UI. This is the third change to the UI that I have been in the life of this website, so, this site is very much living and is going to have more changes! Here are some things I am planning to implement:
+- Modularized CSS files, similar to what I did in Boiling Bad
+- Easter eggs! The play button, Create, and three dots can do something, I have not yet decided what they will do, through
+- Change "Popular Tracks" to something interesting rather than just something that could be the footer.
+- Delete Projects.jsx and Research.jsx? (Not sure if I will do this, these contains a lot of writing that I did)
