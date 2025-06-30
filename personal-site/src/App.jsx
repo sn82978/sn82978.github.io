@@ -6,6 +6,7 @@ import ArtistPick from "./components/ArtistPick";
 import Discography from "./components/Discography";
 import FtIn from "./components/FeaturedIn";
 import AllEntriesPage from "./components/AllEntriesPage"; // Create this component
+import Footer from "./components/Footer";
 
 
 const artist = {
@@ -407,6 +408,7 @@ function HomePage() {
       <div style={{ padding: "24px 32px" }}>
         <FtIn albums={features}/>
       </div>
+      <Footer></Footer>
     </>
   );
 }

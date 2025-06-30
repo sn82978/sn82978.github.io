@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Footer from "./Footer";
 
 const FILTERS = ["Research", "Projects"];
 
@@ -227,7 +228,7 @@ function AllEntriesPage({ entries }) {
                   marginBottom: 20, // Increased from 10 to 20 for more space
                   display: "flex",
                   alignItems: "center",
-                  lineHeight: 1.7 // Increases vertical space within each bullet
+                  lineHeight: 1.7 // Make more vertical space within each bullet
                 }}
               >
                 <span
@@ -248,6 +249,7 @@ function AllEntriesPage({ entries }) {
           </div>
         ))}
       </div>
+      <Footer></Footer>
     </div>
   );
 }

@@ -6,6 +6,7 @@ const FILTERS = ['Albums (Click "Show All" for Details!")'];
 const RESUME_URL = "https://drive.google.com/file/d/12f1we87TBJ78daKGBmC6RHoP3fVy-gO6/view?usp=sharing";
 
 import { useNavigate } from "react-router-dom";
+import Footer from "./Footer";
 
 function Discography({ albums }) {
   const navigate = useNavigate();
