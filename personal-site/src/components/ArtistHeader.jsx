@@ -11,6 +11,10 @@ export default function ArtistHeader() {
 
   const [isFollowing, setIsFollowing] = useState(false);
 
+  const handleDotsClick = () => {
+    window.open("https://github.com/sn82978/sn82978.github.io", "_blank", "noopener,noreferrer");
+  };
+
   const handleFollowClick = () => {
     if (!isFollowing) {
       setFollowers(followers + 1);
@@ -19,6 +23,10 @@ export default function ArtistHeader() {
       setFollowers(followers - 1);
       setIsFollowing(false);
     }
+  };
+
+  const handlePlayClick = () => {
+    window.open("https://www.youtube.com/watch?v=U49nqkmsq0w", "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -89,6 +97,7 @@ export default function ArtistHeader() {
         {/* Action Buttons */}
         <div style={{ display: "flex", alignItems: "center", marginTop: 32, gap: 16 }}>
           <button
+            onClick={handlePlayClick}
             style={{
               background: "#1db954",
               color: "#fff",
@@ -124,6 +133,7 @@ export default function ArtistHeader() {
             {isFollowing ? "Pushed!" : "Push to main"}
           </button>
           <button
+            onClick={handleDotsClick}
             style={{
               background: "transparent",
               color: "#fff",

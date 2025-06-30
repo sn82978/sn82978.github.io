@@ -172,6 +172,10 @@ const features = [
 function Sidebar({ playlists }) {
   const location = useLocation();
 
+  const handleCreateClick = () => {
+    window.open("https://vite.dev/guide/", "_blank", "noopener,noreferrer");
+  };
+
   return (
     <aside style={{
       width: 260,
@@ -184,7 +188,9 @@ function Sidebar({ playlists }) {
       borderRight: "1px solid #222",
     }}>
       <div style={{ padding: "0 24px", marginBottom: 24 }}>
-        <button style={{
+        <button 
+        onClick={handleCreateClick}
+        style={{
           background: "#fff",
           color: "#000",
           border: "none",
@@ -385,7 +391,7 @@ function HomePage() {
                 biology or physics.</p>
               <p>My research interests consist of computational astrophysics, computational biology, and machine learning. I have a lot of experience with machine learning and creating models. In the past, I have pruned datasets and finetuned existing models to create custom models for whatever issue I'm facing. Recently, I have developed a Computer Vision CNN model to detect very small <i>drosophila melanogaster</i> eggs, expediating the current manual process of egg-counting in research labs. I also developed an interface to have producing bounding-boxed training data for computer vision models (pretraining or from scratch) faster by 10x, rivaling current practices such as using Roboflow.</p>
               <p>I am interested in joining research labs and internships in computational physics or pure machine learning.</p>
-              <p>In case you haven't noticed, I absolutely love music. At the moment, I recommend you to listen to "UNLIMITED" by NAV FT PLAYBOI CARTI. I also produce my own music (a page about that is coming soon) :p</p>
+              <p>In case you haven't noticed, I absolutely love music. At the moment, I recommend you to listen to "Reminiscing" by Little River Band.</p>
             </div>
           </div>
         </div>
