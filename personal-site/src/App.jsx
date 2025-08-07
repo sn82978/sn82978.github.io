@@ -55,16 +55,25 @@ const artist = {
 
 
 const artistPick = {
-  image: "MLFFPic.png",
+  image: "db.png",
   postedBy: "Shreya Nakum",
   postedByAvatar: "shreya-standing.png",
-  title: "ML to Detect Fruit Fly Eggs",
-  type: "Research",
-  githubUrl: "https://github.com/sn82978/CNN-Classifier"
+  title: "Uncovering the Typing and Distribution of Code Clones Across Forks of Open Source Microservice Repositories",
+  type: "NSF IRES: University of Oulu",
+  githubUrl: "https://github.com/Camithilwen/Code-Cloning-Analysis"
 };
 
 
 const albums = [
+    {
+    title:"Uncovering the Typing and Distribution of Code Clones Across Forks of Open Source Microservice Repositories",
+    cover: "db.png",
+    year:"2025",
+    type:"NSF IRES: University of Oulu",
+    latest: true,
+    githubUrl:"https://github.com/Camithilwen/Code-Cloning-Analysis",
+    category:"Research"
+  },
   {
     title: "Tiling: Computer Vision to Detect Fruit Fly Eggs",
     cover: "MLFFPic.png",
@@ -357,7 +366,6 @@ function PlaylistPage({ name }) {
 }
 
 // Home page component
-// Home page component
 function HomePage() {
   return (
     <>
@@ -387,12 +395,19 @@ function HomePage() {
           <div style={{ flex: "1 1 75%", marginLeft: 24 }}>
             <div style={{ color: "#fff", fontSize: 16, lineHeight: 1.7 }}>
               <p>Hi! I'm Shreya, a computer science major specializing in Intelligent Systems and 
-                Systems & Software at UC Irvine with a minor in Mathematics. I am passionate about 
+                Systems & Software at UC Irvine. I am a part of the Campus Honors Collegium and the Information 
+                and Computer Science Honors Program. I am passionate about 
                 multidisciplinary research, especially how AI tools can be used in fields such as 
                 biology or physics.</p>
-              <p>My research interests consist of computational astrophysics, computational biology, and machine learning. I have a lot of experience with machine learning and creating models. In the past, I have pruned datasets and finetuned existing models to create custom models for whatever issue I'm facing. Recently, I have developed a Computer Vision CNN model to detect very small <i>drosophila melanogaster</i> eggs, expediating the current manual process of egg-counting in research labs. I also developed an interface to have producing bounding-boxed training data for computer vision models (pretraining or from scratch) faster by 10x, rivaling current practices such as using Roboflow.</p>
-              <p>I am interested in joining research labs and internships in computational physics or pure machine learning.</p>
-              <p>In case you haven't noticed, I absolutely love music. At the moment, I recommend you to listen to "Reminiscing" by Little River Band.</p>
+              <p>My research interests consist of computational astrophysics, computational biology, and machine learning. I have a lot of experience with machine learning and creating models. In the past, I have pruned datasets and finetuned existing models to create custom models for whatever issue I'm facing. 
+                Recently, I have developed a Computer Vision CNN model to detect very small <i>drosophila melanogaster</i> eggs, 
+                expediating the current manual process of egg-counting in research labs. I also developed an interface to have 
+                producing bounding-boxed training data for computer vision models (pretraining or from scratch) faster by 10x, 
+                rivaling current practices such as using Roboflow. Over this last summer, I was accepted into the National Science Foundation's IRES program,
+                where I conducted research at the University of Oulu in Finland.</p>
+              <p>I am interested in joining research labs and internships in machine learning.</p>
+              <p>In case you haven't noticed, I absolutely love music. At the moment, I recommend you to listen to "Mugwort" by MF Doom (or just click the play button).</p>
+              <p>Have fun on my website and check out the buttons!</p>
             </div>
           </div>
         </div>
@@ -433,7 +448,6 @@ function App() {
       >
         <Sidebar playlists={artist.playlists} />
       </div>
-      {/* Scrollable Main Content */}
       <main
         style={{
           marginLeft: SIDEBAR_WIDTH,

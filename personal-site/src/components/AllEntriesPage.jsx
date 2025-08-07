@@ -93,6 +93,19 @@ const BULLET_POINTS = {
       </a>{" "}
     </>,
   ],
+  "Uncovering the Typing and Distribution of Code Clones Across Forks of Open Source Microservice Repositories": [
+    "Code reuse is a widespread efficiency practice in software development, especially in the emerging realm of microservice development. Microservices are small-scale, single-task or single-service software components which are coupled to other microservices to form robust large software systems via common communication protocols. There is a proliferation of microservice projects available with open source licenses through Github. This allows developers to quickly copy and adapt existing architecture to any given use case, but it also results in a proliferation of reused code in various states of change from the original source. Use of cloned code, though efficient, can carry intensive maintenance costs if changes are required across the entire population of a given clone. Identifying the presence and distribution of code clones within a software project is therefore of interest to developers, but manual identification of cloned code segments is tedious and time-consuming as code clones may exist as any of several subtypes. Furthermore, existing analysis tools are often limited in scope and available only for select programming languages. In response to the need for rapid and multilingual analysis for the full spectrum of code clone types, large language models (LLMs) emerge as a prime contender. In order to evaluate the potential of LLMs for this purpose, we compiled a dataset of 26 open source microservice repositories and 26 forks in various states of change and compared the performance of one general purpose and two code-specific LLMs. We found that the sampled LLMs performed close to the overall accuracy of human evaluators in identifying overall distribution of clones on a subset of the data, albeit with false negative results. We also found LLMs to be perform well at differentiating between clone subtypes when compared to an approach using non-generative machine learning techniques.",
+    <>
+      <a
+        href="https://github.com/Camithilwen/Code-Cloning-Analysis"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ color: "#1db954" }}
+      >
+        Github Repository
+      </a>{" "}
+    </>,
+  ],
   "UI for Tiling": [
     "This was the counterpart to the Tiling project, a UI created to help easily create a training dataset for machine learning models using the Tiling technique. You simply follow the instruction on the README.md and upload your images directory and start labelling. The idea is that to label each square, the name of the file is modified, and then to train, the dataset is set up such that the class is extracted directly from the file's name.",
     <>
