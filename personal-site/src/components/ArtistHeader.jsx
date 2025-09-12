@@ -1,3 +1,5 @@
+// AristHeader.jsx
+
 import React, { useState } from "react";
 
 const artist = {
@@ -7,7 +9,7 @@ const artist = {
 };
 
 export default function ArtistHeader() {
-  const [followers, setFollowers] = useState(737);
+  const [followers, setFollowers] = useState(841);
 
   const [isFollowing, setIsFollowing] = useState(false);
 
