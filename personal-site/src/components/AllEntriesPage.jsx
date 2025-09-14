@@ -4,7 +4,7 @@ const FILTERS = ["Research", "Projects"];
 
 const BULLET_POINTS = {
   "Constraining Cosmic-Ray Transport with Observational Data": {
-    description: "This project was my introduction to the world of research, and, as you may have noticed, focused in on computational astrophysics. In this project, I learned how to use libraries like pandas and numpy to do data analysis on large datasets. In the project, my role focused on creating a plot using a variety of astronomy and data science libraries showing the effective diffusivity coefficient for all galaxies in the Hubble COS-Halos dataset.",
+    description: "My intro to the world of research! I used libraries like pandas and numpy to do data analysis on large datasets. My role focused on creating a plot using a variety of astronomy and data science libraries showing the effective diffusivity coefficient for all galaxies in the Hubble COS-Halos dataset.",
     links: [
       { title: "Poster at AAS", url: "https://aas240-aas.ipostersessions.com/Default.aspx?s=39-11-68-61-92-B5-5B-4D-65-27-D7-9C-C2-2B-9E-B1#stay" },
       { title: "Published Paper", url: "https://academic.oup.com/mnras/article/521/2/2477/7070735" },
@@ -12,7 +12,7 @@ const BULLET_POINTS = {
     ]
   },
   "Statistical Analysis and Machine Learning to Detect Drift v. Anti-Drift": {
-    description: "At the Rose lab, this project was meant to look at which aspect of evolution is more important: Drift (random changes in the genome) or selection (specific changes in the genome to make one part dominant). We do this by studying SNPs, a genomic variant at a single base position in the DNA. However, to truly do this research, we need to identify which SNPs are evolving and which ones are not. We do this by looking at the SNP's change over time (generations of flies), and then we have to decide if that change is significant of evolution or not, which we need p-value of. To find the best p-value, I trained 220 Random Forest ML models based on selection and population, finding that a p-value of 0.000218 is better. Additionally, I created an unsupervised model with UMAP dimension reduction to see if there is a relationship between frequency changes and trajectory. The project was funded by Calit2.",
+    description: "At the Rose Lab, I studied whether drift or selection drives evolution by analyzing SNPs across generations of fruit flies, training 220 Random Forest models to refine the p-value threshold to 0.000218. I also applied UMAP for unsupervised analysis to explore relationships between SNP frequency changes and evolutionary trajectories, with the project funded by Calit2.",
     links: [
       { title: "Slides from Oral Presentation at Calit2 2025", url: "https://docs.google.com/presentation/d/1aWlFPqgMO3BhaZnXAVgsTnJD6uUTx6W7gs6-XFdm-R8/edit?usp=sharing" },
       { title: "Poster at UROP 2025", url: "https://drive.google.com/file/d/1jpDVq2Ie3iVeWhEsMzWQTm08o821e0iy/view?usp=drive_link" },
@@ -20,47 +20,54 @@ const BULLET_POINTS = {
     ]
   },
   "Tiling: Computer Vision to Detect Fruit Fly Eggs": {
-    description: "This project-ongoing-looks to utilizing machine learning tools to find the number of fruit fly eggs in a grid-like image of caps. Each grid-like image contains ~16 caps that each contain even smaller fruit fly eggs. As can be seen, these are extremely small objects, and, modern computer vision techniques do not perform well at small object detection. Therefore, we created a recursive data preparation technique called Tiling where the training dataset instead consists of the original image split into smaller tiles of size 75x75 pixels. These images are then labeled, in our case, with the number of eggs on them. For inference, the model is fed an entire grid-image, which is split into caps, which is then split into tiles. It predicts based on tiles, and then reconstructs and sums up the counts to get the total predicted cap count, and then sums up the counts for the entire grid-like image. This project won #1 at the UROP 2025 Group Oral Speech Competition and was funded by UCI UROP.",
+    description: "This ongoing project applies machine learning to count fruit fly eggs in grid-like images by developing a recursive tiling technique that splits images into 75x75 pixel tiles for more accurate small-object detection. The model predicts egg counts at the tile level, reconstructs them into cap counts, and then sums across the grid, with this work winning #1 at the UROP 2025 Group Oral Speech Competition and funded by UCI UROP.",
     links: [
       { title: "Slides from Oral Presentation (Won) at UROP 2025", url: "https://drive.google.com/file/d/1tDlDDwiDEWAMkyRW2rBC2F8td4dDidTX/view?usp=sharing" },
       { title: "Github Repository", url: "https://github.com/sn82978/CNN-Classifier" }
     ]
   },
   "Uncovering the Typing and Distribution of Code Clones Across Forks of Open Source Microservice Repositories": {
-    description: "Code reuse is a widespread efficiency practice in software development, especially in the emerging realm of microservice development. Microservices are small-scale, single-task or single-service software components which are coupled to other microservices to form robust large software systems via common communication protocols. There is a proliferation of microservice projects available with open source licenses through Github. This allows developers to quickly copy and adapt existing architecture to any given use case, but it also results in a proliferation of reused code in various states of change from the original source. Use of cloned code, though efficient, can carry intensive maintenance costs if changes are required across the entire population of a given clone. Identifying the presence and distribution of code clones within a software project is therefore of interest to developers, but manual identification of cloned code segments is tedious and time-consuming as code clones may exist as any of several subtypes. Furthermore, existing analysis tools are often limited in scope and available only for select programming languages. In response to the need for rapid and multilingual analysis for the full spectrum of code clone types, large language models (LLMs) emerge as a prime contender. In order to evaluate the potential of LLMs for this purpose, we compiled a dataset of 26 open source microservice repositories and 26 forks in various states of change and compared the performance of one general purpose and two code-specific LLMs. We found that the sampled LLMs performed close to the overall accuracy of human evaluators in identifying overall distribution of clones on a subset of the data, albeit with false negative results. We also found LLMs to be perform well at differentiating between clone subtypes when compared to an approach using non-generative machine learning techniques.",
+    description: "Code reuse in microservice development improves efficiency but creates challenges with maintaining cloned code, making clone detection important yet difficult with current tools. To address this, we evaluated general-purpose and code-specific LLMs on 26 open-source repositories and their forks, finding that they achieved near-human accuracy in identifying clone distribution and performed well at distinguishing clone subtypes.",
     links: [
       { title: "Github Repository", url: "https://github.com/Camithilwen/Code-Cloning-Analysis" }
     ]
   },
   "UI for Tiling": {
-    description: "This was the counterpart to the Tiling project, a UI created to help easily create a training dataset for machine learning models using the Tiling technique. You simply follow the instruction on the README.md and upload your images directory and start labelling. The idea is that to label each square, the name of the file is modified, and then to train, the dataset is set up such that the class is extracted directly from the file's name.",
+    description: "A I UI created to help easily create a training dataset for machine learning models using the Tiling technique. Instructions are on the README.md and upload your images directory and start labelling. The idea is to label each square, the name of the file is modified, and then to train, the dataset is set up such that the class is extracted directly from the file's name.",
     links: [
       { title: "Github Repository", url: "https://github.com/sn82978/Classifier-Site" }
     ]
   },
   "AI@UCI: Workshops": {
-    description: "As a member of the AI@UCI executive board, I have been presenting and giving talks about different machine learning topics for around a year! My workshops have taught undergraduate and graduate students part of AI@UCI as well as local high schoolers. I have taught about vision transformers, my own research at Rose Labs, and how to use PyTorch by making a simple PyTorch classifier.",
+    description: "My workshops as an AI@UCI executive have taught undergraduate and graduate students. I have taught about vision transformers, my own research at Rose Labs, and how to use PyTorch by making a simple PyTorch classifier.",
     links: [
       { title: "Github Repository", url: "https://github.com/Artificial-Intelligence-UC-Irvine/2024-Workshops" }
     ]
   },
   "Sentiment Analysis for Financial News": {
-    description: "Using a dataset of Twitter financial headlines and comments, I decide whether or not a Twitter headline is of positive, negative, or neutral sentiment based on the overall sentiment of the comments, pruning comments that are by bots or irrelevant. I fine-tuned a BERT model to do this using Hugging Face's Transformers. The Twitter database was saved to a database on pgadmin, so I had to use SQL to query it and get the information I wanted regarding article titles (the headlines) and the comments. Overall, the model is deployed on Hugging Face and has over 6k downloads.",
+    description: "Using a dataset of Twitter financial headlines and comments, I built a sentiment classifier that labels headlines as positive, negative, or neutral based on filtered user comments, removing bot and irrelevant posts. I fine-tuned a BERT model with Hugging Face Transformers, queried data with SQL, and deployed the model on Hugging Face, where it has over 6k downloads.",
     links: [
       { title: "Hugging Face Model Card", url: "https://huggingface.co/snoneeightfive/financial-news-headers-sentiment-analysis" }
     ]
   },
   "HackMIT: ActsAI": {
-    description: "This was my project at HackMIT 2024, where my team and I created a website that matches you to a therapist using a chatbot. The site unfortunately did not deploy properly but when working on the project, I worked on scraping the internet for therapists, creating a service that automatically detects dangerous self-harming behaviors in the chat and alerts emergency services of it, fine-tuning the LLM, and deploying it LLM using Modal.",
+    description: "At HackMIT 2024, my team and I built a website that matches users to therapists through a chatbot, integrating features like web scraping to gather therapist data and a service to detect self-harming behaviors that could trigger emergency alerts. I focused on fine-tuning and deploying the LLM with Modal, though the site ultimately did not deploy successfully.",
     links: [
       { title: "Github Repository", url: "https://github.com/PatelPurav05/ActsAI" }
     ]
   },
   "Boiling Bad": {
-    description: "Boiling Bad-and Bottom Bun-is my roommate and I's little side-project. The website showcases our concoctions and potions with a seamless UI. The site displays a limited navbar, showing tiles to allow you to navigate to see our recipes and videos. It is minimalistic but also gives hints of a 2000s UI. In making this website, routing and embedding the videos were the biggest challenges. I had to make sure that every page could be accessed in some way and that the videos showed up properly.",
+    description: "Boiling Bad-and Bottom Bun is a side project my roommate and I built to showcase our recipes and potion videos through a minimalistic website with a 2000s-inspired UI. I focused on routing and video embedding, ensuring every page was accessible and that the media displayed seamlessly.",
     links: [
       { title: "Deployed Site", url: "https://sn82978.github.io/BOILING-BAD/" },
       { title: "Github Repository", url: "https://github.com/sn82978/BOILING-BAD" }
+    ]
+  },
+  "Impactful Updates": {
+    description: "Impactful Updates is a website meant to connect people to their representatives and exercise their politial power--expressing what they wish to see in their state to the people who represent them.",
+    links: [
+      { title: "Deployed Site", url: "https://impactful-updates.vercel.app/" },
+      { title: "Github Repository", url: "https://github.com/sn82978/Impactful-Updates" }
     ]
   }
 };
@@ -129,6 +136,13 @@ const SAMPLE_ENTRIES = [
     type: "Web Development",
     year: "2024",
     cover: "boiling.png"
+  },
+  {
+    title: "Impactful Updates",
+    category: "Projects",
+    type: "Web Development",
+    year: "2024",
+    cover: "imp_upd.png"
   }
 ];
 
@@ -292,7 +306,7 @@ function AllEntriesPage() {
                 }}>
                   <p style={{
                     color: "#e1e1e1",
-                    fontSize: 14,
+                    fontSize: 16,
                     lineHeight: 1.6,
                     margin: 0
                   }}>

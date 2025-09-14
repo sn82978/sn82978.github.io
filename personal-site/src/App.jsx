@@ -12,39 +12,39 @@ import Footer from "./components/Footer";
 const artist = {
   tracks: [
     {
-      title: "snakum AT uci DOT edu",
-      plays: "1000",
-      duration: "2:20",
+      title: "Tiling: Computer Vision to Detect Fruit Fly Eggs",
+      plays: "3",
+      duration: "F24-",
       explicit: false,
-      githubUrl: "mailto:snakum@uci.edu"
+      githubUrl: "https://github.com/sn82978/CNN-Classifier"
     },
     {
-      title: "LinkedIn",
-      plays: "570",
-      duration: "5:30",
+      title: "Constraining Cosmic-Ray Transport with Observational Data",
+      plays: "31",
+      duration: "W21-S23",
       explicit: false,
-      githubUrl: "https://www.linkedin.com/in/shreya-nakum/"
+      githubUrl: "https://academic.oup.com/mnras/article/521/2/2477/7070735?login=false"
     },
     {
-      title: "Instagram",
-      plays: "495",
-      duration: "3:48",
+      title: "Sentiment Analysis for Financial News",
+      plays: "6,000",
+      duration: "W23-W24",
       explicit: false,
-      githubUrl: "https://www.instagram.com/shreyanakum185/"
+      githubUrl: "https://huggingface.co/snoneeightfive/financial-news-headers-sentiment-analysis"
     },
     {
-      title: "Spotify",
-      plays: "36",
-      duration: "3:59",
+      title: "Statistical Analysis and Machine Learning to Detect Drift v. Anti-Drift",
+      plays: "1",
+      duration: "S25",
       explicit: true,
-      githubUrl: "https://open.spotify.com/user/a865jfg5dv8rxzs43fu2yiuud"
+      githubUrl: "https://github.com/rose-mueller-labs/snp-data"
     },
     {
-      title: "Github",
-      plays: "9",
-      duration: "4:03",
+      title: "Impactful Updates",
+      plays: "3",
+      duration: "S25-",
       explicit: false,
-      githubUrl: "https://github.com/sn82978"
+      githubUrl: "https://impactful-updates.vercel.app/"
     },
   ],
   playlists: [
@@ -152,6 +152,15 @@ const albums = [
     type: "[Personal]",
     latest: true,
     githubUrl: "https://sn82978.github.io/BOILING-BAD/",
+    category: "Projects" // or "Projects"
+  },
+  {
+    title: "Impactful Updates",
+    cover: "imp_upd.png",
+    year: "2025",
+    type: "[Personal]",
+    latest: true,
+    githubUrl: "https://impactful-updates.vercel.app/",
     category: "Projects" // or "Projects"
   }
 ];
@@ -445,6 +454,13 @@ function PlaylistPage({ name }) {
 
 // Home page component
 function HomePage() {
+  const contacts = [
+    { name: "Email", url: "mailto:snakum@uci.edu", icon: "✉️" },
+    { name: "LinkedIn", url: "https://linkedin.com/in/shreya-nakum", icon: "🔗" },
+    { name: "GitHub", url: "https://github.com/sn82978", icon: "💻" },
+    { name: "Spotify", url: "https://open.spotify.com/user/a865jfg5dv8rxzs43fu2yiuud?si=ba707c1dcfe74b63", icon: "🎧" }
+  ];
+
   return (
     <div style={{ 
       background: "linear-gradient(180deg, #1f1f1f 0%, #121212 100%)", 
@@ -465,7 +481,7 @@ function HomePage() {
           border: "1px solid rgba(255,255,255,0.1)"
         }}>
           {/* Image container: 25% width */}
-          <div style={{ flex: "0 0 25%", maxWidth: "25%" }}>
+          <div style={{ flex: "0 0 30%", maxWidth: "30%" }}>
             <img
               src="IMG_0454_Original.jpg"
               alt="Shreya Nakum"
@@ -479,17 +495,75 @@ function HomePage() {
             />
           </div>
           {/* About blurb: 75% width */}
-          <div style={{ flex: "1 1 75%", marginLeft: 32 }}>
-            <div style={{ color: "#e1e1e1", fontSize: 16, lineHeight: 1.7 }}>
-              <p>Hi! I'm Shreya, a computer science major specializing in Intelligent Systems and 
-                Systems & Software at UC Irvine. I am a part of the Campus Honors Collegium and the Information 
-                and Computer Science Honors Program. I am passionate about 
-                multidisciplinary research, especially regarding AI tools!</p>
-              <p>My research interests consist of computational astrophysics, computational biology, and machine learning. I have a lot of experience with machine learning and creating models. In the past, I have pruned datasets and finetuned existing models to create custom models for whatever issue I'm facing. 
-                Recently, I have developed a Computer Vision CNN model to detect small biological images. Over this last summer, I was accepted into the National Science Foundation's IRES REU,
-                where I conducted research at the University of Oulu in Finland.</p>
-              <p>I am interested in joining research labs and internships in machine learning.</p>
-              <p> I absolutely love music, it is truly my passion. At the moment, I recommend you to listen to "Mugwort" by MF Doom (or just click the play button :D ).</p>
+          <div style={{ flex: "1 1 70%", marginLeft: 32 }}>
+            <div style={{ color: "#e1e1e1", fontSize: 20, lineHeight: 1.7, marginBottom: 24 }}>
+              <p>Hi! I'm Shreya, a researcher passionate about exploring how AI and machine learning can drive discovery across science, while staying inspired by music and creativity!</p>
+            </div>
+            
+            {/* Contacts Section */}
+            <div style={{ marginBottom: 24 }}>
+              {/* <h3 style={{ color: "#fff", fontSize: 20, fontWeight: 600, marginBottom: 16 }}>Connect</h3> */}
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
+                {contacts.map((contact) => (
+                  <a
+                    key={contact.name}
+                    href={contact.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: 8,
+                      padding: "10px 16px",
+                      background: "rgba(29, 185, 84, 0.1)",
+                      border: "1px solid #1db954",
+                      borderRadius: 25,
+                      color: "#1db954",
+                      textDecoration: "none",
+                      fontSize: 14,
+                      fontWeight: 600,
+                      transition: "all 0.2s ease"
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.background = "#1db954";
+                      e.target.style.color = "#000";
+                      e.target.style.transform = "translateY(-2px)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.background = "rgba(29, 185, 84, 0.1)";
+                      e.target.style.color = "#1db954";
+                      e.target.style.transform = "translateY(0)";
+                    }}
+                  >
+                    <span>{contact.icon}</span>
+                    {contact.name}
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Spotify Embed */}
+            <div>
+              <h3 style={{ color: "#fff", fontSize: 20, fontWeight: 600, marginBottom: 16 }}>Currently Listening To</h3>
+              <div style={{
+                background: "rgba(20, 20, 20, 0.8)",
+                borderRadius: 12,
+                padding: 16,
+                border: "1px solid rgba(255,255,255,0.1)"
+              }}>
+                <iframe
+                  src="https://open.spotify.com/embed/track/3JJL91ilRV6fXhKqu0FGXs?si=2f56963ce7034862?utm_source=generator&theme=0"
+                  width="100%"
+                  height="152"
+                  frameBorder="0"
+                  allowFullScreen=""
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                  style={{
+                    borderRadius: 8
+                  }}
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>
