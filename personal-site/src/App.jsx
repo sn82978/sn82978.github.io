@@ -494,10 +494,10 @@ function HomePage() {
               }}
             />
           </div>
-          {/* About blurb: 75% width */}
+          {/* About blurb: 75% width originally */}
           <div style={{ flex: "1 1 70%", marginLeft: 32 }}>
             <div style={{ color: "#e1e1e1", fontSize: 20, lineHeight: 1.7, marginBottom: 24 }}>
-              <p>Hi! I'm Shreya, a researcher passionate about exploring how AI and machine learning can drive discovery across science, while staying inspired by music and creativity!</p>
+              <p>Hi! I'm Shreya! I'm currently a GN&C Intern at NASA JSC, working on simulating commercial LEO space stations and Artemis IV!</p>
             </div>
             
             {/* Contacts Section */}

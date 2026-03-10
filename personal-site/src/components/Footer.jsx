@@ -25,7 +25,7 @@ function Footer() {
             fontWeight: 600,
             marginBottom: 16
           }}>
-            Built with passion for music and code
+            I love music and code :)
           </div>
           
           <div style={{
