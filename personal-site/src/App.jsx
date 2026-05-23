@@ -186,6 +186,41 @@ const features = [
   }
 ];
 
+function MapWidget() {
+  return (
+    <div style={{ padding: "0 32px 32px 32px" }}>
+      <div style={{
+        background: "rgba(40, 40, 40, 0.8)",
+        borderRadius: 12,
+        padding: 24,
+        backdropFilter: "blur(20px)",
+        border: "1px solid rgba(255,255,255,0.1)",
+        display: "flex",
+        alignItems: "center",
+        gap: 32,
+      }}>
+        {/* Map */}
+        <a href="https://mapmyvisitors.com/web/1bw0c" title="Visit tracker" style={{ flex: "0 0 40%" }}>
+          <img
+            src="https://mapmyvisitors.com/map.png?cl=ffffff&w=600&t=tt&d=74xmXege_Rnxq-XM2ukNrGa3N6nErUb2rU4kIOR0ewU&cmo=1db954&cmn=23d160"
+            alt="Visitor Map"
+            style={{ width: "100%", borderRadius: 8, display: "block" }}
+          />
+        </a>
+        {/* Text */}
+        <div style={{ flex: 1 }}>
+          <h3 style={{ color: "#fff", fontSize: 26, fontWeight: 700, marginBottom: 12 }}>Visitor Map</h3>
+          <p style={{ color: "#b3b3b3", fontSize: 18, lineHeight: 1.7, marginBottom: 16 }}>
+            Thanks for stopping by :) This map tracks where visitors are tuning in from around the world!
+          </p>
+          <p style={{ color: "#b3b3b3", fontSize: 18, lineHeight: 1.7 }}>
+            Whether you're here for the research, the projects, or just browsing, welcome to my little corner of the internet!
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 // Sidebar component updated to use Link and highlight active page
 function Sidebar({ playlists }) {
@@ -580,6 +615,7 @@ function HomePage() {
       <div style={{ padding: "32px" }}>
         <FtIn albums={features}/>
       </div>
+      <MapWidget />
       <Footer></Footer>
     </div>
   );

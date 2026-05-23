@@ -9,7 +9,7 @@ const artist = {
 };
 
 export default function ArtistHeader() {
-  const [followers, setFollowers] = useState(1223);
+  const [followers, setFollowers] = useState(1308);
 
   const [isFollowing, setIsFollowing] = useState(false);
 
