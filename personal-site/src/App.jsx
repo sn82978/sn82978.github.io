@@ -1,4 +1,5 @@
-// App.js
+// App.jsx
+
 import React from "react";
 import { BrowserRouter, Routes, Route, Navigate, Link, useLocation } from "react-router-dom";
 import ArtistHeader from "./components/ArtistHeader";
@@ -14,7 +15,7 @@ const artist = {
     {
       title: "Tiling: Computer Vision to Detect Fruit Fly Eggs",
       plays: "3",
-      duration: "F24-",
+      duration: "F24-S26",
       explicit: false,
       githubUrl: "https://github.com/sn82978/CNN-Classifier"
     },
@@ -26,25 +27,25 @@ const artist = {
       githubUrl: "https://academic.oup.com/mnras/article/521/2/2477/7070735?login=false"
     },
     {
-      title: "Sentiment Analysis for Financial News",
-      plays: "6,000",
-      duration: "W23-W24",
+      title: "Drosphila Neuroassay Tracking",
+      plays: "1",
+      duration: "F25-",
       explicit: false,
       githubUrl: "https://huggingface.co/snoneeightfive/financial-news-headers-sentiment-analysis"
     },
     {
       title: "Statistical Analysis and Machine Learning to Detect Drift v. Anti-Drift",
       plays: "1",
-      duration: "S25",
+      duration: "W25-S25",
       explicit: true,
       githubUrl: "https://github.com/rose-mueller-labs/snp-data"
     },
     {
-      title: "Impactful Updates",
-      plays: "3",
-      duration: "S25-",
-      explicit: false,
-      githubUrl: "https://impactful-updates.vercel.app/"
+      title: "Detecting Knowledge Gaps",
+      plays: "1",
+      duration: "W26-",
+      explicit: true,
+      githubUrl: "https://github.com/sn82978/knowledge-gaps"
     },
   ],
   playlists: [
@@ -58,9 +59,9 @@ const artistPick = {
   image: "MLFFPic.png",
   postedBy: "Shreya Nakum",
   postedByAvatar: "shreya-standing.png",
-  title: "Tiling: Method for Small Biological Image Identification",
+  title: "Drosophila Neuroassay Tracking",
   type: "UC Irvine: Rose Labs",
-  githubUrl: "https://github.com/sn82978/CNN-Classifier"
+  githubUrl: "https://github.com/rose-mueller-labs/Cameras-Calit2IRT"
 };
 
 
@@ -70,7 +71,7 @@ const albums = [
     cover: "db.png",
     year:"2025",
     type:"NSF IRES: University of Oulu",
-    latest: true,
+    latest: false,
     githubUrl:"https://github.com/Camithilwen/Code-Cloning-Analysis",
     category:"Research"
   },
@@ -79,7 +80,7 @@ const albums = [
     cover: "MLFFPic.png",
     year: "2025",
     type: "Rose & Mueller Labs",
-    latest: true,
+    latest: false,
     githubUrl: "https://github.com/sn82978/CNN-Classifier",
     category: "Research",
     paper: "https://docs.google.com/document/d/1g8U7XFLoaX3DetpHfGf9URt-OD2jN2BHP9Nv4N5sYyY/edit?usp=sharing",
@@ -90,7 +91,7 @@ const albums = [
     cover: "IMG_4926.jpeg",
     year: "2025",
     type: "Rose & Mueller Labs",
-    latest: true,
+    latest: false,
     githubUrl: "https://github.com/rose-mueller-labs/snp-data",
     category: "Research",
     paper: "https://docs.google.com/presentation/d/1aWlFPqgMO3BhaZnXAVgsTnJD6uUTx6W7gs6-XFdm-R8/edit?usp=sharing",
@@ -101,7 +102,7 @@ const albums = [
     cover: "classifier-site-sample.png",
     year: "2025",
     type: "Rose & Mueller Labs",
-    latest: true,
+    latest: false,
     githubUrl: "https://github.com/sn82978/Classifier-Site",
     category: "Research",
     paper: "https://github.com/sn82978/Classifier-Site/blob/main/README.md",
@@ -150,19 +151,27 @@ const albums = [
     cover: "boiling.png",
     year: "2025",
     type: "[Personal]",
-    latest: true,
+    latest: false,
     githubUrl: "https://sn82978.github.io/BOILING-BAD/",
     category: "Projects" // or "Projects"
   },
   {
-    title: "Impactful Updates",
-    cover: "imp_upd.png",
-    year: "2025",
-    type: "[Personal]",
+    title: "Drosophila Neuroassay Tracking",
+    cover: "cameras_track.png",
+    year: "2026",
+    type: "Research",
     latest: true,
-    githubUrl: "https://impactful-updates.vercel.app/",
-    category: "Projects" // or "Projects"
-  }
+    githubUrl: "https://github.com/rose-mueller-labs/Cameras-Calit2IRT",
+    category: "Research" // or "Projects"
+  }, 
+  {
+      title: "Detecting Knowledge Gaps",
+      cover: "openai_MATH.png",
+      year: "2026",
+      type: "Research",
+      latest: true,
+      githubUrl: "https://github.com/sn82978/knowledge-gaps"
+    },
 ];
 
 const features = [

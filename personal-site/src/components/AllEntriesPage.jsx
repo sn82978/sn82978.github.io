@@ -1,3 +1,5 @@
+// AllEntriesPage.jsx
+
 import React, { useState } from "react";
 
 const FILTERS = ["Research", "Projects"];
@@ -63,11 +65,17 @@ const BULLET_POINTS = {
       { title: "Github Repository", url: "https://github.com/sn82978/BOILING-BAD" }
     ]
   },
-  "Impactful Updates": {
-    description: "Impactful Updates is a website meant to connect people to their representatives and exercise their politial power--expressing what they wish to see in their state to the people who represent them.",
+  "Drosophila Neuroassay Tracking": {
+    description: "Developed a multi-camera tracking algorithm implementing 2D pose estimation and identity propagation for dense biological assays.",
     links: [
-      { title: "Deployed Site", url: "https://impactful-updates.vercel.app/" },
-      { title: "Github Repository", url: "https://github.com/sn82978/Impactful-Updates" }
+      { title: "Github Repository", url: "https://github.com/rose-mueller-labs/Cameras-Calit2IRT" }
+    ]
+  },
+
+  "Detecting Knowledge Gaps": {
+    description: "Tested the OpenAI and Gemini embedding models against multiple datasets about mathematics and physics to identify where the model lacks in training data through graphical evaluation with PacMAP. Compared the models' manifolds using the Davies-Bouldin index, mean silhoette, and intra-cosine similiarity to determine their proclivity",
+    links: [
+      { title: "Github Repository", url: "https://github.com/sn82978/knowledge-gaps" }
     ]
   }
 };
@@ -138,11 +146,18 @@ const SAMPLE_ENTRIES = [
     cover: "boiling.png"
   },
   {
-    title: "Impactful Updates",
-    category: "Projects",
-    type: "Web Development",
-    year: "2024",
-    cover: "imp_upd.png"
+    title: "Drosophila Neuroassay Tracking",
+    category: "Research",
+    type: "Computer Vision",
+    year: "2026",
+    cover: "cameras_track.png"
+  },
+  {
+    title: "Detecting Knowledge Gaps",
+    category: "Research",
+    type: "AI/ML",
+    year: "2026",
+    cover: "openai_MATH.png"
   }
 ];
 
