@@ -69,7 +69,7 @@ const albums = [
     {
     title: "AI@UCI: Workshops",
     cover: "IMG_8906.jpeg",
-    year: "2025",
+    year: "2026",
     type: "Workshop Coordinator",
     latest: true,
     githubUrl: "https://github.com/Artificial-Intelligence-UC-Irvine",
