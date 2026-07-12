@@ -559,7 +559,7 @@ function HomePage() {
           {/* About blurb: 75% width originally */}
           <div style={{ flex: "1 1 70%", marginLeft: 32 }}>
             <div style={{ color: "#e1e1e1", fontSize: 20, lineHeight: 1.7, marginBottom: 24 }}>
-              <p>Hi! I'm Shreya! I'm currently a GN&C Intern at NASA JSC, working on simulating commercial LEO space stations and Artemis IV!</p>
+              <p>Hi! I'm Shreya! I'm currently a software engineering intern at NASA's Johnson Space Center, working on simulating commercial LEO space stations and future Artemis missions!</p>
             </div>
             
             {/* Contacts Section */}
@@ -614,8 +614,8 @@ function HomePage() {
                 border: "1px solid rgba(255,255,255,0.1)"
               }}>
                 <iframe 
-                // https://open.spotify.com/track/6M14BiCN00nOsba4JaYsHW?si=4da0622f76404ccf
-                  src="https://open.spotify.com/embed/track/6M14BiCN00nOsba4JaYsHW?si=4da0622f76404ccf?si=c71ef085644746bb?utm_source=generator&theme=0"
+                // https://open.spotify.com/track/6B73XdLNx7jY8pNmiT6QMr?si=2cf925a9704947b0
+                  src="https://open.spotify.com/embed/track/6B73XdLNx7jY8pNmiT6QMr?si=2cf925a9704947b0?si=c71ef085644746bb?utm_source=generator&theme=0"
                   width="100%"
                   height="152"
                   frameBorder="0"
