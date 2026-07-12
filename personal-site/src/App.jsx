@@ -13,18 +13,18 @@ import Footer from "./components/Footer";
 const artist = {
   tracks: [
     {
+      title: "Constraining Cosmic-Ray Transport with Observational Data",
+      plays: "31",
+      duration: "W21-S23",
+      explicit: true,
+      githubUrl: "https://academic.oup.com/mnras/article/521/2/2477/7070735?login=false"
+    },
+    {
       title: "Tiling: Computer Vision to Detect Fruit Fly Eggs",
       plays: "3",
       duration: "F24-S26",
       explicit: false,
       githubUrl: "https://github.com/sn82978/CNN-Classifier"
-    },
-    {
-      title: "Constraining Cosmic-Ray Transport with Observational Data",
-      plays: "31",
-      duration: "W21-S23",
-      explicit: false,
-      githubUrl: "https://academic.oup.com/mnras/article/521/2/2477/7070735?login=false"
     },
     {
       title: "Drosphila Neuroassay Tracking",
@@ -37,14 +37,14 @@ const artist = {
       title: "Statistical Analysis and Machine Learning to Detect Drift v. Anti-Drift",
       plays: "1",
       duration: "W25-S25",
-      explicit: true,
+      explicit: false,
       githubUrl: "https://github.com/rose-mueller-labs/snp-data"
     },
     {
-      title: "Detecting Knowledge Gaps",
+      title: "Detecting LLM Knowledge Gaps",
       plays: "1",
       duration: "W26-",
-      explicit: true,
+      explicit: false,
       githubUrl: "https://github.com/sn82978/knowledge-gaps"
     },
   ],
@@ -56,7 +56,7 @@ const artist = {
 
 
 const artistPick = {
-  image: "MLFFPic.png",
+  image: "cameras_track.png",
   postedBy: "Shreya Nakum",
   postedByAvatar: "shreya-standing.png",
   title: "Drosophila Neuroassay Tracking",
@@ -66,6 +66,32 @@ const artistPick = {
 
 
 const albums = [
+    {
+    title: "AI@UCI: Workshops",
+    cover: "IMG_8906.jpeg",
+    year: "2025",
+    type: "Workshop Coordinator",
+    latest: true,
+    githubUrl: "https://github.com/Artificial-Intelligence-UC-Irvine",
+    category: "Projects"
+    },
+    {
+    title: "Drosophila Neuroassay Tracking",
+    cover: "cameras_track.png",
+    year: "2026",
+    type: "Rose & Mueller Labs",
+    latest: true,
+    githubUrl: "https://github.com/rose-mueller-labs/Cameras-Calit2IRT",
+    category: "Research" // or "Projects"
+  }, 
+  {
+      title: "Detecting Knowledge Gaps",
+      cover: "openai_MATH.png",
+      year: "2026",
+      type: "Krone-Martins Lab",
+      latest: true,
+      githubUrl: "https://github.com/sn82978/knowledge-gaps"
+    },
     {
     title:"Uncovering the Typing and Distribution of Code Clones Across Forks of Open Source Microservice Repositories",
     cover: "db.png",
@@ -129,15 +155,6 @@ const albums = [
     category: "Projects",
   },
   {
-    title: "AI@UCI: Workshops",
-    cover: "IMG_8906.jpeg",
-    year: "2025",
-    type: "Workshop Coordinator",
-    latest: true,
-    githubUrl: "https://github.com/Artificial-Intelligence-UC-Irvine",
-    category: "Projects"
-  },
-  {
     title: "HackMIT: ActsAI",
     cover: "sd.png",
     year: "2024",
@@ -154,27 +171,37 @@ const albums = [
     latest: false,
     githubUrl: "https://sn82978.github.io/BOILING-BAD/",
     category: "Projects" // or "Projects"
+  }
+];
+
+const features = [
+  {
+    title: "Detecting LLM Knowledge Gaps",
+    cover: "openai_MATH.png",
+    year: "2026",
+    type: "Krone-Martins Lab",
+    latest: false,
+    githubUrl: "https://drive.google.com/file/d/1D3c1FjKw2xT9enLUbe2aIODKn0Uec2e9/view?usp=sharing",
+    category: "Research" // or "Projects"
   },
   {
     title: "Drosophila Neuroassay Tracking",
     cover: "cameras_track.png",
     year: "2026",
-    type: "Research",
-    latest: true,
-    githubUrl: "https://github.com/rose-mueller-labs/Cameras-Calit2IRT",
+    type: "Rose & Mueller Labs",
+    latest: false,
+    githubUrl: "https://drive.google.com/file/d/1wfo1L0LqdNSuqtkm4J0-7bhmZH7jIs0h/view?usp=sharing",
     category: "Research" // or "Projects"
-  }, 
+  },
   {
-      title: "Detecting Knowledge Gaps",
-      cover: "openai_MATH.png",
-      year: "2026",
-      type: "Research",
-      latest: true,
-      githubUrl: "https://github.com/sn82978/knowledge-gaps"
-    },
-];
-
-const features = [
+    title: "MHS Alumnus Interview",
+    cover: "alumnus.png",
+    year: "2025",
+    type: "Interview",
+    latest: false,
+    githubUrl: "https://mhstheunion.com/2025/03/04/mhs-alumni-discuss-college-experiences/",
+    category: "Volunteering" // or "Projects"
+  },
   {
     title: "Constraining Cosmic-Ray Transport with Observational Data",
     cover: "mnras-plot.png",
@@ -182,16 +209,7 @@ const features = [
     type: "California Institute of Technology",
     latest: false,
     githubUrl: "https://academic.oup.com/mnras/article/521/2/2477/7070735?login=false",
-    category: "Volunteering" // or "Projects"
-  },
-  {
-    title: "MHS Alumnus Interview",
-    cover: "alumnus.png",
-    year: "2025",
-    type: "Interview",
-    latest: true,
-    githubUrl: "https://mhstheunion.com/2025/03/04/mhs-alumni-discuss-college-experiences/",
-    category: "Volunteering" // or "Projects"
+    category: "Research" // or "Projects"
   }
 ];
 

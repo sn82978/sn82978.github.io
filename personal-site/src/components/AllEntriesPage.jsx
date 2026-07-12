@@ -72,7 +72,7 @@ const BULLET_POINTS = {
     ]
   },
 
-  "Detecting Knowledge Gaps": {
+  "Detecting LLM Knowledge Gaps": {
     description: "Tested the OpenAI and Gemini embedding models against multiple datasets about mathematics and physics to identify where the model lacks in training data through graphical evaluation with PacMAP. Compared the models' manifolds using the Davies-Bouldin index, mean silhoette, and intra-cosine similiarity to determine their proclivity",
     links: [
       { title: "Github Repository", url: "https://github.com/sn82978/knowledge-gaps" }
@@ -153,7 +153,7 @@ const SAMPLE_ENTRIES = [
     cover: "cameras_track.png"
   },
   {
-    title: "Detecting Knowledge Gaps",
+    title: "Detecting LLM Knowledge Gaps",
     category: "Research",
     type: "AI/ML",
     year: "2026",
