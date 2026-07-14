@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 const artist = {
   name: "Shreya Nakum",
-  image: "IMG_2562.jpeg",
+  image: "ai_pres.png",
   verified: true,
 };
 

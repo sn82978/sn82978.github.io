@@ -29,7 +29,7 @@ const artist = {
     {
       title: "Drosphila Neuroassay Tracking",
       plays: "1",
-      duration: "F25-",
+      duration: "F26-",
       explicit: false,
       githubUrl: "https://huggingface.co/snoneeightfive/financial-news-headers-sentiment-analysis"
     },
@@ -194,13 +194,13 @@ const features = [
     category: "Research" // or "Projects"
   },
   {
-    title: "MHS Alumnus Interview",
-    cover: "alumnus.png",
+    title: "Statistical Analysis and Machine Learning to Detect Drift v. Anti-Drift", 
+    cover: "IMG_4926.jpeg",
     year: "2025",
-    type: "Interview",
+    type: "Rose & Mueller Labs",
     latest: false,
-    githubUrl: "https://mhstheunion.com/2025/03/04/mhs-alumni-discuss-college-experiences/",
-    category: "Volunteering" // or "Projects"
+    githubUrl: "https://drive.google.com/file/d/1_nkpQS6NWG7ln4XcAUJBI9jhXKcFEKYg/view?usp=sharing",
+    category: "Research"
   },
   {
     title: "Constraining Cosmic-Ray Transport with Observational Data",
@@ -210,6 +210,15 @@ const features = [
     latest: false,
     githubUrl: "https://academic.oup.com/mnras/article/521/2/2477/7070735?login=false",
     category: "Research" // or "Projects"
+  },
+    {
+    title: "MHS Alumnus Interview",
+    cover: "alumnus.png",
+    year: "2025",
+    type: "Interview",
+    latest: false,
+    githubUrl: "https://mhstheunion.com/2025/03/04/mhs-alumni-discuss-college-experiences/",
+    category: "Volunteering" // or "Projects"
   }
 ];
 
@@ -545,7 +554,8 @@ function HomePage() {
           {/* Image container: 25% width */}
           <div style={{ flex: "0 0 30%", maxWidth: "30%" }}>
             <img
-              src="IMG_0454_Original.jpg"
+              // src="IMG_0454_Original.jpg"
+              src="IMG_7589.jpg"
               alt="Shreya Nakum"
               style={{
                 width: "100%",

@@ -43,7 +43,8 @@ const BULLET_POINTS = {
   "AI@UCI: Workshops": {
     description: "My workshops as an AI@UCI executive have taught undergraduate and graduate students. I have taught about vision transformers, my own research at Rose Labs, and how to use PyTorch by making a simple PyTorch classifier.",
     links: [
-      { title: "Github Repository", url: "https://github.com/Artificial-Intelligence-UC-Irvine/2024-Workshops" }
+      { title: "Github Repository", url: "https://github.com/Artificial-Intelligence-UC-Irvine/2024-Workshops" },
+      {title: "YouTube Channel", url: "https://www.youtube.com/@AIatUCI"}
     ]
   },
   "Sentiment Analysis for Financial News": {
@@ -68,7 +69,8 @@ const BULLET_POINTS = {
   "Drosophila Neuroassay Tracking": {
     description: "Developed a multi-camera tracking algorithm implementing 2D pose estimation and identity propagation for dense biological assays.",
     links: [
-      { title: "Github Repository", url: "https://github.com/rose-mueller-labs/Cameras-Calit2IRT" }
+      { title: "Github Repository", url: "https://github.com/rose-mueller-labs/Cameras-Calit2IRT" },
+      {title: "Select Detection Videos", url: "https://drive.google.com/drive/u/0/folders/178IPYW5Qh8eJDfeK5QZxPOgFTJOx4tkw"}
     ]
   },
 
