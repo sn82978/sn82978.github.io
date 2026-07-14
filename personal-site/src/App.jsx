@@ -555,7 +555,7 @@ function HomePage() {
           <div style={{ flex: "0 0 30%", maxWidth: "30%" }}>
             <img
               // src="IMG_0454_Original.jpg"
-              src="IMG_7589.jpg"
+              src="woC.jpg"
               alt="Shreya Nakum"
               style={{
                 width: "100%",
@@ -624,8 +624,8 @@ function HomePage() {
                 border: "1px solid rgba(255,255,255,0.1)"
               }}>
                 <iframe 
-                // https://open.spotify.com/track/6B73XdLNx7jY8pNmiT6QMr?si=2cf925a9704947b0
-                  src="https://open.spotify.com/embed/track/6B73XdLNx7jY8pNmiT6QMr?si=2cf925a9704947b0?si=c71ef085644746bb?utm_source=generator&theme=0"
+                // https://open.spotify.com/track/7kD5GdMaoi9oRW2ScjO1pT?si=95193b8392224bd0
+                  src="https://open.spotify.com/embed/track/7kD5GdMaoi9oRW2ScjO1pT?si=2cf925a9704947b0?si=c71ef085644746bb?utm_source=generator&theme=0"
                   width="100%"
                   height="152"
                   frameBorder="0"
