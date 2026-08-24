@@ -258,7 +258,8 @@ function MapWidget() {
   );
 }
 
-// Sidebar component updated to use Link and highlight active page
+// Sidebar component updated to use Link and highlight active page --> need to make it collapsible
+// 
 function Sidebar({ playlists }) {
   const location = useLocation();
 
@@ -660,7 +661,8 @@ function HomePage() {
 
 
 function App() {
-  const SIDEBAR_WIDTH = 260; // Adjust as needed
+  const SIDEBAR_WIDTH = 260;
+  const [collapsed, setCollapsed] = React.useState(false);
 
   return (
     <div style={{ background: "linear-gradient(180deg, #1f1f1f 0%, #121212 100%)", minHeight: "100vh" }}>
@@ -674,16 +676,45 @@ function App() {
           width: SIDEBAR_WIDTH,
           background: "#000",
           zIndex: 100,
-          borderRight: "1px solid #333"
+          borderRight: "1px solid #333",
+          transform: collapsed ? `translateX(-${SIDEBAR_WIDTH}px)` : "translateX(0)",
+          transition: "transform 0.3s ease",
         }}
       >
         <Sidebar playlists={artist.playlists} />
       </div>
+
+      {/* Toggle button: stays visible regardless of collapse state */}
+      <button
+        onClick={() => setCollapsed((c) => !c)}
+        aria-label={collapsed ? "Open sidebar" : "Collapse sidebar"}
+        style={{
+          position: "fixed",
+          top: 16,
+          left: collapsed ? 16 : SIDEBAR_WIDTH - 40,
+          zIndex: 200,
+          width: 32,
+          height: 32,
+          borderRadius: "50%",
+          border: "1px solid #333",
+          background: "#181818",
+          color: "#fff",
+          cursor: "pointer",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          transition: "left 0.3s ease",
+        }}
+      >
+        {collapsed ? ">>" : "<<"}
+      </button>
+
       <main
         style={{
-          marginLeft: SIDEBAR_WIDTH,
+          marginLeft: collapsed ? 0 : SIDEBAR_WIDTH,
           minHeight: "100vh",
-          overflow: "auto"
+          overflow: "auto",
+          transition: "margin-left 0.3s ease",
         }}
       >
         <Routes>
