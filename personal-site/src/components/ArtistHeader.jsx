@@ -1,4 +1,4 @@
-// AristHeader.jsx
+// ArtistHeader.jsx
 
 import React, { useState } from "react";
 
@@ -9,8 +9,7 @@ const artist = {
 };
 
 export default function ArtistHeader() {
-  const [followers, setFollowers] = useState(1344);
-
+  const [followers, setFollowers] = useState(1400);
   const [isFollowing, setIsFollowing] = useState(false);
 
   const handleDotsClick = () => {
@@ -36,13 +35,13 @@ export default function ArtistHeader() {
       style={{
         position: "relative",
         width: "100%",
-        height: 340,
+        minHeight: 340,
         backgroundImage: `url(${artist.image})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         display: "flex",
         alignItems: "flex-end",
-        padding: "0 40px 32px 40px",
+        padding: "40px clamp(16px, 5vw, 40px) 32px clamp(16px, 5vw, 40px)",
         boxSizing: "border-box",
       }}
     >
@@ -56,7 +55,7 @@ export default function ArtistHeader() {
         }}
       />
       {/* Content */}
-      <div style={{ position: "relative", zIndex: 2 }}>
+      <div style={{ position: "relative", zIndex: 2, width: "100%" }}>
         {artist.verified && (
           <div style={{ display: "flex", alignItems: "center", marginBottom: 8 }}>
             <span
@@ -70,9 +69,10 @@ export default function ArtistHeader() {
                 marginRight: 8,
                 display: "inline-flex",
                 alignItems: "center",
+                whiteSpace: "nowrap",
               }}
             >
-              <svg width="16" height="16" viewBox="0 0 16 16" style={{ marginRight: 5 }}>
+              <svg width="16" height="16" viewBox="0 0 16 16" style={{ marginRight: 5, flexShrink: 0 }}>
                 <circle cx="8" cy="8" r="8" fill="#1db954" />
                 <path d="M12 5.5l-4.2 4.2L6 8.9" stroke="#fff" strokeWidth="1.5" fill="none" />
               </svg>
@@ -82,7 +82,7 @@ export default function ArtistHeader() {
         )}
         <h1
           style={{
-            fontSize: 80,
+            fontSize: "clamp(36px, 9vw, 80px)",
             fontWeight: "bold",
             color: "#fff",
             margin: 0,
@@ -97,7 +97,7 @@ export default function ArtistHeader() {
           {followers.toLocaleString()} contributions
         </div>
         {/* Action Buttons */}
-        <div style={{ display: "flex", alignItems: "center", marginTop: 32, gap: 16 }}>
+        <div style={{ display: "flex", alignItems: "center", marginTop: 32, gap: 16, flexWrap: "wrap" }}>
           <button
             onClick={handlePlayClick}
             style={{
@@ -114,6 +114,7 @@ export default function ArtistHeader() {
               justifyContent: "center",
               cursor: "pointer",
               boxShadow: "0 2px 8px #0008",
+              flexShrink: 0,
             }}
           >
             ▶

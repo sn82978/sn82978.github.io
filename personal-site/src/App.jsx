@@ -570,7 +570,7 @@ function HomePage() {
           {/* About blurb: 75% width originally */}
           <div style={{ flex: "1 1 70%", marginLeft: 32 }}>
             <div style={{ color: "#e1e1e1", fontSize: 20, lineHeight: 1.7, marginBottom: 24 }}>
-              <p>Hi! I'm Shreya! I'm currently a software engineering intern at NASA's Johnson Space Center, working on simulating commercial LEO space stations and future Artemis missions!</p>
+              <p>Hi! I'm Shreya! I'm a senior at UC Irvine studying Computer Science! I'm currently applying for my Ph.D. and am interested in computer vision and robotics!</p>
             </div>
             
             {/* Contacts Section */}
