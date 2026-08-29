@@ -1,10 +1,34 @@
 // AllEntriesPage.jsx
 
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const FILTERS = ["Research", "Projects"];
 
-const BULLET_POINTS = {
+// projects that already have a full interactive page
+const CUSTOM_PAGE_ROUTES = {
+  "Constraining Cosmic-Ray Transport with Observational Data": "/research/cosmic-ray-transport",
+  "Tiling: Computer Vision to Detect Fruit Fly Eggs": "/research/tiling",
+  "Drosophila Neuroassay Tracking": "/research/drosophila-tracking",
+  "Statistical Analysis and Machine Learning to Detect Drift v. Anti-Drift": "/research/drift",
+  "Detecting LLM Knowledge Gaps": "/research/knowledge-gaps",
+};
+
+// too long
+const SLUG_OVERRIDES = {
+  "Uncovering the Typing and Distribution of Code Clones Across Forks of Open Source Microservice Repositories":
+    "code-clone-analysis",
+};
+
+export function getSlug(title) {
+  if (SLUG_OVERRIDES[title]) return SLUG_OVERRIDES[title];
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
+export const BULLET_POINTS = {
   "Constraining Cosmic-Ray Transport with Observational Data": {
     description: "My intro to the world of research! I used libraries like pandas and numpy to do data analysis on large datasets. My role focused on creating a plot using a variety of astronomy and data science libraries showing the effective diffusivity coefficient for all galaxies in the Hubble COS-Halos dataset.",
     links: [
@@ -35,7 +59,7 @@ const BULLET_POINTS = {
     ]
   },
   "UI for Tiling": {
-    description: "A I UI created to help easily create a training dataset for machine learning models using the Tiling technique. Instructions are on the README.md and upload your images directory and start labelling. The idea is to label each square, the name of the file is modified, and then to train, the dataset is set up such that the class is extracted directly from the file's name.",
+    description: "A UI created to help easily create a training dataset for machine learning models using the Tiling technique. Instructions are on the README.md and upload your images directory and start labelling. The idea is to label each square, the name of the file is modified, and then to train, the dataset is set up such that the class is extracted directly from the file's name.",
     links: [
       { title: "Github Repository", url: "https://github.com/sn82978/Classifier-Site" }
     ]
@@ -82,8 +106,8 @@ const BULLET_POINTS = {
   }
 };
 
-// Sample entries data
-const SAMPLE_ENTRIES = [
+// curr project stuff
+export const SAMPLE_ENTRIES = [
   {
     title: "Constraining Cosmic-Ray Transport with Observational Data",
     category: "Research",
@@ -124,7 +148,11 @@ const SAMPLE_ENTRIES = [
     category: "Projects",
     type: "Teaching",
     year: "2025",
-    cover: "IMG_8906.jpeg"
+    cover: "IMG_8906.jpeg",
+  images: [
+    { src: "IMG_8906.jpeg", caption: "Leading the PyTorch workshop, Spring 2025" },
+    { src: "stassi.png", caption: "Q&A after the vision transformers talk" },
+  ],
   },
   {
     title: "Sentiment Analysis for Financial News",
@@ -178,7 +206,13 @@ function Footer() {
 
 function AllEntriesPage() {
   const [filter, setFilter] = useState(FILTERS[0]);
+  const navigate = useNavigate();
   const filteredEntries = SAMPLE_ENTRIES.filter(e => e.category === filter);
+
+  const goToEntry = (entry) => {
+    const customRoute = CUSTOM_PAGE_ROUTES[entry.title];
+    navigate(customRoute || `/all-entries/${getSlug(entry.title)}`);
+  };
 
   return (
     <div style={{ 
@@ -252,6 +286,7 @@ function AllEntriesPage() {
           return (
             <div
               key={entry.title}
+              onClick={() => goToEntry(entry)}
               style={{
                 background: "rgba(40, 40, 40, 0.8)",
                 borderRadius: 12,
@@ -276,11 +311,11 @@ function AllEntriesPage() {
                 e.currentTarget.style.boxShadow = "none";
               }}
             >
-              {/* Cover Image & Title */}
+              {/* cover image & title */}
               <div style={{ 
                 position: "relative", 
                 height: "200px",
-                background: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url(${entry.cover})`,
+                background: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url(/${entry.cover})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 display: "flex",
@@ -307,7 +342,7 @@ function AllEntriesPage() {
                 </div>
               </div>
 
-              {/* Scrollable Content */}
+              {/* scrolalble content */}
               <div style={{ 
                 flex: 1,
                 padding: "20px",
@@ -331,7 +366,7 @@ function AllEntriesPage() {
                   </p>
                 </div>
 
-                {/* Links Section */}
+                {/* links */}
                 {entryData?.links && (
                   <div style={{ 
                     borderTop: "1px solid rgba(255,255,255,0.1)",
@@ -346,6 +381,7 @@ function AllEntriesPage() {
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
                         style={{
                           display: "inline-flex",
                           alignItems: "center",

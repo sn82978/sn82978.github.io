@@ -6,46 +6,52 @@ import ArtistHeader from "./components/ArtistHeader";
 import ArtistPick from "./components/ArtistPick";
 import Discography from "./components/Discography";
 import FtIn from "./components/FeaturedIn";
-import AllEntriesPage from "./components/AllEntriesPage"; // Create this component
 import Footer from "./components/Footer";
+import CosmicRayPage from "./components/CosmicRayPage";
+import TilingPage from "./components/TilingPage";
+import DrosophilaTrackingPage from "./components/DrosophilaTrackingPage";
+import DriftPage from "./components/DriftPage";
+import KnowledgeGapsPage from "./components/KnowledgeGapsPage";
+import AllEntriesPage, { getSlug } from "./components/AllEntriesPage";
+import EntryDetailPage from "./components/EntryDetailPage";
 
-
+// make the top 5 & artists pick, when you click them, go to pages of the site that have more information on the project + an easter egg that is an interactive version of that research/project! [done]
 const artist = {
   tracks: [
     {
-      title: "Constraining Cosmic-Ray Transport with Observational Data",
+      title: "Constraining Cosmic-Ray Transport with Observational Data", // this page should have the same Spotify theme as earlier but with an animation of a CR transport & radial thingy [done]
       plays: "31",
       duration: "W21-S23",
       explicit: true,
-      githubUrl: "https://academic.oup.com/mnras/article/521/2/2477/7070735?login=false"
+      githubUrl: "/research/cosmic-ray-transport" // "https://academic.oup.com/mnras/article/521/2/2477/7070735?login=false"
     },
     {
-      title: "Tiling: Computer Vision to Detect Fruit Fly Eggs",
+      title: "Tiling: Computer Vision to Detect Fruit Fly Eggs", // 
       plays: "3",
       duration: "F24-S26",
       explicit: false,
-      githubUrl: "https://github.com/sn82978/CNN-Classifier"
+      githubUrl: "/research/tiling" // "https://github.com/sn82978/CNN-Classifier"
     },
     {
       title: "Drosphila Neuroassay Tracking",
       plays: "1",
       duration: "F26-",
       explicit: false,
-      githubUrl: "https://huggingface.co/snoneeightfive/financial-news-headers-sentiment-analysis"
+      githubUrl: "/research/drosophila-tracking" // "https://huggingface.co/snoneeightfive/financial-news-headers-sentiment-analysis"
     },
     {
       title: "Statistical Analysis and Machine Learning to Detect Drift v. Anti-Drift",
       plays: "1",
       duration: "W25-S25",
       explicit: false,
-      githubUrl: "https://github.com/rose-mueller-labs/snp-data"
+      githubUrl: "/research/drift" // "https://github.com/rose-mueller-labs/snp-data"
     },
     {
       title: "Detecting LLM Knowledge Gaps",
       plays: "1",
       duration: "W26-",
       explicit: false,
-      githubUrl: "https://github.com/sn82978/knowledge-gaps"
+      githubUrl: "/research/knowledge-gaps" // https://github.com/sn82978/knowledge-gaps"
     },
   ],
   playlists: [
@@ -61,9 +67,11 @@ const artistPick = {
   postedByAvatar: "shreya-standing.png",
   title: "Drosophila Neuroassay Tracking",
   type: "UC Irvine: Rose Labs",
-  githubUrl: "https://github.com/rose-mueller-labs/Cameras-Calit2IRT"
+  githubUrl: "/research/drosophila-tracking" // "https://github.com/rose-mueller-labs/Cameras-Calit2IRT"
 };
 
+// instead of opening the github URL, it can open the all-entries (https://sn82978.github.io/all-entries) instead? and again
+// just like with the make the top 5 & artists pick, make those be those same interactive pages [done]
 
 const albums = [
     {
@@ -72,7 +80,7 @@ const albums = [
     year: "2026",
     type: "Workshop Coordinator",
     latest: true,
-    githubUrl: "https://github.com/Artificial-Intelligence-UC-Irvine",
+    githubUrl: `/all-entries/${getSlug("AI@UCI: Workshops")}`, // "/all-entries", // "https://github.com/Artificial-Intelligence-UC-Irvine",
     category: "Projects"
     },
     {
@@ -81,7 +89,7 @@ const albums = [
     year: "2026",
     type: "Rose & Mueller Labs",
     latest: true,
-    githubUrl: "https://github.com/rose-mueller-labs/Cameras-Calit2IRT",
+    githubUrl: "/research/drosophila-tracking",// "https://github.com/rose-mueller-labs/Cameras-Calit2IRT",
     category: "Research" // or "Projects"
   }, 
   {
@@ -90,7 +98,7 @@ const albums = [
       year: "2026",
       type: "Krone-Martins Lab",
       latest: true,
-      githubUrl: "https://github.com/sn82978/knowledge-gaps"
+      githubUrl: "/research/knowledge-gaps",// githubUrl: "https://github.com/sn82978/knowledge-gaps"
     },
     {
     title:"Uncovering the Typing and Distribution of Code Clones Across Forks of Open Source Microservice Repositories",
@@ -98,7 +106,7 @@ const albums = [
     year:"2025",
     type:"NSF IRES: University of Oulu",
     latest: false,
-    githubUrl:"https://github.com/Camithilwen/Code-Cloning-Analysis",
+    githubUrl: `/all-entries/${getSlug("Uncovering the Typing and Distribution of Code Clones Across Forks of Open Source Microservice Repositories")}`,//githubUrl:"https://github.com/Camithilwen/Code-Cloning-Analysis",
     category:"Research"
   },
   {
@@ -107,7 +115,7 @@ const albums = [
     year: "2025",
     type: "Rose & Mueller Labs",
     latest: false,
-    githubUrl: "https://github.com/sn82978/CNN-Classifier",
+    githubUrl: "/research/tiling",// githubUrl: "https://github.com/sn82978/CNN-Classifier",
     category: "Research",
     paper: "https://docs.google.com/document/d/1g8U7XFLoaX3DetpHfGf9URt-OD2jN2BHP9Nv4N5sYyY/edit?usp=sharing",
     poster: "https://drive.google.com/file/d/12x2XuuYTxEq3A-VKrbrTqwNeN5h-iyRa/view"
@@ -118,7 +126,7 @@ const albums = [
     year: "2025",
     type: "Rose & Mueller Labs",
     latest: false,
-    githubUrl: "https://github.com/rose-mueller-labs/snp-data",
+    githubUrl: "/research/drift",// githubUrl: "https://github.com/rose-mueller-labs/snp-data",
     category: "Research",
     paper: "https://docs.google.com/presentation/d/1aWlFPqgMO3BhaZnXAVgsTnJD6uUTx6W7gs6-XFdm-R8/edit?usp=sharing",
     poster: "https://drive.google.com/file/d/1jpDVq2Ie3iVeWhEsMzWQTm08o821e0iy/view?usp=sharing"
@@ -129,7 +137,7 @@ const albums = [
     year: "2025",
     type: "Rose & Mueller Labs",
     latest: false,
-    githubUrl: "https://github.com/sn82978/Classifier-Site",
+    githubUrl: "/research/tiling",// githubUrl: "https://github.com/sn82978/Classifier-Site",
     category: "Research",
     paper: "https://github.com/sn82978/Classifier-Site/blob/main/README.md",
     poster: "https://drive.google.com/file/d/12x2XuuYTxEq3A-VKrbrTqwNeN5h-iyRa/view",
@@ -140,7 +148,7 @@ const albums = [
     year: "2023",
     type: "California Institute of Technology",
     latest: false,
-    githubUrl: "https://github.com/sn82978/Cosmic-Ray-Transport-Plots",
+    githubUrl: "/research/cosmic-ray-transport",
     category: "Research", // or "Projects",
     paper: "https://academic.oup.com/mnras/article/521/2/2477/7070735?login=false", // add for each entry
     poster: "https://aas240-aas.ipostersessions.com/Default.aspx?s=39-11-68-61-92-B5-5B-4D-65-27-D7-9C-C2-2B-9E-B1#stay"
@@ -151,25 +159,25 @@ const albums = [
     year: "2024",
     type: "Atoma Media",
     latest: false,
-    githubUrl: "https://huggingface.co/snoneeightfive/financial-news-headers-sentiment-analysis",
+    githubUrl: `/all-entries/${getSlug("Sentiment Analysis for Financial News")}`,// githubUrl: "https://huggingface.co/snoneeightfive/financial-news-headers-sentiment-analysis",
     category: "Projects",
   },
-  {
-    title: "HackMIT: ActsAI",
-    cover: "sd.png",
-    year: "2024",
-    type: "HackMIT",
-    latest: false,
-    githubUrl: "https://github.com/PatelPurav05/ActsAI",
-    category: "Projects" // or "Projects"
-  },
+  // {
+  //   title: "HackMIT: ActsAI",
+  //   cover: "sd.png",
+  //   year: "2024",
+  //   type: "HackMIT",
+  //   latest: false,
+  //   githubUrl: "/all-entries",// githubUrl: "https://github.com/PatelPurav05/ActsAI",
+  //   category: "Projects" // or "Projects"
+  // },
   {
     title: "Boiling Bad",
     cover: "boiling.png",
     year: "2025",
     type: "[Personal]",
     latest: false,
-    githubUrl: "https://sn82978.github.io/BOILING-BAD/",
+    githubUrl: `/all-entries/${getSlug("Boiling Bad")}`,// githubUrl: "https://sn82978.github.io/BOILING-BAD/",
     category: "Projects" // or "Projects"
   }
 ];
@@ -181,7 +189,7 @@ const features = [
     year: "2026",
     type: "Krone-Martins Lab",
     latest: false,
-    githubUrl: "https://drive.google.com/file/d/1D3c1FjKw2xT9enLUbe2aIODKn0Uec2e9/view?usp=sharing",
+    githubUrl: "/all-entries",// githubUrl: "https://drive.google.com/file/d/1D3c1FjKw2xT9enLUbe2aIODKn0Uec2e9/view?usp=sharing",
     category: "Research" // or "Projects"
   },
   {
@@ -190,7 +198,7 @@ const features = [
     year: "2026",
     type: "Rose & Mueller Labs",
     latest: false,
-    githubUrl: "https://drive.google.com/file/d/1wfo1L0LqdNSuqtkm4J0-7bhmZH7jIs0h/view?usp=sharing",
+    githubUrl: "/research/drosophila-tracking",// githubUrl: "https://drive.google.com/file/d/1wfo1L0LqdNSuqtkm4J0-7bhmZH7jIs0h/view?usp=sharing",
     category: "Research" // or "Projects"
   },
   {
@@ -199,7 +207,7 @@ const features = [
     year: "2025",
     type: "Rose & Mueller Labs",
     latest: false,
-    githubUrl: "https://drive.google.com/file/d/1_nkpQS6NWG7ln4XcAUJBI9jhXKcFEKYg/view?usp=sharing",
+    githubUrl: "/research/drift",// githubUrl: "https://drive.google.com/file/d/1_nkpQS6NWG7ln4XcAUJBI9jhXKcFEKYg/view?usp=sharing",
     category: "Research"
   },
   {
@@ -208,7 +216,7 @@ const features = [
     year: "2023",
     type: "California Institute of Technology",
     latest: false,
-    githubUrl: "https://academic.oup.com/mnras/article/521/2/2477/7070735?login=false",
+    githubUrl: "/research/cosmic-ray-transport",// githubUrl: "https://academic.oup.com/mnras/article/521/2/2477/7070735?login=false",
     category: "Research" // or "Projects"
   },
     {
@@ -235,7 +243,7 @@ function MapWidget() {
         alignItems: "center",
         gap: 32,
       }}>
-        {/* Map */}
+        {/* map */}
         <a href="https://mapmyvisitors.com/web/1bw0c" title="Visit tracker" style={{ flex: "0 0 40%" }}>
           <img
             src="https://mapmyvisitors.com/map.png?cl=ffffff&w=600&t=tt&d=74xmXege_Rnxq-XM2ukNrGa3N6nErUb2rU4kIOR0ewU&cmo=1db954&cmn=23d160"
@@ -243,7 +251,7 @@ function MapWidget() {
             style={{ width: "100%", borderRadius: 8, display: "block" }}
           />
         </a>
-        {/* Text */}
+        {/* text */}
         <div style={{ flex: 1 }}>
           <h3 style={{ color: "#fff", fontSize: 26, fontWeight: 700, marginBottom: 12 }}>Visitor Map</h3>
           <p style={{ color: "#b3b3b3", fontSize: 18, lineHeight: 1.7, marginBottom: 16 }}>
@@ -258,8 +266,8 @@ function MapWidget() {
   );
 }
 
-// Sidebar component updated to use Link and highlight active page --> need to make it collapsible
-// 
+// Sidebar component updated to use Link and highlight active page --> need to make it collapsible [done]
+//
 function Sidebar({ playlists }) {
   const location = useLocation();
 
@@ -333,7 +341,7 @@ function Sidebar({ playlists }) {
 
           {playlists.map((pl) => {
             if (pl === "This is Shreya Nakum") {
-              // External resume URL
+              // external resume URL
               return (
                 <li
                   key={pl}
@@ -366,7 +374,7 @@ function Sidebar({ playlists }) {
             }
 
             if (pl === "Discography") {
-              // Internal link to /all-entries
+              // internal link to /all-entries
               return (
                 <li
                   key={pl}
@@ -402,7 +410,7 @@ function Sidebar({ playlists }) {
               );
             }
 
-            // Default rendering for any other playlists
+            // default rendering for any other playlists
             return (
               <li
                 key={pl}
@@ -514,7 +522,7 @@ function PopularTracks({ tracks }) {
 
 
 
-// Playlist page component
+// playlist page component
 function PlaylistPage({ name }) {
   return (
     <div style={{ padding: "32px", color: "#fff", background: "linear-gradient(180deg, #1f1f1f 0%, #121212 100%)", minHeight: "100vh" }}>
@@ -524,7 +532,7 @@ function PlaylistPage({ name }) {
   );
 }
 
-// Home page component
+// home page component
 function HomePage() {
   const contacts = [
     { name: "Email", url: "mailto:snakum@uci.edu", icon: "✉️" },
@@ -556,7 +564,8 @@ function HomePage() {
           <div style={{ flex: "0 0 30%", maxWidth: "30%" }}>
             <img
               // src="IMG_0454_Original.jpg"
-              src="woC.jpg"
+              // src="woC.jpg"
+              src="nasa_hshot.jpeg"
               alt="Shreya Nakum"
               style={{
                 width: "100%",
@@ -567,10 +576,10 @@ function HomePage() {
               }}
             />
           </div>
-          {/* About blurb: 75% width originally */}
+          {/* About blurb: 75% width originally, but when I shrink it down the font size needs to shrink, too, not just the picture */} 
           <div style={{ flex: "1 1 70%", marginLeft: 32 }}>
-            <div style={{ color: "#e1e1e1", fontSize: 20, lineHeight: 1.7, marginBottom: 24 }}>
-              <p>Hi! I'm Shreya! I'm a senior at UC Irvine studying Computer Science! I'm currently applying for my Ph.D. and am interested in computer vision and robotics!</p>
+            <div style={{ color: "#e1e1e1", fontSize: "clamp(14px, 1.4vw + 6px, 20px)", lineHeight: 1.7, marginBottom: 24 }}>
+              <p>Born and raised in the Bay Area, Shreya has always been a science and software enthusiast. Since high school, she has grown to love the interdisciplinary applications of machine learning. She has just wrapped up a co-op at NASA JSC and will now start her final year at UC Irvine. Shreya is currently applying for her Ph.D. in computer vision and robotics!</p>
             </div>
             
             {/* Contacts Section */}
@@ -593,7 +602,7 @@ function HomePage() {
                       borderRadius: 25,
                       color: "#1db954",
                       textDecoration: "none",
-                      fontSize: 14,
+                      fontSize: "clamp(11px, 0.9vw + 6px, 14px)",
                       fontWeight: 600,
                       transition: "all 0.2s ease"
                     }}
@@ -615,9 +624,9 @@ function HomePage() {
               </div>
             </div>
 
-            {/* Spotify Embed */}
+            {/* spotify sotw */}
             <div>
-              <h3 style={{ color: "#fff", fontSize: 20, fontWeight: 600, marginBottom: 16 }}>Currently Listening To</h3>
+              <h3 style={{ color: "#fff", fontSize: "clamp(15px, 1.1vw + 8px, 20px)", fontWeight: 600, marginBottom: 16 }}>Currently Listening To</h3>
               <div style={{
                 background: "rgba(20, 20, 20, 0.8)",
                 borderRadius: 12,
@@ -626,7 +635,8 @@ function HomePage() {
               }}>
                 <iframe 
                 // https://open.spotify.com/track/7kD5GdMaoi9oRW2ScjO1pT?si=95193b8392224bd0
-                  src="https://open.spotify.com/embed/track/7kD5GdMaoi9oRW2ScjO1pT?si=2cf925a9704947b0?si=c71ef085644746bb?utm_source=generator&theme=0"
+                // https://open.spotify.com/track/0DFKqhoeM3LGHTY4wIuS9V?si=a8cb0ee84f0f4bfd
+                  src="https://open.spotify.com/embed/track/0DFKqhoeM3LGHTY4wIuS9V?si=a8cb0ee84f0f4bfd?utm_source=generator&theme=0"
                   width="100%"
                   height="152"
                   frameBorder="0"
@@ -666,7 +676,7 @@ function App() {
 
   return (
     <div style={{ background: "linear-gradient(180deg, #1f1f1f 0%, #121212 100%)", minHeight: "100vh" }}>
-      {/* Fixed Sidebar */}
+      {/* fixed collapsible sidebar */}
       <div
         style={{
           position: "fixed",
@@ -684,7 +694,7 @@ function App() {
         <Sidebar playlists={artist.playlists} />
       </div>
 
-      {/* Toggle button: stays visible regardless of collapse state */}
+      {/* toggle button: stays visible regardless of collapse state for phone compatibility*/}
       <button
         onClick={() => setCollapsed((c) => !c)}
         aria-label={collapsed ? "Open sidebar" : "Collapse sidebar"}
@@ -722,7 +732,13 @@ function App() {
           <Route path="/all-entries" element={<AllEntriesPage entries={albums} />} />
           <Route path="/resume" element={<PlaylistPage name="resume" />} />
           <Route path="/CV" element={<PlaylistPage name="CV" />} />
-          <Route path="*" element={<Navigate to="/" />} />
+          <Route path="*" element={<Navigate to="/" />} /> 
+          <Route path="/research/cosmic-ray-transport" element={<CosmicRayPage entry={albums.find(a => a.title === "Constraining Cosmic-Ray Transport with Observational Data")} />} />
+          <Route path="/research/tiling" element={<TilingPage entry={albums.find(a => a.title === "Tiling: Computer Vision to Detect Fruity Fly Eggs")} />} />
+          <Route path="/research/drosophila-tracking" element={<DrosophilaTrackingPage entry={albums.find(a => a.title === "Drosophila Neuroassay Tracking")} />} />
+          <Route path="/research/drift" element={<DriftPage entry={albums.find(a => a.title === "Statistical Analysis and Machine Learning to Detect Drift v. Anti-Drift")} />} />
+          <Route path="/research/knowledge-gaps" element={<KnowledgeGapsPage entry={albums.find(a => a.title === "Detecting LLM Knowledge Gaps")} />} />
+          <Route path="/all-entries/:slug" element={<EntryDetailPage />} />
         </Routes>
       </main>
     </div>
