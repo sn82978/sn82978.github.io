@@ -134,7 +134,7 @@ export const SAMPLE_ENTRIES = [
     category: "Research",
     type: "Software Engineering",
     year: "2025",
-    cover: "db.png"
+    cover: "db.png" // add more images?
   },
   {
     title: "UI for Tiling",
@@ -151,7 +151,7 @@ export const SAMPLE_ENTRIES = [
     cover: "IMG_8906.jpeg",
   images: [
     { src: "IMG_8906.jpeg", caption: "Leading the PyTorch workshop, Spring 2025" },
-    { src: "stassi.png", caption: "Q&A after the vision transformers talk" },
+    { src: "pres_ai2.png", caption: "Leading the ensembling workshop, Fall 2025" },
   ],
   },
   {
@@ -161,13 +161,13 @@ export const SAMPLE_ENTRIES = [
     year: "2024",
     cover: "sent.png"
   },
-  {
-    title: "HackMIT: ActsAI",
-    category: "Projects",
-    type: "Hackathon",
-    year: "2024",
-    cover: "sd.png"
-  },
+  // {
+  //   title: "HackMIT: ActsAI",
+  //   category: "Projects",
+  //   type: "Hackathon",
+  //   year: "2024",
+  //   cover: "sd.png"
+  // },
   {
     title: "Boiling Bad",
     category: "Projects",
@@ -187,7 +187,7 @@ export const SAMPLE_ENTRIES = [
     category: "Research",
     type: "AI/ML",
     year: "2026",
-    cover: "openai_MATH.png"
+    cover: "openai_MATH.png" // fix this with more images
   }
 ];
 

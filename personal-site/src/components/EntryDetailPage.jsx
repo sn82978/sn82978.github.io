@@ -194,7 +194,7 @@ export default function EntryDetailPage() {
             transition: "all 0.2s ease",
           }}
         >
-          ← Back to All Entries
+          Back to All Entries
         </button>
       </div>
 
