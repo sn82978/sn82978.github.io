@@ -727,14 +727,15 @@ function App() {
           transition: "margin-left 0.3s ease",
         }}
       >
-        <Routes>
+        {/* Getting 404 file not found on all of these after CosmicRays (and including CosmicRays) when I click on deployed website*/}
+        <Routes> 
           <Route path="/" element={<HomePage />} />
           <Route path="/all-entries" element={<AllEntriesPage entries={albums} />} />
           <Route path="/resume" element={<PlaylistPage name="resume" />} />
           <Route path="/CV" element={<PlaylistPage name="CV" />} />
           <Route path="*" element={<Navigate to="/" />} /> 
           <Route path="/research/cosmic-ray-transport" element={<CosmicRayPage entry={albums.find(a => a.title === "Constraining Cosmic-Ray Transport with Observational Data")} />} />
-          <Route path="/research/tiling" element={<TilingPage entry={albums.find(a => a.title === "Tiling: Computer Vision to Detect Fruity Fly Eggs")} />} />
+          <Route path="/research/tiling" element={<TilingPage entry={albums.find(a => a.title === "Tiling: Computer Vision to Detect Fruit Fly Eggs")} />} />
           <Route path="/research/drosophila-tracking" element={<DrosophilaTrackingPage entry={albums.find(a => a.title === "Drosophila Neuroassay Tracking")} />} />
           <Route path="/research/drift" element={<DriftPage entry={albums.find(a => a.title === "Statistical Analysis and Machine Learning to Detect Drift v. Anti-Drift")} />} />
           <Route path="/research/knowledge-gaps" element={<KnowledgeGapsPage entry={albums.find(a => a.title === "Detecting LLM Knowledge Gaps")} />} />

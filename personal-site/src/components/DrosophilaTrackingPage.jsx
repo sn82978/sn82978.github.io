@@ -57,7 +57,7 @@ function stepFly(f) {
 
 const DEFAULT_ENTRY = {
   githubUrl: "https://github.com/rose-mueller-labs/Cameras-Calit2IRT",
-  videosUrl: "https://drive.google.com/drive/u/0/folders/178IPYW5Qh8eJDfeK5QZxPOgFTJOx4tkw",
+  videosUrl: "https://docs.google.com/presentation/d/1QjsyHKZjVPHiWhzua0DCi15NPnj5fuV5qk1L4ciKJZk/edit?usp=sharing",
 };
 
 export default function DrosophilaTrackingPage({ entry = DEFAULT_ENTRY }) {
@@ -362,7 +362,7 @@ export default function DrosophilaTrackingPage({ entry = DEFAULT_ENTRY }) {
               transition: "all 0.2s ease",
             }}
           >
-            Select Detection Videos
+            CalitIRT 2026 Presentation
           </a>
         )}
       </div>
