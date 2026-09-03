@@ -175,7 +175,7 @@ export default function CosmicRayPage({ entry }) {
 
   const paper = entry?.paper;
   const poster = entry?.poster;
-  const githubUrl = entry?.githubUrl;
+  const githubUrl = "https://github.com/sn82978/Cosmic-Ray-Transport-Plots";
 
   return (
     <div

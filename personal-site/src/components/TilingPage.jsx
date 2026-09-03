@@ -187,7 +187,7 @@ export default function TilingPage({ entry = DEFAULT_ENTRY }) {
   const navigate = useNavigate();
   const [tileSize, setTileSize] = useState(75);
 
-  const githubUrl = entry?.githubUrl || DEFAULT_ENTRY.githubUrl;
+  const githubUrl = "https://github.com/rose-mueller-labs/Fecundity-Classifier";
   const slidesUrl = entry?.poster || DEFAULT_ENTRY.poster;
 
   return (

@@ -107,7 +107,7 @@ export default function DriftPage({ entry = DEFAULT_ENTRY }) {
         : "Pure drift at a moderate population size, no consistent direction, just each replicate wandering on its own.";
   }
 
-  const githubUrl = entry?.githubUrl || DEFAULT_ENTRY.githubUrl;
+  const githubUrl = "https://github.com/rose-mueller-labs/snp-data";
   const slides = entry?.slides || DEFAULT_ENTRY.slides;
   const poster = entry?.poster || DEFAULT_ENTRY.poster;
 

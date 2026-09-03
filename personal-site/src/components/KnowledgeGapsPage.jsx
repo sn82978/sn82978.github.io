@@ -97,7 +97,7 @@ export default function KnowledgeGapsPage({ entry = DEFAULT_ENTRY }) {
     verdictColor = "#e0604a";
   }
 
-  const githubUrl = entry?.githubUrl || DEFAULT_ENTRY.githubUrl;
+  const githubUrl = "https://github.com/sn82978/knowledge-gaps";
   const slides = entry?.slides || DEFAULT_ENTRY.slides;
 
   return (

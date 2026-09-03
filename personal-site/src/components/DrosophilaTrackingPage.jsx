@@ -151,7 +151,7 @@ export default function DrosophilaTrackingPage({ entry = DEFAULT_ENTRY }) {
     return () => cancelAnimationFrame(frameRef.current);
   }, []);
 
-  const githubUrl = entry?.githubUrl || DEFAULT_ENTRY.githubUrl;
+  const githubUrl = "https://github.com/rose-mueller-labs/Cameras-Calit2IRT";
   const videosUrl = entry?.videosUrl || DEFAULT_ENTRY.videosUrl;
 
   return (
