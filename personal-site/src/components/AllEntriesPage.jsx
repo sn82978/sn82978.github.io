@@ -55,7 +55,8 @@ export const BULLET_POINTS = {
   "Uncovering the Typing and Distribution of Code Clones Across Forks of Open Source Microservice Repositories": {
     description: "Code reuse in microservice development improves efficiency but creates challenges with maintaining cloned code, making clone detection important yet difficult with current tools. To address this, we evaluated general-purpose and code-specific LLMs on 26 open-source repositories and their forks, finding that they achieved near-human accuracy in identifying clone distribution and performed well at distinguishing clone subtypes.",
     links: [
-      { title: "Github Repository", url: "https://github.com/Camithilwen/Code-Cloning-Analysis" }
+      { title: "Github Repository", url: "https://github.com/Camithilwen/Code-Cloning-Analysis" },
+      { title: "Pre-Print Manuscript", url: "https://doi.org/10.13140/RG.2.2.34393.28004"}
     ]
   },
   "UI for Tiling": {
@@ -94,14 +95,16 @@ export const BULLET_POINTS = {
     description: "Developed a multi-camera tracking algorithm implementing 2D pose estimation and identity propagation for dense biological assays.",
     links: [
       { title: "Github Repository", url: "https://github.com/rose-mueller-labs/Cameras-Calit2IRT" },
-      {title: "Select Detection Videos", url: "https://drive.google.com/drive/u/0/folders/178IPYW5Qh8eJDfeK5QZxPOgFTJOx4tkw"}
+      {title: "Select Detection Videos", url: "https://drive.google.com/drive/u/0/folders/178IPYW5Qh8eJDfeK5QZxPOgFTJOx4tkw"},
+      {title: "Poster", url: "https://drive.google.com/file/d/1wfo1L0LqdNSuqtkm4J0-7bhmZH7jIs0h/view"}
     ]
   },
 
   "Detecting LLM Knowledge Gaps": {
     description: "Tested the OpenAI and Gemini embedding models against multiple datasets about mathematics and physics to identify where the model lacks in training data through graphical evaluation with PacMAP. Compared the models' manifolds using the Davies-Bouldin index, mean silhoette, and intra-cosine similiarity to determine their proclivity",
     links: [
-      { title: "Github Repository", url: "https://github.com/sn82978/knowledge-gaps" }
+      { title: "Github Repository", url: "https://github.com/sn82978/knowledge-gaps" },
+      {title:  "Poster", url: "https://drive.google.com/file/d/1D3c1FjKw2xT9enLUbe2aIODKn0Uec2e9/view"}
     ]
   }
 };
@@ -199,7 +202,7 @@ function Footer() {
       padding: "40px 0",
       fontSize: 14
     }}>
-      © 2025 Shreya Nakum. All rights reserved.
+      © 2026 Shreya Nakum. All rights reserved.
     </div>
   );
 }

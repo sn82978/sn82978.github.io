@@ -20,10 +20,17 @@ const artist = {
   tracks: [
     {
       title: "Constraining Cosmic-Ray Transport with Observational Data", // this page should have the same Spotify theme as earlier but with an animation of a CR transport & radial thingy [done]
-      plays: "31",
+      plays: "822",
       duration: "W21-S23",
       explicit: true,
       githubUrl: "/research/cosmic-ray-transport" // "https://academic.oup.com/mnras/article/521/2/2477/7070735?login=false"
+    },
+    {
+      title: "An LLM-based Technique for Detection of Code Clones Across Open Source Microservice Repository Forks",
+      plays: "16",
+      duration: "S25-F26",
+      explicit: true,
+      githubUrl: "/all-entries/code-clone-analysis" // "https://github.com/rose-mueller-labs/snp-data"
     },
     {
       title: "Tiling: Computer Vision to Detect Fruit Fly Eggs", // 
@@ -38,13 +45,6 @@ const artist = {
       duration: "F26-",
       explicit: false,
       githubUrl: "/research/drosophila-tracking" // "https://huggingface.co/snoneeightfive/financial-news-headers-sentiment-analysis"
-    },
-    {
-      title: "Statistical Analysis and Machine Learning to Detect Drift v. Anti-Drift",
-      plays: "1",
-      duration: "W25-S25",
-      explicit: false,
-      githubUrl: "/research/drift" // "https://github.com/rose-mueller-labs/snp-data"
     },
     {
       title: "Detecting LLM Knowledge Gaps",
@@ -62,12 +62,12 @@ const artist = {
 
 
 const artistPick = {
-  image: "cameras_track.png",
+  image: "db.png",
   postedBy: "Shreya Nakum",
   postedByAvatar: "shreya-standing.png",
-  title: "Drosophila Neuroassay Tracking",
-  type: "UC Irvine: Rose Labs",
-  githubUrl: "/research/drosophila-tracking" // "https://github.com/rose-mueller-labs/Cameras-Calit2IRT"
+  title: "An LLM-based Technique for Detection of Code Clones Across Open Source Microservice Repository Forks",
+  type: "NSF IRES Research",
+  githubUrl: "/all-entries/code-clone-analysis"
 };
 
 // instead of opening the github URL, it can open the all-entries (https://sn82978.github.io/all-entries) instead? and again
@@ -105,7 +105,7 @@ const albums = [
     cover: "db.png",
     year:"2025",
     type:"NSF IRES: University of Oulu",
-    latest: false,
+    latest: true,
     githubUrl: `/all-entries/${getSlug("Uncovering the Typing and Distribution of Code Clones Across Forks of Open Source Microservice Repositories")}`,//githubUrl:"https://github.com/Camithilwen/Code-Cloning-Analysis",
     category:"Research"
   },

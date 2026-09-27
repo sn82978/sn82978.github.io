@@ -10,7 +10,19 @@ function FtIn({ albums }) {
   const navigate = useNavigate();
 
   const handleShowAll = () => {
-    navigate("/all-entries");
+    navigate("/all-entries"); 
+  };
+
+  // Helper to match the routing style from AllEntriesPage
+  const handleAlbumClick = (album) => {
+    // Note: If you have CUSTOM_PAGE_ROUTES for these albums like in AllEntriesPage, 
+    // you can import and apply them here too. Otherwise, this generates the standard slug.
+    const slug = album.title
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/(^-|-$)/g, "");
+      
+    navigate(`/all-entries/${slug}`);
   };
 
   const [filter, setFilter] = useState(FILTERS[0]);
@@ -103,9 +115,16 @@ function FtIn({ albums }) {
                 flexShrink: 0,
                 transition: "transform 0.2s ease, opacity 0.2s ease"
               }}
-              onClick={() => window.open(album.githubUrl, "_blank", "noopener,noreferrer")}
+              // -----------------------------------------------------------
+              // UPDATED: Now uses handleAlbumClick instead of window.open
+              // -----------------------------------------------------------
+              onClick={() => handleAlbumClick(album)}
               tabIndex={0}
-              onKeyPress={e => { if (e.key === "Enter" || e.key === " ") window.open(album.githubUrl, "_blank", "noopener,noreferrer"); }}
+              onKeyPress={e => { 
+                if (e.key === "Enter" || e.key === " ") {
+                  handleAlbumClick(album);
+                } 
+              }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = "scale(1.05)";
                 e.currentTarget.style.opacity = "0.8";
@@ -114,7 +133,7 @@ function FtIn({ albums }) {
                 e.currentTarget.style.transform = "scale(1)";
                 e.currentTarget.style.opacity = "1";
               }}
-              title="View on GitHub"
+              title={`View ${album.title}`}
             >
               <div style={{ position: "relative" }}>
                 <img
@@ -136,25 +155,6 @@ function FtIn({ albums }) {
                     e.target.style.boxShadow = "0 4px 16px rgba(0,0,0,0.4)";
                   }}
                 />
-                {/* Featured badge */}
-                {/* <div
-                  style={{
-                    position: "absolute",
-                    top: 8,
-                    right: 8,
-                    background: "linear-gradient(135deg, #1db954 0%, #1ed760 100%)",
-                    color: "#fff",
-                    fontSize: 10,
-                    fontWeight: 600,
-                    padding: "4px 8px",
-                    borderRadius: 8,
-                    textTransform: "uppercase",
-                    letterSpacing: 0.5,
-                    boxShadow: "0 2px 8px rgba(29, 185, 84, 0.4)"
-                  }}
-                >
-                  Featured
-                </div> */}
               </div>
               
               <div style={{ 
