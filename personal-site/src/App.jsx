@@ -579,7 +579,7 @@ function HomePage() {
           {/* About blurb: 75% width originally, but when I shrink it down the font size needs to shrink, too, not just the picture */} 
           <div style={{ flex: "1 1 70%", marginLeft: 32 }}>
             <div style={{ color: "#e1e1e1", fontSize: "clamp(14px, 1.4vw + 6px, 20px)", lineHeight: 1.7, marginBottom: 24 }}>
-              <p>Born and raised in the Bay Area, Shreya has always been a science and software enthusiast. Since high school, she has grown to love the interdisciplinary applications of machine learning. She has just wrapped up a co-op at NASA JSC and will now start her final year at UC Irvine. Shreya is currently applying for her Ph.D. in computer vision and robotics!</p>
+              <p>Born and raised in the Bay Area, Shreya has always been a science and software enthusiast. Since high school, she has grown to love the interdisciplinary applications of machine learning. She is currently a robotics intern at JPL and is now in her final year at UC Irvine. Shreya is currently applying for her Ph.D. in computer vision and robotics!</p>
             </div>
             
             {/* Contacts Section */}
