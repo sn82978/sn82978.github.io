@@ -308,7 +308,7 @@ export default function DriftPage({ entry = DEFAULT_ENTRY }) {
               transition: "all 0.2s ease",
             }}
           >
-            View Source
+            GitHub Repository
           </a>
         )}
         {slides && (

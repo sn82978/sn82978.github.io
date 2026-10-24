@@ -12,13 +12,11 @@ const CUSTOM_PAGE_ROUTES = {
   "Drosophila Neuroassay Tracking": "/research/drosophila-tracking",
   "Statistical Analysis and Machine Learning to Detect Drift v. Anti-Drift": "/research/drift",
   "Detecting LLM Knowledge Gaps": "/research/knowledge-gaps",
+  "An LLM-based Technique for Detection of Code Clones Across Open Source Microservice Repository Forks": "/research/code-clone" 
 };
 
-// too long
-const SLUG_OVERRIDES = {
-  "Uncovering the Typing and Distribution of Code Clones Across Forks of Open Source Microservice Repositories":
-    "code-clone-analysis",
-};
+// entriesData.js
+const SLUG_OVERRIDES = {}; // see note below
 
 export function getSlug(title) {
   if (SLUG_OVERRIDES[title]) return SLUG_OVERRIDES[title];
@@ -46,25 +44,25 @@ export const BULLET_POINTS = {
     ]
   },
   "Tiling: Computer Vision to Detect Fruit Fly Eggs": {
-    description: "This ongoing project applies machine learning to count fruit fly eggs in grid-like images by developing a recursive tiling technique that splits images into 75x75 pixel tiles for more accurate small-object detection. The model predicts egg counts at the tile level, reconstructs them into cap counts, and then sums across the grid, with this work winning #1 at the UROP 2025 Group Oral Speech Competition and funded by UCI UROP.",
+    description: "This project applies machine learning to count fruit fly eggs in grid-like images by developing a recursive tiling technique that splits images into 75x75 pixel tiles for more accurate small-object detection. The model predicts egg counts at the tile level, reconstructs them into cap counts, and then sums across the grid, with this work winning #1 at the UROP 2025 Group Oral Speech Competition and funded by UCI UROP.",
     links: [
       { title: "Slides from Oral Presentation (Won) at UROP 2025", url: "https://drive.google.com/file/d/1tDlDDwiDEWAMkyRW2rBC2F8td4dDidTX/view?usp=sharing" },
       { title: "Github Repository", url: "https://github.com/sn82978/CNN-Classifier" }
     ]
   },
-  "Uncovering the Typing and Distribution of Code Clones Across Forks of Open Source Microservice Repositories": {
+  "An LLM-based Technique for Detection of Code Clones Across Open Source Microservice Repository Forks": {
     description: "Code reuse in microservice development improves efficiency but creates challenges with maintaining cloned code, making clone detection important yet difficult with current tools. To address this, we evaluated general-purpose and code-specific LLMs on 26 open-source repositories and their forks, finding that they achieved near-human accuracy in identifying clone distribution and performed well at distinguishing clone subtypes.",
     links: [
       { title: "Github Repository", url: "https://github.com/Camithilwen/Code-Cloning-Analysis" },
       { title: "Pre-Print Manuscript", url: "https://doi.org/10.13140/RG.2.2.34393.28004"}
     ]
   },
-  "UI for Tiling": {
-    description: "A UI created to help easily create a training dataset for machine learning models using the Tiling technique. Instructions are on the README.md and upload your images directory and start labelling. The idea is to label each square, the name of the file is modified, and then to train, the dataset is set up such that the class is extracted directly from the file's name.",
-    links: [
-      { title: "Github Repository", url: "https://github.com/sn82978/Classifier-Site" }
-    ]
-  },
+  // "UI for Tiling": {
+  //   description: "A UI created to help easily create a training dataset for machine learning models using the Tiling technique. Instructions are on the README.md and upload your images directory and start labelling. The idea is to label each square, the name of the file is modified, and then to train, the dataset is set up such that the class is extracted directly from the file's name.",
+  //   links: [
+  //     { title: "Github Repository", url: "https://github.com/sn82978/Classifier-Site" }
+  //   ]
+  // },
   "AI@UCI: Workshops": {
     description: "My workshops as an AI@UCI executive have taught undergraduate and graduate students. I have taught about vision transformers, my own research at Rose Labs, and how to use PyTorch by making a simple PyTorch classifier.",
     links: [
@@ -96,7 +94,7 @@ export const BULLET_POINTS = {
     links: [
       { title: "Github Repository", url: "https://github.com/rose-mueller-labs/Cameras-Calit2IRT" },
       {title: "Select Detection Videos", url: "https://drive.google.com/drive/u/0/folders/178IPYW5Qh8eJDfeK5QZxPOgFTJOx4tkw"},
-      {title: "Poster", url: "https://drive.google.com/file/d/1wfo1L0LqdNSuqtkm4J0-7bhmZH7jIs0h/view"}
+      {title: "Poster at UROP 2025", url: "https://drive.google.com/file/d/1wfo1L0LqdNSuqtkm4J0-7bhmZH7jIs0h/view"}
     ]
   },
 
@@ -104,7 +102,7 @@ export const BULLET_POINTS = {
     description: "Tested the OpenAI and Gemini embedding models against multiple datasets about mathematics and physics to identify where the model lacks in training data through graphical evaluation with PacMAP. Compared the models' manifolds using the Davies-Bouldin index, mean silhoette, and intra-cosine similiarity to determine their proclivity",
     links: [
       { title: "Github Repository", url: "https://github.com/sn82978/knowledge-gaps" },
-      {title:  "Poster", url: "https://drive.google.com/file/d/1D3c1FjKw2xT9enLUbe2aIODKn0Uec2e9/view"}
+      {title:  "Poster at UROP 2026", url: "https://drive.google.com/file/d/1D3c1FjKw2xT9enLUbe2aIODKn0Uec2e9/view"}
     ]
   }
 };
@@ -133,19 +131,19 @@ export const SAMPLE_ENTRIES = [
     cover: "MLFFPic.png"
   },
   {
-    title: "Uncovering the Typing and Distribution of Code Clones Across Forks of Open Source Microservice Repositories",
+    title: "An LLM-based Technique for Detection of Code Clones Across Open Source Microservice Repository Forks",
     category: "Research",
     type: "Software Engineering",
     year: "2025",
     cover: "db.png" // add more images?
   },
-  {
-    title: "UI for Tiling",
-    category: "Projects",
-    type: "Web Development",
-    year: "2025",
-    cover: "classifier-site-sample.png"
-  },
+  // {
+  //   title: "UI for Tiling",
+  //   category: "Projects",
+  //   type: "Web Development",
+  //   year: "2025",
+  //   cover: "classifier-site-sample.png"
+  // },
   {
     title: "AI@UCI: Workshops",
     category: "Projects",

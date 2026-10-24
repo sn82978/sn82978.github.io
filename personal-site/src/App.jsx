@@ -14,23 +14,25 @@ import DriftPage from "./components/DriftPage";
 import KnowledgeGapsPage from "./components/KnowledgeGapsPage";
 import AllEntriesPage, { getSlug } from "./components/AllEntriesPage";
 import EntryDetailPage from "./components/EntryDetailPage";
+import CodeClonePage from "./components/CodeClone"
+import News from "./components/News";
 
 // make the top 5 & artists pick, when you click them, go to pages of the site that have more information on the project + an easter egg that is an interactive version of that research/project! [done]
 const artist = {
   tracks: [
     {
       title: "Constraining Cosmic-Ray Transport with Observational Data", // this page should have the same Spotify theme as earlier but with an animation of a CR transport & radial thingy [done]
-      plays: "822",
+      plays: "843",
       duration: "W21-S23",
       explicit: true,
       githubUrl: "/research/cosmic-ray-transport" // "https://academic.oup.com/mnras/article/521/2/2477/7070735?login=false"
     },
     {
       title: "An LLM-based Technique for Detection of Code Clones Across Open Source Microservice Repository Forks",
-      plays: "16",
+      plays: "124",
       duration: "S25-F26",
       explicit: true,
-      githubUrl: "/all-entries/code-clone-analysis" // "https://github.com/rose-mueller-labs/snp-data"
+      githubUrl: "/research/code-clone" // "https://github.com/rose-mueller-labs/snp-data"
     },
     {
       title: "Tiling: Computer Vision to Detect Fruit Fly Eggs", // 
@@ -55,8 +57,8 @@ const artist = {
     },
   ],
   playlists: [
-    "This is Shreya Nakum",
-    "Discography",
+    "Curriculum Vitae",
+    "Experiences",
   ],
 };
 
@@ -67,7 +69,7 @@ const artistPick = {
   postedByAvatar: "shreya-standing.png",
   title: "An LLM-based Technique for Detection of Code Clones Across Open Source Microservice Repository Forks",
   type: "NSF IRES Research",
-  githubUrl: "/all-entries/code-clone-analysis"
+  githubUrl: "/research/code-clone"
 };
 
 // instead of opening the github URL, it can open the all-entries (https://sn82978.github.io/all-entries) instead? and again
@@ -101,14 +103,13 @@ const albums = [
       githubUrl: "/research/knowledge-gaps",// githubUrl: "https://github.com/sn82978/knowledge-gaps"
     },
     {
-    title:"Uncovering the Typing and Distribution of Code Clones Across Forks of Open Source Microservice Repositories",
+    title:"An LLM-based Technique for Detection of Code Clones Across Open Source Microservice Repository Forks",
     cover: "db.png",
     year:"2025",
     type:"NSF IRES: University of Oulu",
     latest: true,
-    githubUrl: `/all-entries/${getSlug("Uncovering the Typing and Distribution of Code Clones Across Forks of Open Source Microservice Repositories")}`,//githubUrl:"https://github.com/Camithilwen/Code-Cloning-Analysis",
-    category:"Research"
-  },
+    githubUrl: "/research/code-clone"
+    },
   {
     title: "Tiling: Computer Vision to Detect Fruit Fly Eggs",
     cover: "MLFFPic.png",
@@ -131,17 +132,17 @@ const albums = [
     paper: "https://docs.google.com/presentation/d/1aWlFPqgMO3BhaZnXAVgsTnJD6uUTx6W7gs6-XFdm-R8/edit?usp=sharing",
     poster: "https://drive.google.com/file/d/1jpDVq2Ie3iVeWhEsMzWQTm08o821e0iy/view?usp=sharing"
   },
-  {
-    title: "UI for Tiling",
-    cover: "classifier-site-sample.png",
-    year: "2025",
-    type: "Rose & Mueller Labs",
-    latest: false,
-    githubUrl: "/research/tiling",// githubUrl: "https://github.com/sn82978/Classifier-Site",
-    category: "Research",
-    paper: "https://github.com/sn82978/Classifier-Site/blob/main/README.md",
-    poster: "https://drive.google.com/file/d/12x2XuuYTxEq3A-VKrbrTqwNeN5h-iyRa/view",
-  },
+  // {
+  //   title: "UI for Tiling",
+  //   cover: "classifier-site-sample.png",
+  //   year: "2025",
+  //   type: "Rose & Mueller Labs",
+  //   latest: false,
+  //   githubUrl: "/research/tiling",// githubUrl: "https://github.com/sn82978/Classifier-Site",
+  //   category: "Research",
+  //   paper: "https://github.com/sn82978/Classifier-Site/blob/main/README.md",
+  //   poster: "https://drive.google.com/file/d/12x2XuuYTxEq3A-VKrbrTqwNeN5h-iyRa/view",
+  // },
   {
     title: "Constraining Cosmic-Ray Transport with Observational Data",
     cover: "mnras-plot.png",
@@ -182,52 +183,39 @@ const albums = [
   }
 ];
 
-const features = [
+const news = [
   {
-    title: "Detecting LLM Knowledge Gaps",
-    cover: "openai_MATH.png",
-    year: "2026",
-    type: "Krone-Martins Lab",
-    latest: false,
-    githubUrl: "/all-entries",// githubUrl: "https://drive.google.com/file/d/1D3c1FjKw2xT9enLUbe2aIODKn0Uec2e9/view?usp=sharing",
-    category: "Research" // or "Projects"
+    date: "2026-10-19",
+    title: "Accepted to AAS GN&C 2026: Dissimilar Altimeter Work",
+    description: "I will be presenting and publishing my work at AAS GN&C #49 in Breckenridge, CO.",
+    tag: "Conference"
   },
   {
-    title: "Drosophila Neuroassay Tracking",
-    cover: "cameras_track.png",
-    year: "2026",
-    type: "Rose & Mueller Labs",
-    latest: false,
-    githubUrl: "/research/drosophila-tracking",// githubUrl: "https://drive.google.com/file/d/1wfo1L0LqdNSuqtkm4J0-7bhmZH7jIs0h/view?usp=sharing",
-    category: "Research" // or "Projects"
+    date: "2026-10-05", // TODO: real date
+    title: "Accepted in JPL's Year-long Internship Program", // TODO: real news
+    description: "Working on vision and robotics.",
+    tag: "Internship",
   },
   {
-    title: "Statistical Analysis and Machine Learning to Detect Drift v. Anti-Drift", 
-    cover: "IMG_4926.jpeg",
-    year: "2025",
-    type: "Rose & Mueller Labs",
-    latest: false,
-    githubUrl: "/research/drift",// githubUrl: "https://drive.google.com/file/d/1_nkpQS6NWG7ln4XcAUJBI9jhXKcFEKYg/view?usp=sharing",
-    category: "Research"
+    date: "2026-09-14",
+    title: "Preprint: LLM Code Clone Paper Under Review in ASEJ",
+    description: "An LLM-based Technique for Detection of Code Clones Across Open Source Microservice Repository Forks.",
+    tag: "Publication",
+    url: "/research/code-clone",
   },
-  {
-    title: "Constraining Cosmic-Ray Transport with Observational Data",
-    cover: "mnras-plot.png",
-    year: "2023",
-    type: "California Institute of Technology",
-    latest: false,
-    githubUrl: "/research/cosmic-ray-transport",// githubUrl: "https://academic.oup.com/mnras/article/521/2/2477/7070735?login=false",
-    category: "Research" // or "Projects"
-  },
-    {
-    title: "MHS Alumnus Interview",
-    cover: "alumnus.png",
-    year: "2025",
-    type: "Interview",
-    latest: false,
-    githubUrl: "https://mhstheunion.com/2025/03/04/mhs-alumni-discuss-college-experiences/",
-    category: "Volunteering" // or "Projects"
-  }
+  // {
+  //   date: "2025-12-22",
+  //   title: "Accepted in NASA JSC's Internship",
+  //   description: "Worked on modeling reaction wheel actuators and control system & a computer vision algorithm for descent on Moon.",
+  //   tag: "Internship"
+  // },
+  // {
+  //   date: "2025-12-04",
+  //   title: "Won CalitIRT Funding",
+  //   description: "Awarded funding for Drosphila Tracking project.",
+  //   tag: "Funding"
+  // }
+
 ];
 
 function MapWidget() {
@@ -340,7 +328,7 @@ function Sidebar({ playlists }) {
           </li>
 
           {playlists.map((pl) => {
-            if (pl === "This is Shreya Nakum") {
+            if (pl === "Curriculum Vitae") {
               // external resume URL
               return (
                 <li
@@ -373,7 +361,7 @@ function Sidebar({ playlists }) {
               );
             }
 
-            if (pl === "Discography") {
+            if (pl === "Experiences") {
               // internal link to /all-entries
               return (
                 <li
@@ -454,7 +442,7 @@ function PopularTracks({ tracks }) {
 
   return (
     <div style={{ padding: "32px" }}>
-      <h2 style={{ color: "#fff", fontSize: 32, fontWeight: 700, marginBottom: 24 }}>Popular</h2>
+      <h2 style={{ color: "#fff", fontSize: 32, fontWeight: 700, marginBottom: 24 }}>Selected Research Projects</h2>
       <div style={{
         background: "rgba(40, 40, 40, 0.8)",
         borderRadius: 12,
@@ -579,7 +567,7 @@ function HomePage() {
           {/* About blurb: 75% width originally, but when I shrink it down the font size needs to shrink, too, not just the picture */} 
           <div style={{ flex: "1 1 70%", marginLeft: 32 }}>
             <div style={{ color: "#e1e1e1", fontSize: "clamp(14px, 1.4vw + 6px, 20px)", lineHeight: 1.7, marginBottom: 24 }}>
-              <p>Born and raised in the Bay Area, Shreya has always been a science and software enthusiast. Since high school, she has grown to love the interdisciplinary applications of machine learning. She is currently a robotics intern at JPL and is now in her final year at UC Irvine. Shreya is currently applying for her Ph.D. in computer vision and robotics!</p>
+              <p>Hello, I'm Shreya! I'm an undergraduate at UC Irvine studying Computer Science. I'm part of the Campus Honors Collegium and Computer Science Honors Program. I'm currently a robotics intern at JPL and will graduate in Spring 2027. I'm currently applying for a Ph.D. in Computer Science! I'm interested in vision and robotics, especially in aerospace and biomedical applications. I absolutely love music, hence the Spotify-themed website; however, I now only listen to music via my walkman.</p>
             </div>
             
             {/* Contacts Section */}
@@ -654,14 +642,14 @@ function HomePage() {
       </div>
       <PopularTracks tracks={artist.tracks} />
       <div style={{ padding: "32px" }}>
-        <h2 style={{ color: "#fff", fontSize: 32, fontWeight: 700, marginBottom: 24 }}>Artist Pick</h2>
+        <h2 style={{ color: "#fff", fontSize: 32, fontWeight: 700, marginBottom: 24 }}>Recent Publication</h2>
         <ArtistPick pick={artistPick} />
       </div>
-      <div style={{ padding: "32px" }}>
-        <Discography albums={albums} name="Discography" />
+      <div style={{ padding: "32px 32px 0 32px" }}>
+        <Discography albums={albums} name="Experiences" />
       </div>
-      <div style={{ padding: "32px" }}>
-        <FtIn albums={features}/>
+      <div style={{ padding: "0 32px 32px 32px" }}>
+        <News news={news} />
       </div>
       <MapWidget />
       <Footer></Footer>
@@ -739,6 +727,7 @@ function App() {
           <Route path="/research/drosophila-tracking" element={<DrosophilaTrackingPage entry={albums.find(a => a.title === "Drosophila Neuroassay Tracking")} />} />
           <Route path="/research/drift" element={<DriftPage entry={albums.find(a => a.title === "Statistical Analysis and Machine Learning to Detect Drift v. Anti-Drift")} />} />
           <Route path="/research/knowledge-gaps" element={<KnowledgeGapsPage entry={albums.find(a => a.title === "Detecting LLM Knowledge Gaps")} />} />
+          <Route path="/research/code-clone" element={<CodeClonePage entry={albums.find(a => a.title === "An LLM-based Technique for Detection of Code Clones Across Open Source Microservice Repository Forks")} />} />
           <Route path="/all-entries/:slug" element={<EntryDetailPage />} />
         </Routes>
       </main>

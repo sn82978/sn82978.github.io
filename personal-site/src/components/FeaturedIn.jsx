@@ -4,8 +4,6 @@ import { useNavigate } from "react-router-dom";
 const FILTERS = ['']; 
 // , "Albums", "Singles and EPs"
 
-const RESUME_URL = "https://drive.google.com/file/d/12f1we87TBJ78daKGBmC6RHoP3fVy-gO6/view?usp=sharing";
-
 function FtIn({ albums }) {
   const navigate = useNavigate();
 
@@ -30,7 +28,7 @@ function FtIn({ albums }) {
   return (
     <section style={{ padding: "32px 0" }}>
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 16 }}>
-        <h2 style={{ color: "#fff", fontSize: 32, fontWeight: 700, marginBottom: 16 }}>Featuring Shreya Nakum</h2>
+        <h2 style={{ color: "#fff", fontSize: 32, fontWeight: 700, marginBottom: 16 }}>Publications, Posters, News</h2>
         <button
           onClick={handleShowAll}
           style={{

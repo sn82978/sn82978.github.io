@@ -360,7 +360,7 @@ export default function CosmicRayPage({ entry }) {
               transition: "all 0.2s ease",
             }}
           >
-            View Source
+            GitHub Repository
           </a>
         )}
         {paper && (

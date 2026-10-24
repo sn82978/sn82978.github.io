@@ -152,7 +152,8 @@ export default function DrosophilaTrackingPage({ entry = DEFAULT_ENTRY }) {
   }, []);
 
   const githubUrl = "https://github.com/rose-mueller-labs/Cameras-Calit2IRT";
-  const videosUrl = entry?.videosUrl || DEFAULT_ENTRY.videosUrl;
+  const videosUrl = "https://drive.google.com/drive/u/0/folders/178IPYW5Qh8eJDfeK5QZxPOgFTJOx4tkw"
+  const slidesURL = "https://docs.google.com/presentation/d/1QjsyHKZjVPHiWhzua0DCi15NPnj5fuV5qk1L4ciKJZk/edit?slide=id.p#slide=id.p"
 
   return (
     <div
@@ -338,7 +339,7 @@ export default function DrosophilaTrackingPage({ entry = DEFAULT_ENTRY }) {
               transition: "all 0.2s ease",
             }}
           >
-            View Source
+            View Repository
           </a>
         )}
         {videosUrl && (
@@ -362,7 +363,31 @@ export default function DrosophilaTrackingPage({ entry = DEFAULT_ENTRY }) {
               transition: "all 0.2s ease",
             }}
           >
-            CalitIRT 2026 Presentation
+            Selected Tracking Videos
+          </a>
+        )}
+        {slidesURL && (
+          <a
+            href={slidesURL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="dt-btn"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 8,
+              padding: "10px 20px",
+              background: "rgba(29, 185, 84, 0.1)",
+              border: `1px solid ${ACCENT}`,
+              borderRadius: 25,
+              color: ACCENT,
+              textDecoration: "none",
+              fontSize: 14,
+              fontWeight: 600,
+              transition: "all 0.2s ease",
+            }}
+          >
+            CalitIRT Presentation Slides
           </a>
         )}
       </div>

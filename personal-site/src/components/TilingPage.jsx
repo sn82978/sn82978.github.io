@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const ACCENT = "#1db954";
 const CANVAS_SIZE = 320;
+const VIDEO_URL = "/513_fecundity_compressed.mp4";
 
 // ground-truth egg layout
 
@@ -89,10 +90,7 @@ function computeStats(tileSize) {
 // visual
 
 function TilingField({ tileSize }) {
-  const { eggStates, missedCount, splitCount, predictedTotal } = useMemo(
-    () => computeStats(tileSize),
-    [tileSize]
-  );
+  const { eggStates, predictedTotal } = useMemo(() => computeStats(tileSize), [tileSize]);
   const error = predictedTotal - TRUE_TOTAL;
   const errorColor = Math.abs(error) <= 2 ? ACCENT : Math.abs(error) <= 5 ? "#e0b34a" : "#e0604a";
 
@@ -103,18 +101,23 @@ function TilingField({ tileSize }) {
   let caption;
   if (tileSize < 50) {
     caption =
-      "Tiles this small slice eggs in half wherever a boundary lands on top of one, the model risks counting the same egg twice, once from each side.";
+      "Tiles this small slice eggs in half wherever a boundary lands on top of one, so the model risks counting the same egg twice, once from each side.";
   } else if (tileSize > 110) {
     caption =
-      "Tiles this large cram whole clusters into a single detection window, once too many eggs overlap in one tile, some start getting missed entirely.";
+      "Tiles this large cram whole clusters into a single detection window. Once too many eggs overlap in one tile, some start getting missed entirely.";
   } else {
     caption =
-      "This is close to the 75 by 75 pixel tiles the real model used, small enough to keep clusters resolvable, large enough to avoid slicing eggs at every boundary.";
+      "This is close to the 75 by 75 pixel tiles the real model used: small enough to keep clusters resolvable, large enough to avoid slicing eggs at every boundary.";
   }
 
   return (
-    <div>
-      <svg viewBox={`0 0 ${CANVAS_SIZE} ${CANVAS_SIZE}`} width={CANVAS_SIZE} height={CANVAS_SIZE} style={{ borderRadius: 8, background: "#141414", display: "block" }}>
+    <div style={{ width: CANVAS_SIZE }}>
+      <svg
+        viewBox={`0 0 ${CANVAS_SIZE} ${CANVAS_SIZE}`}
+        width={CANVAS_SIZE}
+        height={CANVAS_SIZE}
+        style={{ borderRadius: 8, background: "#141414", display: "block" }}
+      >
         {/* tile grid */}
         {gridLines.map((l, i) =>
           l.axis === "v" ? (
@@ -145,7 +148,7 @@ function TilingField({ tileSize }) {
         })}
       </svg>
 
-      <div style={{ display: "flex", gap: 16, marginTop: 14, fontSize: 12, color: "#b3b3b3" }}>
+      <div style={{ display: "flex", gap: 16, marginTop: 14, fontSize: 12, color: "#b3b3b3", flexWrap: "wrap" }}>
         <span><span style={{ color: "#f5e6c8" }}>●</span> counted once</span>
         <span><span style={{ color: "#ffb454" }}>●</span> split across tiles</span>
         <span><span style={{ color: "#555" }}>●</span> missed in a crowded tile</span>
@@ -162,6 +165,7 @@ function TilingField({ tileSize }) {
           display: "flex",
           justifyContent: "space-between",
           gap: 12,
+          flexWrap: "wrap",
         }}
       >
         <span>True count: <strong>{TRUE_TOTAL}</strong></span>
@@ -171,7 +175,7 @@ function TilingField({ tileSize }) {
         </span>
       </div>
 
-      <p style={{ fontSize: 13, color: "#b3b3b3", lineHeight: 1.6, marginTop: 12 }}>{caption}</p>
+      <p style={{ fontSize: 13, color: "#b3b3b3", lineHeight: 1.6, marginTop: 12, marginBottom: 0 }}>{caption}</p>
     </div>
   );
 }
@@ -189,6 +193,21 @@ export default function TilingPage({ entry = DEFAULT_ENTRY }) {
 
   const githubUrl = "https://github.com/rose-mueller-labs/Fecundity-Classifier";
   const slidesUrl = entry?.poster || DEFAULT_ENTRY.poster;
+
+  const btnStyle = {
+    display: "inline-flex",
+    alignItems: "center",
+    gap: 8,
+    padding: "10px 20px",
+    background: "rgba(29, 185, 84, 0.1)",
+    border: `1px solid ${ACCENT}`,
+    borderRadius: 25,
+    color: ACCENT,
+    textDecoration: "none",
+    fontSize: 14,
+    fontWeight: 600,
+    transition: "all 0.2s ease",
+  };
 
   return (
     <div
@@ -240,8 +259,7 @@ export default function TilingPage({ entry = DEFAULT_ENTRY }) {
         </h1>
       </div>
 
-      {/* video panel */}
-            {/* video panel */}
+      {/* interactive tiling panel */}
       <div style={{ display: "flex", justifyContent: "center", padding: "40px 32px 8px 32px" }}>
         <div
           style={{
@@ -250,21 +268,39 @@ export default function TilingPage({ entry = DEFAULT_ENTRY }) {
             padding: 28,
             backdropFilter: "blur(20px)",
             border: "1px solid rgba(255,255,255,0.1)",
-            maxWidth: 800, // was 420
-            width: "100%",
           }}
         >
-          <video
-            controls
-            style={{ width: "100%", height: "auto", borderRadius: 8, display: "block" }}
-          >
-            <source src="/513_fecundity_compressed.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          <TilingField tileSize={tileSize} />
+
+          <div style={{ marginTop: 18, width: CANVAS_SIZE }}>
+            <label
+              htmlFor="tile-size"
+              style={{
+                fontSize: 12,
+                color: "#b3b3b3",
+                display: "flex",
+                justifyContent: "space-between",
+                marginBottom: 6,
+              }}
+            >
+              <span>Tile size</span>
+              <span style={{ color: "#fff", fontWeight: 700 }}>{tileSize}px</span>
+            </label>
+            <input
+              id="tile-size"
+              type="range"
+              min="25"
+              max="160"
+              step="5"
+              value={tileSize}
+              onChange={(e) => setTileSize(parseInt(e.target.value, 10))}
+              style={{ width: "100%", accentColor: ACCENT }}
+            />
+          </div>
         </div>
       </div>
       <p style={{ textAlign: "center", color: "#666", fontSize: 13, marginTop: 4, marginBottom: 8 }}>
-        UROP 2025 presentation
+        drag the slider to change the tile size
       </p>
 
       {/* write-up */}
@@ -283,15 +319,15 @@ export default function TilingPage({ entry = DEFAULT_ENTRY }) {
             About the project
           </h2>
           <p style={{ color: "#b3b3b3", fontSize: 17, lineHeight: 1.8, marginBottom: 16 }}>
-            This is an ongoing project applying machine learning to count fruit fly eggs in
-            grid-like images , the kind of small, densely packed objects that most detectors
+            In this project, I applied machine learning to count fruit fly eggs in
+            grid-like images, the kind of small, densely packed objects that most detectors
             struggle with. My approach was a recursive tiling technique that splits each image
             into 75 by 75 pixel tiles for more accurate small-object detection.
           </p>
           <p style={{ color: "#b3b3b3", fontSize: 17, lineHeight: 1.8, marginBottom: 16 }}>
             The model predicts egg counts at the tile level, reconstructs those into per-cap
             counts, and then sums across the grid. The widget above is a simplified version of
-            exactly that tradeoff , try dragging the tile size away from 75px and watch the
+            exactly that tradeoff. Try dragging the tile size away from 75px and watch the
             error mode flip from double-counting to missed eggs.
           </p>
           <p style={{ color: "#b3b3b3", fontSize: 17, lineHeight: 1.8 }}>
@@ -301,53 +337,18 @@ export default function TilingPage({ entry = DEFAULT_ENTRY }) {
         </div>
       </div>
 
-       {/* bottom button row */}
+      {/* bottom button row */}
       <div style={{ padding: "0 32px 64px 32px", display: "flex", justifyContent: "center", gap: 12, flexWrap: "wrap" }}>
         {githubUrl && (
-          <a
-            href={githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="kg-btn"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 8,
-              padding: "10px 20px",
-              background: "rgba(29, 185, 84, 0.1)",
-              border: `1px solid ${ACCENT}`,
-              borderRadius: 25,
-              color: ACCENT,
-              textDecoration: "none",
-              fontSize: 14,
-              fontWeight: 600,
-              transition: "all 0.2s ease",
-            }}
-          >
-            View Source
+          <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="tl-btn" style={btnStyle}>
+            GitHub Repository
           </a>
         )}
+        <a href={VIDEO_URL} target="_blank" rel="noopener noreferrer" className="tl-btn" style={btnStyle}>
+          Watch Presentation Video
+        </a>
         {slidesUrl && (
-          <a
-            href={slidesUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="kg-btn"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 8,
-              padding: "10px 20px",
-              background: "rgba(29, 185, 84, 0.1)",
-              border: `1px solid ${ACCENT}`,
-              borderRadius: 25,
-              color: ACCENT,
-              textDecoration: "none",
-              fontSize: 14,
-              fontWeight: 600,
-              transition: "all 0.2s ease",
-            }}
-          >
+          <a href={slidesUrl} target="_blank" rel="noopener noreferrer" className="tl-btn" style={btnStyle}>
             View Slides from Presentation (won, UROP 2025)
           </a>
         )}

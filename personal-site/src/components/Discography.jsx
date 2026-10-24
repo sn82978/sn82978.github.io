@@ -19,7 +19,7 @@ function Discography({ albums }) {
   return (
     <section style={{ padding: "32px 0" }}>
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 16 }}>
-        <h2 style={{ color: "#fff", fontSize: 28, marginBottom: 16 }}>Discography</h2>
+        <h2 style={{ color: "#fff", fontSize: 28, marginBottom: 16 }}>Experiences</h2>
         <button
           onClick={handleShowAll}
           style={{
