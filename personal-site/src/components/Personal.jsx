@@ -29,7 +29,8 @@ const TRACKS = [
   },
   {
     title: "Hiking anywhere.",
-    blurb: "One of my favorite pastimes whenever I have a break is to go hiking. My favorites hikes are Cathedral rock in Sedona and Fairy falls by the Columbia River Gorge."
+    blurb: "One of my favorite pastimes whenever I have a break is to go hiking. My favorites hikes are Cathedral rock in Sedona and Fairy falls by the Columbia River Gorge.",
+    tag: "Outdoors"
   }
 
 ];
