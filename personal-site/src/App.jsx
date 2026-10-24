@@ -16,6 +16,7 @@ import AllEntriesPage, { getSlug } from "./components/AllEntriesPage";
 import EntryDetailPage from "./components/EntryDetailPage";
 import CodeClonePage from "./components/CodeClone"
 import News from "./components/News";
+import PersonalPage from "./components/Personal";
 
 // make the top 5 & artists pick, when you click them, go to pages of the site that have more information on the project + an easter egg that is an interactive version of that research/project! [done]
 const artist = {
@@ -59,6 +60,7 @@ const artist = {
   playlists: [
     "Curriculum Vitae",
     "Experiences",
+    "Personal"
   ],
 };
 
@@ -398,6 +400,39 @@ function Sidebar({ playlists }) {
               );
             }
 
+            if (pl === "Personal") {
+              return (
+                <li
+                  key={pl}
+                  style={{
+                    padding: "12px 16px",
+                    background: location.pathname === "/personal" ? "rgba(29, 185, 84, 0.1)" : "transparent",
+                    color: location.pathname === "/personal" ? "#1db954" : "#b3b3b3",
+                    borderRadius: 8,
+                    cursor: "pointer",
+                    transition: "all 0.2s ease",
+                    border: location.pathname === "/personal" ? "1px solid #1db954" : "1px solid transparent"
+                  }}
+                  onMouseEnter={(e) => {
+                    if (location.pathname !== "/personal") {
+                      e.target.style.background = "rgba(80, 80, 80, 0.9)";
+                      e.target.style.color = "#fff";
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (location.pathname !== "/personal") {
+                      e.target.style.background = "transparent";
+                      e.target.style.color = "#b3b3b3";
+                    }
+                  }}
+                >
+                  <Link to="/personal" style={{ color: "inherit", textDecoration: "none" }}>
+                    {pl}
+                  </Link>
+                </li>
+              );
+            }
+
             // default rendering for any other playlists
             return (
               <li
@@ -729,6 +764,7 @@ function App() {
           <Route path="/research/knowledge-gaps" element={<KnowledgeGapsPage entry={albums.find(a => a.title === "Detecting LLM Knowledge Gaps")} />} />
           <Route path="/research/code-clone" element={<CodeClonePage entry={albums.find(a => a.title === "An LLM-based Technique for Detection of Code Clones Across Open Source Microservice Repository Forks")} />} />
           <Route path="/all-entries/:slug" element={<EntryDetailPage />} />
+          <Route path="/personal" element={<PersonalPage />} />
         </Routes>
       </main>
     </div>
