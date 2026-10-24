@@ -27,68 +27,14 @@ export function getSlug(title) {
 }
 
 export const BULLET_POINTS = {
-  "Constraining Cosmic-Ray Transport with Observational Data": {
-    description: "My intro to the world of research! I used libraries like pandas and numpy to do data analysis on large datasets. My role focused on creating a plot using a variety of astronomy and data science libraries showing the effective diffusivity coefficient for all galaxies in the Hubble COS-Halos dataset.",
-    links: [
-      { title: "Poster at AAS", url: "https://aas240-aas.ipostersessions.com/Default.aspx?s=39-11-68-61-92-B5-5B-4D-65-27-D7-9C-C2-2B-9E-B1#stay" },
-      { title: "Published Paper", url: "https://academic.oup.com/mnras/article/521/2/2477/7070735" },
-      { title: "Github Repository", url: "https://github.com/sn82978/Cosmic-Ray-Transport-Plots" }
-    ]
-  },
-  "Statistical Analysis and Machine Learning to Detect Drift v. Anti-Drift": {
-    description: "At the Rose Lab, I studied whether drift or selection drives evolution by analyzing SNPs across generations of fruit flies, training 220 Random Forest models to refine the p-value threshold to 0.000218. I also applied UMAP for unsupervised analysis to explore relationships between SNP frequency changes and evolutionary trajectories, with the project funded by Calit2.",
-    links: [
-      { title: "Slides from Oral Presentation at Calit2 2025", url: "https://docs.google.com/presentation/d/1aWlFPqgMO3BhaZnXAVgsTnJD6uUTx6W7gs6-XFdm-R8/edit?usp=sharing" },
-      { title: "Poster at UROP 2025", url: "https://drive.google.com/file/d/1jpDVq2Ie3iVeWhEsMzWQTm08o821e0iy/view?usp=drive_link" },
-      { title: "Github Repository", url: "https://github.com/rose-mueller-labs/snp-data" }
-    ]
-  },
-  "Tiling: Computer Vision to Detect Fruit Fly Eggs": {
-    description: "This project applies machine learning to count fruit fly eggs in grid-like images by developing a recursive tiling technique that splits images into 75x75 pixel tiles for more accurate small-object detection. The model predicts egg counts at the tile level, reconstructs them into cap counts, and then sums across the grid, with this work winning #1 at the UROP 2025 Group Oral Speech Competition and funded by UCI UROP.",
-    links: [
-      { title: "Slides from Oral Presentation (Won) at UROP 2025", url: "https://drive.google.com/file/d/1tDlDDwiDEWAMkyRW2rBC2F8td4dDidTX/view?usp=sharing" },
-      { title: "Github Repository", url: "https://github.com/sn82978/CNN-Classifier" }
-    ]
-  },
   "An LLM-based Technique for Detection of Code Clones Across Open Source Microservice Repository Forks": {
     description: "Code reuse in microservice development improves efficiency but creates challenges with maintaining cloned code, making clone detection important yet difficult with current tools. To address this, we evaluated general-purpose and code-specific LLMs on 26 open-source repositories and their forks, finding that they achieved near-human accuracy in identifying clone distribution and performed well at distinguishing clone subtypes.",
     links: [
       { title: "Github Repository", url: "https://github.com/Camithilwen/Code-Cloning-Analysis" },
-      { title: "Pre-Print Manuscript", url: "https://doi.org/10.13140/RG.2.2.34393.28004"}
+      { title: "Preprint Manuscript", url: "https://doi.org/10.13140/RG.2.2.34393.28004"}
     ]
   },
-  // "UI for Tiling": {
-  //   description: "A UI created to help easily create a training dataset for machine learning models using the Tiling technique. Instructions are on the README.md and upload your images directory and start labelling. The idea is to label each square, the name of the file is modified, and then to train, the dataset is set up such that the class is extracted directly from the file's name.",
-  //   links: [
-  //     { title: "Github Repository", url: "https://github.com/sn82978/Classifier-Site" }
-  //   ]
-  // },
-  "AI@UCI: Workshops": {
-    description: "My workshops as an AI@UCI executive have taught undergraduate and graduate students. I have taught about vision transformers, my own research at Rose Labs, and how to use PyTorch by making a simple PyTorch classifier.",
-    links: [
-      { title: "Github Repository", url: "https://github.com/Artificial-Intelligence-UC-Irvine/2024-Workshops" },
-      {title: "YouTube Channel", url: "https://www.youtube.com/@AIatUCI"}
-    ]
-  },
-  "Sentiment Analysis for Financial News": {
-    description: "Using a dataset of Twitter financial headlines and comments, I built a sentiment classifier that labels headlines as positive, negative, or neutral based on filtered user comments, removing bot and irrelevant posts. I fine-tuned a BERT model with Hugging Face Transformers, queried data with SQL, and deployed the model on Hugging Face, where it has over 6k downloads.",
-    links: [
-      { title: "Hugging Face Model Card", url: "https://huggingface.co/snoneeightfive/financial-news-headers-sentiment-analysis" }
-    ]
-  },
-  "HackMIT: ActsAI": {
-    description: "At HackMIT 2024, my team and I built a website that matches users to therapists through a chatbot, integrating features like web scraping to gather therapist data and a service to detect self-harming behaviors that could trigger emergency alerts. I focused on fine-tuning and deploying the LLM with Modal, though the site ultimately did not deploy successfully.",
-    links: [
-      { title: "Github Repository", url: "https://github.com/PatelPurav05/ActsAI" }
-    ]
-  },
-  "Boiling Bad": {
-    description: "Boiling Bad-and Bottom Bun is a side project my roommate and I built to showcase our recipes and potion videos through a minimalistic website with a 2000s-inspired UI. I focused on routing and video embedding, ensuring every page was accessible and that the media displayed seamlessly.",
-    links: [
-      { title: "Deployed Site", url: "https://sn82978.github.io/BOILING-BAD/" },
-      { title: "Github Repository", url: "https://github.com/sn82978/BOILING-BAD" }
-    ]
-  },
+
   "Drosophila Neuroassay Tracking": {
     description: "Developed a multi-camera tracking algorithm implementing 2D pose estimation and identity propagation for dense biological assays.",
     links: [
@@ -104,7 +50,63 @@ export const BULLET_POINTS = {
       { title: "Github Repository", url: "https://github.com/sn82978/knowledge-gaps" },
       {title:  "Poster at UROP 2026", url: "https://drive.google.com/file/d/1D3c1FjKw2xT9enLUbe2aIODKn0Uec2e9/view"}
     ]
-  }
+  },
+
+  "Tiling: Computer Vision to Detect Fruit Fly Eggs": {
+    description: "This project applies machine learning to count fruit fly eggs in grid-like images by developing a recursive tiling technique that splits images into 75x75 pixel tiles for more accurate small-object detection. The model predicts egg counts at the tile level, reconstructs them into cap counts, and then sums across the grid, with this work winning #1 at the UROP 2025 Group Oral Speech Competition and funded by UCI UROP.",
+    links: [
+      { title: "Slides from Oral Presentation (Won) at UROP 2025", url: "https://drive.google.com/file/d/1tDlDDwiDEWAMkyRW2rBC2F8td4dDidTX/view?usp=sharing" },
+      { title: "Github Repository", url: "https://github.com/sn82978/CNN-Classifier" }
+    ]
+  },
+  
+  "Statistical Analysis and Machine Learning to Detect Drift v. Anti-Drift": {
+    description: "At the Rose Lab, I studied whether drift or selection drives evolution by analyzing SNPs across generations of fruit flies, training 220 Random Forest models to refine the p-value threshold to 0.000218. I also applied UMAP for unsupervised analysis to explore relationships between SNP frequency changes and evolutionary trajectories, with the project funded by Calit2.",
+    links: [
+      { title: "Slides from Oral Presentation at Calit2 2025", url: "https://docs.google.com/presentation/d/1aWlFPqgMO3BhaZnXAVgsTnJD6uUTx6W7gs6-XFdm-R8/edit?usp=sharing" },
+      { title: "Poster at UROP 2025", url: "https://drive.google.com/file/d/1jpDVq2Ie3iVeWhEsMzWQTm08o821e0iy/view?usp=drive_link" },
+      { title: "Github Repository", url: "https://github.com/rose-mueller-labs/snp-data" }
+    ]
+  },
+
+  "Constraining Cosmic-Ray Transport with Observational Data": {
+    description: "My intro to the world of research! I used libraries like pandas and numpy to do data analysis on large datasets. My role focused on creating a plot using a variety of astronomy and data science libraries showing the effective diffusivity coefficient for all galaxies in the Hubble COS-Halos dataset.",
+    links: [
+      { title: "Poster at AAS", url: "https://aas240-aas.ipostersessions.com/Default.aspx?s=39-11-68-61-92-B5-5B-4D-65-27-D7-9C-C2-2B-9E-B1#stay" },
+      { title: "Published Paper", url: "https://academic.oup.com/mnras/article/521/2/2477/7070735" },
+      { title: "Github Repository", url: "https://github.com/sn82978/Cosmic-Ray-Transport-Plots" }
+    ]
+  },
+
+  "AI@UCI: Workshops": {
+    description: "My workshops as an AI@UCI executive have taught undergraduate and graduate students. I have taught about vision transformers, my own research at Rose Labs, and how to use PyTorch by making a simple PyTorch classifier.",
+    links: [
+      { title: "Github Repository", url: "https://github.com/Artificial-Intelligence-UC-Irvine/2024-Workshops" },
+      {title: "YouTube Channel", url: "https://www.youtube.com/@AIatUCI"}
+    ]
+  },
+
+  "Sentiment Analysis for Financial News": {
+    description: "Using a dataset of Twitter financial headlines and comments, I built a sentiment classifier that labels headlines as positive, negative, or neutral based on filtered user comments, removing bot and irrelevant posts. I fine-tuned a BERT model with Hugging Face Transformers, queried data with SQL, and deployed the model on Hugging Face, where it has over 6k downloads.",
+    links: [
+      { title: "Hugging Face Model Card", url: "https://huggingface.co/snoneeightfive/financial-news-headers-sentiment-analysis" }
+    ]
+  },
+
+  // "HackMIT: ActsAI": {
+  //   description: "At HackMIT 2024, my team and I built a website that matches users to therapists through a chatbot, integrating features like web scraping to gather therapist data and a service to detect self-harming behaviors that could trigger emergency alerts. I focused on fine-tuning and deploying the LLM with Modal, though the site ultimately did not deploy successfully.",
+  //   links: [
+  //     { title: "Github Repository", url: "https://github.com/PatelPurav05/ActsAI" }
+  //   ]
+  // },
+
+  "Boiling Bad": {
+    description: "Boiling Bad-and Bottom Bun is a side project my roommate and I built to showcase our recipes and potion videos through a minimalistic website with a 2000s-inspired UI. I focused on routing and video embedding, ensuring every page was accessible and that the media displayed seamlessly.",
+    links: [
+      { title: "Deployed Site", url: "https://sn82978.github.io/BOILING-BAD/" },
+      { title: "Github Repository", url: "https://github.com/sn82978/BOILING-BAD" }
+    ]
+  },
 };
 
 // curr project stuff
