@@ -10,7 +10,4 @@ I made this site using React+Vite, JavaScript XML, and CSS. The site is modeled 
 Your work throughout your career is your discography! Your projects are albums and your silly off-hand programs are singles! This thought made me decide to reformat my website to reflect an artist's profile on Spotify. It also made way for me to add some fun easter eggs with the buttons.
 
 ## Additions
-My friends know that I always start making changes to this site when it's finals and changes I make are always related to the UI. This is the third major change to the website's UI, so, this site is very much living and is going to have more changes! Here are some things I am planning to implement:
-- Modularized CSS files, similar to what I did in Boiling Bad
-- Change "Popular Tracks" to something interesting rather than just something that could be the footer.
-- Make this website nicer to look at on the phone.
+My friends know that I always start making changes to this site when it's finals and changes I make are always related to the UI. This is the third major change to the website's UI, so, this site is very much living and is going to have more changes!
