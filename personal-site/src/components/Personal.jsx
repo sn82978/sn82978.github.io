@@ -36,10 +36,10 @@ const TRACKS = [
 ];
 
 const PHOTOS = [
-  { src: "coffee Medium.jpeg", caption: "Coffee and an almond croissant." },
+  { src: "coffee Medium.jpg", caption: "Coffee and an almond croissant." },
   { src: "hiking_oregon.jpg", caption: "Hiking by the Columbia River!" },
   { src: "pear_cake.jpg", caption: "A pear cake I baked last Thanksgiving." },
-  { src: "walkman Medium.jpeg", caption: "Listening to music on my walkman!"}
+  { src: "walkman Medium.jpg", caption: "Listening to music on my walkman!"}
 ];
 
 const TILTS = [-3, 2, -1.5, 3, -2, 1.5];
