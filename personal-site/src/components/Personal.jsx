@@ -112,7 +112,7 @@ function DoomArt() {
 
 // Britney Spears Pretty Girls
 function PrettyGirlsArt() {
-  const titleFont = "Impact, 'Arial Narrow', 'Arial Black', sans-serif";
+  const titleFont = "Arial, 'Arial', 'Arial', sans-serif";
   return (
     <ArtFrame>
       <defs>
@@ -243,7 +243,7 @@ function BratArt() {
         x="102"
         y="62"
         textAnchor="middle"
-        fontFamily="'Arial Narrow', Arial, Helvetica, sans-serif"
+        fontFamily="'Arial', Arial, Helvetica, sans-serif"
         fontWeight="700"
         fontSize="27"
         letterSpacing="-1"
