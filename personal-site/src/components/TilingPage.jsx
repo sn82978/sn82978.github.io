@@ -193,6 +193,7 @@ export default function TilingPage({ entry = DEFAULT_ENTRY }) {
 
   const githubUrl = "https://github.com/rose-mueller-labs/Fecundity-Classifier";
   const slidesUrl = entry?.poster || DEFAULT_ENTRY.poster;
+  const thesisURL = "https://sn82978.github.io/Fecundity_Thesis.pdf"
 
   const btnStyle = {
     display: "inline-flex",
@@ -350,6 +351,11 @@ export default function TilingPage({ entry = DEFAULT_ENTRY }) {
         {slidesUrl && (
           <a href={slidesUrl} target="_blank" rel="noopener noreferrer" className="tl-btn" style={btnStyle}>
             View Slides from Presentation (won, UROP 2025)
+          </a>
+        )}
+        {thesisURL && (
+          <a href={thesisURL} target="_blank" rel="noopener noreferrer" className="tl-btn" style={btnStyle}>
+            View Thesis (Under Review)
           </a>
         )}
       </div>
