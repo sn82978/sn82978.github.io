@@ -205,6 +205,13 @@ const news = [
     tag: "Publication",
     url: "/research/code-clone",
   },
+  {
+    date: "2026-06-01",
+    title: "Submitted Campus Honors Collegium Thesis",
+    description: "Finished writing and submitted my work on creating a CNN that can detect & count fruit fly eggs.",
+    tag: "Publication",
+    url: "https://sn82978.github.io/Fecundity_Thesis.pdf"
+  }
   // {
   //   date: "2025-12-22",
   //   title: "Accepted in NASA JSC's Internship",
