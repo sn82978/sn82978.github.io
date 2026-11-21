@@ -414,7 +414,7 @@ export default function CodeClonePage({ entry }) {
   const [tab, setTab] = useState("detection");
 
   const paper = "https://www.researchgate.net/publication/414857677_An_LLM-based_Technique_for_Detection_of_Code_Clones_Across_Open_Source_Microservice_Repository_Forks";
-  const githubUrl = "https://github.com/Camithilwen/Code-CloningAnalysis";
+  const githubUrl = "https://github.com/Camithilwen/Code-Cloning-Analysis";
 
   const linkStyle = {
     display: "inline-flex",

@@ -45,7 +45,7 @@ const artist = {
     {
       title: "Drosphila Neuroassay Tracking",
       plays: "1",
-      duration: "F26-",
+      duration: "F25-",
       explicit: false,
       githubUrl: "/research/drosophila-tracking" // "https://huggingface.co/snoneeightfive/financial-news-headers-sentiment-analysis"
     },

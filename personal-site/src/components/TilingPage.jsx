@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const ACCENT = "#1db954";
 const CANVAS_SIZE = 320;
-const VIDEO_URL = "/513_fecundity_compressed.mp4";
+const VIDEO_URL = "/https://drive.google.com/file/d/1Ve4fvT2c8R_XHwtOCnZyvkL5hD3MhhMp/view?usp=sharing.mp4";
 
 // ground-truth egg layout
 
