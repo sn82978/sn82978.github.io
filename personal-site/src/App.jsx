@@ -359,7 +359,7 @@ function Sidebar({ playlists }) {
                   }}
                 >
                   <a
-                    href="ShreyaNakumResume.pdf"
+                    href="ShreyaNakumCV.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{ color: "inherit", textDecoration: "none" }}
