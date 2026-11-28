@@ -345,12 +345,9 @@ export default function TilingPage({ entry = DEFAULT_ENTRY }) {
             GitHub Repository
           </a>
         )}
-        <a href={VIDEO_URL} target="_blank" rel="noopener noreferrer" className="tl-btn" style={btnStyle}>
-          Watch Presentation Video
-        </a>
         {slidesUrl && (
           <a href={slidesUrl} target="_blank" rel="noopener noreferrer" className="tl-btn" style={btnStyle}>
-            View Slides from Presentation (won, UROP 2025)
+            Watch Presentation (won, UROP 2025)
           </a>
         )}
         {thesisURL && (
